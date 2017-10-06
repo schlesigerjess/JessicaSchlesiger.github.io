@@ -1,0 +1,99 @@
+#-------------------------------
+# General Site Settings
+
+title: Jessica Schlesiger
+description: Jessica Schlesiger resume
+email: Schlesiger.Jess@gmail.com
+
+# NOTE: The Logo and Background image are defined in the all.sass document.
+
+menu:
+- {name: About Me, url: '#about-me'}
+- {name: Work, url: '#work'}
+- {name: Clients, url: '#clients'}
+- {name: Contact, url: '#contact'}
+
+#-------------------------------
+# SEO Section
+
+# NOTE: Providing SEO information will make this website more searchable on the internet.
+
+seo:
+  description: 'Provide a description for your website to make it visible to search engines.'
+  rel-author: 'https://plus.google.com/u/0/+DevTipsForDesigners/'
+  rel-publisher: 'https://plus.google.com/u/0/+DevTipsForDesigners/'
+
+#-------------------------------
+# Google Analytics Section
+
+# Analytics helps you understand who visits your website.
+# Learn more at: http://support.google.com/analytics/answer/1008065
+
+# NOTE: If you want to use Google Analytics for basic web tracking: Just uncomment and enter your UA-Code here.
+
+#google-analytics-ua: UA-XXXXXX-X
+
+#-------------------------------
+# About Section
+
+# NOTE: The avatar is defined in the all.sass document.
+
+blurb: >
+  **Travis specializes in making things** for human people.
+  Most of the things he makes are [digital interfaces](http://travisneilson.com){:target="_blank"},
+  but he also puts effort into crafting [next-level beats](http://soundcloud.com/travis-neilson){:target="_blank"}
+  and [YouTube videos](http://youtube.com/user/devtipsfordesigners){:target="_blank"} about making codes happen.
+
+
+skills_programming:
+- {name: C, value: '90', example: has Example}
+- {name: CSS, value: '90', example: has Example}
+- {name: SASS, value: '90', example: has Example}
+- {name: Java, value: '100', example: }
+- {name: JavaScript, value: '100', example: }
+- {name: Jekyll, value: '70', example: has Exsdaample}
+- {name: HTML, value: '90', example: has Example}
+- {name: Lua, value: '40', example: has Example}
+- {name: OpenGL, value: '70', example: has Example}
+
+skills_design:
+- {name: Adobe Illustrator, value: '70', example: has Example}
+- {name: Adobe Photoshop, value: '90', example: }
+- {name: Web Design, value: '70', example: }
+- {name: UML, value: '100', example: has Example}
+
+skills_utilities:
+- {name: Eclipse, value: '100', example: }
+- {name: Excel, value: '90', example: }
+- {name: Notepad++, value: '100', example: has Example}
+- {name: Github, value: '80', example: has Example}
+- {name: SourceForge, value: '70', example: has Example}
+- {name: Word, value: '90', example: }
+
+#-------------------------------
+# Work Section
+
+projects:
+- {name: Pheonix Atari 2600, subName: "C, OpenGL", description: aaaa, folder: 'proj-1', file: 'work/proj-1.html'}
+- {name: Pokemon Battle Simulator, subName: Java, description: aaaa, folder: 'proj-2', file: 'work/proj-2.html'}
+- {name: Pennstate Logo Updates, subName: Illustrator, description: aaaa, folder: 'proj-3', file: 'work/proj-3.html'}
+- {name: Google Calendar Script, subName: "Javascript, Google Drive", description: aaaa, folder: 'proj-4', file: 'work/proj-4.html'}
+- {name: Email Notification Script, subName: Java, description: aaaa, folder: 'proj-5', file: 'work/proj-5.html'}
+- {name: NEAT Neural Network, subName: "Research, Lua", description: aaaa, folder: 'proj-6', file: 'work/proj-6.html'}
+- {name: Illustrations, subName: sda, description: aaaa, folder: 'proj-4', file: 'work/proj-4.html'}
+- {name: Graphic Design, subName: Test One two thrww, description: aaaa, folder: 'proj-5', file: 'work/proj-5.html'}
+
+
+
+#-------------------------------
+# Contact Section
+
+social:
+- {icon: 'twitter', link: 'http://twitter.com/devtipsshow'}
+- {icon: 'dribbble', link: 'https://dribbble.com/travisneilson'}
+- {icon: 'behance', link: 'https://www.behance.net/travisneilson'}
+- {icon: 'youtube', link: 'https://www.youtube.com/DevTipsForDesigners'}
+- {icon: 'linkedin', link: 'http://www.linkedin.com/in/travisneilson/'}
+
+
+# social network icons available: 'twitter' / 'facebook' / 'github' / 'pinterest' 'google-plus' / 'linkedin' / 'youtube' / 'instagram' / 'dribbble' / 'behance' / 'soundcloud' / 'vine'

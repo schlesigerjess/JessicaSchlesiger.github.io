@@ -1,0 +1,64 @@
+.portfolioBar 
+	padding-bottom: 20px
+	@include greyBoxShade 
+	table
+		text-align: center
+	+clearfix
+
+.thumb-wrap
+	margin: 0px auto
+.thumb-unit
+	border-radius: 5px
+	width: 31%
+	margin: 1%
+	display: block
+	float: left
+	height: 200px
+	position: relative
+	overflow: hidden
+	background-color: #fff
+	border: 1px solid $grayAccent
+	
+	&:hover 
+		.thumb-overlay
+			background: fade-out($mainAccent-dark, .1)
+			+position(absolute, -5px 0px 0px 0px )
+			color: #fff 
+		img.top
+			opacity: 0
+			
+	
+.thumb-image
+	margin: 5px
+	max-height: 75%
+	display: block
+	border-radius: 5px
+	overflow: hidden
+	img
+		display: block
+		max-width: 100%
+	
+.thumb-overlay
+	padding: 10px
+	+position(absolute,  75% 0px 0px 0px )
+	height: 100%
+	+transition
+	background: fade-out($mainAccent, 1)
+	td
+		text-align: left
+		vertical-align: top
+.thumb-text
+	display:block
+	float: left
+	width: 90%
+.arrow
+	display: block
+	float: right
+	position: relative
+	width: 20px
+	height: 20px
+	margin-right: -5px
+	img
+		position: absolute
+		top: 7px
+		+transition
