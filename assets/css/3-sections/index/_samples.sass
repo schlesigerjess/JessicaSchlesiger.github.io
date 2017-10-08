@@ -3,22 +3,21 @@
 	@include greyBoxShade 
 	table
 		text-align: center
-	+clearfix
-
+.portfolio
+	padding: 2%
 .thumb-wrap
 	margin: 0px auto
+	+clearfix
 .thumb-unit
+	max-width: 400px
 	border-radius: 5px
-	width: 31%
-	margin: 1%
+	margin: 1% auto 1% auto
 	display: block
-	float: left
 	height: 200px
 	position: relative
 	overflow: hidden
 	background-color: #fff
 	border: 1px solid $grayAccent
-	
 	&:hover 
 		.thumb-overlay
 			background: fade-out($mainAccent-dark, .1)
@@ -26,8 +25,6 @@
 			color: #fff 
 		img.top
 			opacity: 0
-			
-	
 .thumb-image
 	margin: 5px
 	max-height: 75%
@@ -37,6 +34,7 @@
 	img
 		display: block
 		max-width: 100%
+		vertical-align: bottom
 	
 .thumb-overlay
 	padding: 10px
@@ -62,3 +60,21 @@
 		position: absolute
 		top: 7px
 		+transition
+
+		
+		
+
+@media only screen and (min-width: 745px)
+	.thumb-unit
+		float: left
+		width: 31%
+		margin-right: 1% !important
+		margin-left: 1% !important
+		
+
+@media only screen and (min-width: 565px) and (max-width: 744px)
+	.thumb-unit
+		float: left
+		width: 46%
+		margin-right: 1% !important
+		margin-left: 2% !important
