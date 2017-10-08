@@ -59,7 +59,7 @@ skills_programming:
 skills_design:
 - {name: Adobe Illustrator, value: '70', example: has Example}
 - {name: Adobe Photoshop, value: '90', example: }
-- {name: Web Design, value: '70', example: }
+- {name: Web Design, value: '80', example: }
 - {name: UML, value: '100', example: has Example}
 
 skills_utilities:
@@ -74,17 +74,22 @@ skills_utilities:
 # Work Section
 
 projects:
-- {name: Pheonix Atari 2600, subName: "C, OpenGL", description: aaaa, folder: 'proj-1', file: 'work/proj-1.html'}
-- {name: Pokemon Battle Simulator, subName: Java, description: aaaa, folder: 'proj-2', file: 'work/proj-2.html'}
-- {name: Pennstate Logo Updates, subName: Illustrator, description: aaaa, folder: 'proj-3', file: 'work/proj-3.html'}
-- {name: Google Calendar Script, subName: "Javascript, Google Drive", description: aaaa, folder: 'proj-4', file: 'work/proj-4.html'}
-- {name: Email Notification Script, subName: Java, description: aaaa, folder: 'proj-5', file: 'work/proj-5.html'}
-- {name: NEAT Neural Network, subName: "Research, Lua", description: aaaa, folder: 'proj-6', file: 'work/proj-6.html'}
-- {name: Illustrations, subName: sda, description: aaaa, folder: 'proj-4', file: 'work/proj-4.html'}
-- {name: Graphic Design, subName: Test One two thrww, description: aaaa, folder: 'proj-5', file: 'work/proj-5.html'}
-
-
-
+- {name: NEAT Neural Network, subName: "Research, Lua", folder: 'proj-6', file: 'work/proj-6.html', 
+    description: "Testing for domain-general intelligence using a NEAT Neural Network in Super Mario World."}
+- {name: Pheonix Atari 2600, subName: "C, OpenGL", folder: 'proj-1', file: 'work/proj-1.html',  
+    description: "Recreation of the Atari arcade game Phenoix using OpenGL and C for my Intro To Computer Graphics project."}
+- {name: Google Calendar Script, subName: "Javascript, Google Drive", folder: 'proj-4', file: 'work/proj-4.html', 
+    description: "Scheduling script which pulls dates from a spreadsheet and updates or creates the events on designated Google Calendars."}
+- {name: Email Notification Script, subName: Java, folder: 'proj-5', file: 'work/proj-5.html', 
+    description: "Pulls data from the Employee Database and Upcoming Events Spreadsheet and notifies each staff member of upcoming events they are scheduled for."}
+- {name: Pokemon Battle Simulator, subName: Java, folder: 'proj-2', file: 'work/proj-2.html', 
+    description: aaaa}
+- {name: Illustrations, subName: "Illustrator, Photoshop", folder: 'proj-7', file: 'work/proj-7.html', 
+    description: "Hobbiest art creations."}
+- {name: Graphic Design, subName: "Photoshop", folder: 'proj-8', file: 'work/proj-8.html', 
+    description: aaaa}
+- {name: Graaaaaaaphic Design, subName: "Photoshop", folder: 'proj-3', file: 'work/proj-3.html', 
+    description: aaaa}
 #-------------------------------
 # Contact Section
 
