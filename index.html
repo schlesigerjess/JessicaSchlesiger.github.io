@@ -4,11 +4,6 @@
 <!DOCTYPE html>
 <html class="" lang="en-US">
 <head>
-  <script type="text/javascript">
-    var host = "jessicaschlesiger.ml";
-    if ((host == window.location.host) && (window.location.protocol != "https:"))
-        window.location.protocol = "https";
-</script>
   <meta charset="UTF-8">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,8 +15,7 @@
 
   <title>{{ site.data.settings.title }}</title>
 
-  <link rel="stylesheet" href="/assets/css/all.css {{ prepend: site.github.url | replace: 'http://', '//'}}">
-  <link rel="canonical" href=" { { site.url } }{ { page.url } }">
+  <link rel="stylesheet" href="/assets/css/all.css">
   <!--[if lt IE 9]><script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
   {% include analytics.html %}
@@ -29,24 +23,14 @@
 <body>
 
 {% include header.html %}
-
 {% include index/about.html %}
 {% include index/experience.html %}
 {% include index/skills.html %}
 {% include index/samples.html %}
-
-
-
 {% include index/contact.html %}
-
-
-
-
-
-
 {% include footer.html %}
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="/assets/js/functions.js {{ prepend: site.github.url | replace: 'http://', '//'}}"></script>
+<script src="/assets/js/functions.js"></script>
 </body>
 </html>
