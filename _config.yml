@@ -3,8 +3,8 @@
 markdown: kramdown
 permalink: pretty
 
-url: https://www.JessicaSchlesiger.ml   # with the https protocol
-enforce_ssl: JessicaSchlesiger.ml   # without any protocol
+url: https://www.jessicaschlesiger.ml   # with the https protocol
+enforce_ssl: jessicaschlesiger.ml   # without any protocol
 
 include: ['_includes/work']
 exclude: ['the_design.psd']
