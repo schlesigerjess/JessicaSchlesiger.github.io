@@ -21,7 +21,7 @@
   <title>{{ site.data.settings.title }}</title>
 
   <link rel="stylesheet" href="/assets/css/all.css {{ prepend: site.github.url | replace: 'http://', '//'}}">
-  <link rel="stylesheet" href=" { { site.url } }{ { page.url } }">
+  <link rel="canonical" href=" { { site.url } }{ { page.url } }">
   <!--[if lt IE 9]><script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
   {% include analytics.html %}
@@ -47,6 +47,6 @@
 {% include footer.html %}
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="{{ site.github.url }}/assets/js/functions.js"></script>
+<script src="/assets/js/functions.js {{ prepend: site.github.url | replace: 'http://', '//'}}"></script>
 </body>
 </html>
