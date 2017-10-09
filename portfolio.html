@@ -1,9 +1,15 @@
-<div class="sample-bar">
-	<div class="sample Container">		
-		<h1>Work</h1>
+---
+layout: default
+title: "Portfolio Jessica Schlesiger"
+description: "Jessica Schlesiger Portfolio"
+permalink: /portfolio.html
+---
+
+<div class="portfolio-bar">
+	<div class="portfolio Container">		
 		<div class="sample-wrap">
 			 <div class="thumb-wrap">
-				{% for project in site.data.settings.projects limit:6 %}
+				{% for project in site.data.settings.projects %}
 					<a href="" class="thumb-unit">
 							<div class="thumb-image" data-url="{{ site.github.url }}/work/{{ project.folder }}/">
 								<img src="{{ site.github.url }}/assets/img/work/{{project.folder}}/thumb.jpg" alt="{{ project.name }}" />
@@ -23,12 +29,6 @@
 					</a>
 				{% endfor %}
 			</div>
-			<a href="/portfolio.html" class="portfolio-link">Full Portfolio 
-				<div class="arrow">
-					<img class="bottom" src="{{ site.github.url }}/assets/img/icons/arrowWhite.png" alt="➤">
-					<img class="top" src="{{ site.github.url }}/assets/img/icons/arrow.png" alt="➤">
-					</div>
-			</a>
 		</div>
 	</div>
 </div>
