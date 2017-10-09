@@ -1,13 +1,13 @@
-.portfolioBar 
-	padding-bottom: 20px
+.sample-bar 
 	@include greyBoxShade 
 	table
 		text-align: center
-.portfolio
+.sample
 	padding: 2%
+.sample-wrap
+	+clearfix
 .thumb-wrap
 	margin: 0px auto
-	+clearfix
 .thumb-unit
 	max-width: 400px
 	border-radius: 5px
@@ -46,7 +46,7 @@
 		text-align: left
 		vertical-align: top
 .thumb-text
-	display:block
+	display: block
 	float: left
 	width: 90%
 .arrow
@@ -60,21 +60,39 @@
 		position: absolute
 		top: 7px
 		+transition
-
-		
-		
-
+.portfolio-link
+	text-decoration: none
+	background-color: #fff
+	border: 1px solid $grayAccent
+	padding: 10px 20px 5px 10px
+	border-radius: 5px
+	font-weight: bold
+	max-width: 380px
+	display: block
+	margin: 0 auto
+	text-align: center
+	vertical-align: middle
+	+transition
+	img
+		top: -1px !important
+	&:hover 
+		background-color: $mainAccent
+		color: #fff
+		img.top
+			opacity: 0
 @media only screen and (min-width: 745px)
-	.thumb-unit
-		float: left
-		width: 31%
+	.thumb-unit, .portfolio-link
+		float: right !important
 		margin-right: 1% !important
 		margin-left: 1% !important
+	.thumb-unit
+		width: 31%
 		
 
 @media only screen and (min-width: 565px) and (max-width: 744px)
-	.thumb-unit
-		float: left
-		width: 46%
+	.thumb-unit, .portfolio-link
+		float: right !important
 		margin-right: 1% !important
 		margin-left: 2% !important
+	.thumb-unit
+		width: 46%

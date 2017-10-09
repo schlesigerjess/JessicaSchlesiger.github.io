@@ -1,36 +1,37 @@
-
-	<div class="portfolioBar">
-		<div class="portfolio Container">
-			<h1 id="work">Work</h1>
-			
-			
-			
-			
-			
+<div class="sample-bar">
+	<div class="sample Container">
+	
+		<a href="{{ site.baseurl }}/_includes/404.html">aaaaaa</a>
+		
+		<h1>Work</h1>
+		<div class="sample-wrap">
 			 <div class="thumb-wrap">
-					{% for project in site.data.settings.projects limit:6 %}
-				<a href="" class="thumb-unit">
-						<div class="thumb-image" data-url="/work/{{ project.folder }}/">
-					<img src="/assets/img/work/{{project.folder}}/thumb.jpg" alt="{{ project.name }}" />
-						  </div>
-						<div class="thumb-overlay">
-							<div class="thumb-text"> 
+				{% for project in site.data.settings.projects limit:6 %}
+					<a href="" class="thumb-unit">
+							<div class="thumb-image" data-url="/work/{{ project.folder }}/">
+								<img src="/assets/img/work/{{project.folder}}/thumb.jpg" alt="{{ project.name }}" />
+							</div>
+							<div class="thumb-overlay">
+								<div class="thumb-text"> 
 									<strong>{{ project.name }}</strong>
 									<br>{{ project.subName }}
-									<br><br>{{ project.description }} </div>
-								
-									<div width="20px" class="arrow">
-										<img class="bottom" src="/assets/img/icons/arrowWhite.png" alt="➤">
-										<img class="top" src="/assets/img/icons/arrow.png" alt="➤">
-									</div>
-						</div>
-						</a>
-					  {% endfor %}
-					</div>
-			
-			
-			
-			
+									<br><br>{{ project.description }} 
+								</div>
+									
+								<div class="arrow">
+									<img class="bottom" src="/assets/img/icons/arrowWhite.png" alt="➤">
+									<img class="top" src="/assets/img/icons/arrow.png" alt="➤">
+								</div>
+							</div>
+					</a>
+				{% endfor %}
 			</div>
+			<a href="" class="portfolio-link">Full Portfolio 
+				<div class="arrow">
+					<img class="bottom" src="/assets/img/icons/arrowWhite.png" alt="➤">
+					<img class="top" src="/assets/img/icons/arrow.png" alt="➤">
+					</div>
+			</a>
 		</div>
 	</div>
+</div>
