@@ -20,7 +20,7 @@
 
   <title>{{ site.data.settings.title }}</title>
 
-  <link rel="stylesheet" href="https://{{ site.github.url }}/assets/css/all.css">
+  <link rel="stylesheet" href="/assets/css/all.css {{ prepend: site.github.url | replace: 'http://', '//'}}">
   <link rel="stylesheet" href=" { { site.url } }{ { page.url } }">
   <!--[if lt IE 9]><script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
