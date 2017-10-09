@@ -8,8 +8,8 @@
 			 <div class="thumb-wrap">
 				{% for project in site.data.settings.projects limit:6 %}
 					<a href="" class="thumb-unit">
-							<div class="thumb-image" data-url="/work/{{ project.folder }}/">
-								<img src="/assets/img/work/{{project.folder}}/thumb.jpg" alt="{{ project.name }}" />
+							<div class="thumb-image" data-url="{{ site.github.url }}/work/{{ project.folder }}/">
+								<img src="{{ site.github.url }}/assets/img/work/{{project.folder}}/thumb.jpg" alt="{{ project.name }}" />
 							</div>
 							<div class="thumb-overlay">
 								<div class="thumb-text"> 
@@ -19,8 +19,8 @@
 								</div>
 									
 								<div class="arrow">
-									<img class="bottom" src="/assets/img/icons/arrowWhite.png" alt="➤">
-									<img class="top" src="/assets/img/icons/arrow.png" alt="➤">
+									<img class="bottom" src="{{ site.github.url }}/assets/img/icons/arrowWhite.png" alt="➤">
+									<img class="top" src="{{ site.github.url }}/assets/img/icons/arrow.png" alt="➤">
 								</div>
 							</div>
 					</a>
@@ -28,8 +28,8 @@
 			</div>
 			<a href="" class="portfolio-link">Full Portfolio 
 				<div class="arrow">
-					<img class="bottom" src="/assets/img/icons/arrowWhite.png" alt="➤">
-					<img class="top" src="/assets/img/icons/arrow.png" alt="➤">
+					<img class="bottom" src="{{ site.github.url }}/assets/img/icons/arrowWhite.png" alt="➤">
+					<img class="top" src="{{ site.github.url }}/assets/img/icons/arrow.png" alt="➤">
 					</div>
 			</a>
 		</div>
