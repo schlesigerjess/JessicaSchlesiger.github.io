@@ -1,8 +1,8 @@
 # Build settings
 markdown: kramdown
-permalink: pretty
+#permalink: pretty
+permalink: ':title/'
 
-include: ['_includes/work']
 
 sass:
   sass_dir: assets/css
