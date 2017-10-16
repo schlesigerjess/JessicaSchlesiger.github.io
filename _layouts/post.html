@@ -7,21 +7,17 @@ permalink: /{{page.title}}
  <div class="post-bar">
       <div class="post Container">
 		<div class="post-intro">
-		<div class="post-intro-text"> <h1 class="page-title">{{page.title}}</h1>
-		The Qantas homepage was in need of some love. There wasn’t scope for a full redesign, so I needed to work with what was already there and give it a bit of a facelift. I’ll take you through the refreshed homepage and how it was designed.
+		<div class="post-intro-text"> <h1 class="page-title">{{ page.title }}</h1><h4>{{page.date | date: '%b %d, %Y'}}</h4>
+		{{ page.abstract }}
 		</div>
 			{% if page.img %}
-			<img class="post-intro-img" src={{ "/assets/img/work/" | prepend: site.baseurl | append : page.img}} alt="{{page.title}}">
+			<img class="post-intro-img" src="{{ site.baseurl }}/assets/img/work/{{ page.projectFolder }}/{{ page.img }}" alt="{{page.title}}">
 			{% endif %}
 		
 		</div>
         <div class="page-content">
           <article>
            
-            {% if page.date %}
-            <div class="date-byline"><span><i class="fa fa-calendar-o" aria-hidden="true"></i> 
-			{{page.date | date: '%b %d, %Y'}}</span></div>
-            {% endif %}
             {{page.content | markdownify}}
           </article>
         </div>

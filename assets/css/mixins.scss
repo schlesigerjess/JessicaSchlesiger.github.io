@@ -1,5 +1,5 @@
 /* default color, shading and border for grey boxes */
-@mixin greyBoxShade() {
+@mixin grayBoxShade() {
 	width: 100%;
 	background: $grayAccent-light;
 	border-top: 1px solid #fff;
@@ -12,3 +12,9 @@
 	border-bottom: 1px solid $grayAccent;
 	box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
 	}
+@mixin imgShade() {
+    -webkit-appearance: none;
+    -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+}
