@@ -47,12 +47,13 @@ blurb: >
 
 skills_programming:
 - {name: C, value: '90', example: has Example}
+- {name: JavaScript, value: '100', example: }
+- {name: Java, value: '100', example: }
+- {name: HTML, value: '90', example: has Example}
 - {name: CSS, value: '90', example: has Example}
 - {name: SASS, value: '90', example: has Example}
-- {name: Java, value: '100', example: }
-- {name: JavaScript, value: '100', example: }
 - {name: Jekyll, value: '70', example: has Exsdaample}
-- {name: HTML, value: '90', example: has Example}
+- {name: Liquid, value: '40', example: has Exsdaample}
 - {name: Lua, value: '40', example: has Example}
 - {name: OpenGL, value: '70', example: has Example}
 
@@ -60,15 +61,15 @@ skills_design:
 - {name: Adobe Illustrator, value: '70', example: has Example}
 - {name: Adobe Photoshop, value: '90', example: }
 - {name: Web Design, value: '80', example: }
-- {name: UML, value: '100', example: has Example}
 
 skills_utilities:
 - {name: Eclipse, value: '100', example: }
-- {name: Excel, value: '90', example: }
 - {name: Notepad++, value: '100', example: has Example}
 - {name: Github, value: '80', example: has Example}
 - {name: SourceForge, value: '70', example: has Example}
 - {name: Word, value: '90', example: }
+- {name: Excel, value: '90', example: }
+- {name: UML, value: '100', example: has Example}
 
 #-------------------------------
 # Work Section
