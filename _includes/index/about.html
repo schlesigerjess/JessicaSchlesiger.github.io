@@ -1,26 +1,17 @@
 <div class="about-bar">
-  <div class="about Container">
-	<div class="about-text">
-    <h1>About Me</h1>
-	<p>
-          I am a resourceful individual whose passion is solving complex problems. I seek challenges which 
-		  force mastery of new topics or concepts. In my free time I am often working on a new project or
-		   designing new digital art.	
-		   </p>
-		   <div class="about-icons">
-		   
-		   
-		   
-    {% for link in site.data.settings.social %}
-    <a href="{{ link.link }}" class="icon-{{ link.icon }}" alt="{{ link.icon }}"></a>
-    {% endfor %}
-		   
-		   
-		   
-		   </div>
-		
-		
-		
+	<div class="about container">
+		<div class="about-text">
+			<h1>About Me</h1>
+			<p>
+			  I am a resourceful individual whose passion is solving complex problems. I seek challenges which 
+			  force mastery of new topics or concepts. In my free time I am often working on a new project or
+			   designing new digital art.	
+			</p>
+			<div class="about-icons">
+				{% for link in site.data.settings.social %}
+					<a href="{{ link.link }}" class="icon-{{ link.icon }}" alt="{{ link.icon }}"></a>
+				{% endfor %}
+			</div>
 		</div>
-  </div>
+	</div>
 </div>
