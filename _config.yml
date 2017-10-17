@@ -6,6 +6,6 @@ permalink: ':title/'
 
 sass:
   sass_dir: assets/css
- # style: :nested
- style: compressed
+  style: :nested
+ #style: compressed
 
