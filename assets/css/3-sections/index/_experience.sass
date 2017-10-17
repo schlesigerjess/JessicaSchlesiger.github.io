@@ -10,16 +10,40 @@
 		text-decoration: none
 	+clearfix
 .exp-description, .exp-location
-	margin-bottom: 10px
+	+clearfix
 	h4
 		margin: 0 0 3px 0
 		padding: 0
+.exp-logo
+	margin: -5px 10px 0px 0px
+	height: 50px
+	width: auto
+	display: block
+	float: right
+.exp-listWrap
+	+clearfix
+.exp-listUnit
+	display: block
+	margin-left: 3%
+	line-height: 1.6em
+.exp-text
+	float: left
 @media only screen and (min-width: $lrgWidth)
+	.exp-listUnit
+		float: left
+		display: block
+		width: 47% !important
+	.exp-logo
+		float: none !important
+		margin: 0 !important
+		height: 60px !important
 	.exp-lockUp
 		max-width: 830px
 	.exp-location, .exp-description 
 		display: block
 		float: left
+	.exp-text
+		margin-bottom: 10px
 	.exp-description 
 		max-width: 68%
 	.exp-location
