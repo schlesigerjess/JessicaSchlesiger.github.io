@@ -8,9 +8,9 @@ email: Schlesiger.Jess@gmail.com
 # NOTE: The Logo and Background image are defined in the all.sass document.
 
 menu:
-- {name: About, url: '/index'}
-- {name: Portfolio, url: '/portfolio'}
-- {name: Contact, url: '/contact'}
+- {name: About, url: '/'}
+- {name: Portfolio, url: '/portfolio/'}
+- {name: Contact, url: '/contact/'}
 
 #-------------------------------
 # SEO Section
