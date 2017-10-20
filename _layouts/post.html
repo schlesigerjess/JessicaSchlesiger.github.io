@@ -4,22 +4,16 @@ permalink: /{{page.title}}
 ---
 
 
- <div class="post-bar">
-      <div class="post container">
-		<div class="post-intro">
-		<div class="post-intro-text"> <h1 class="page-title">{{ page.title }}</h1><h4>{{page.date | date: '%b %d, %Y'}}</h4>
+ <div class="post-abstract-bar">
+      <div class="post-abstract container">
+		<div class="post-abstract-text"> <h1 class="page-title">{{ page.title }}</h1><h4>{{page.date | date: '%b %d, %Y'}}</h4>
 		<p>{{ page.abstract }}</p>
 		</div>
 			{% if page.img %}
-			<img class="post-intro-img" src="{{ site.baseurl }}/assets/img/work/{{ page.projectFolder }}/{{ page.img }}" alt="{{page.title}}">
+			<img class="post-abstract-img" src="{{ site.baseurl }}/assets/img/work/{{ page.projectFolder }}/{{ page.img }}" alt="{{page.title}}">
 			{% endif %}
 		
-		</div>
-        <div class="page-content">
-          <article>
+		</div></div>
+	
            
             {{page.content | markdownify}}
-          </article>
-        </div>
-      </div>
-  </div>
