@@ -6,7 +6,7 @@ permalink: /portfolio
 ---
 
 <div class="portfolio-bar">
-	<div class="portfolio container">		
+	<div class="portfolio container">			
 		<div class="sample-wrap">
 			 <div class="thumb-wrap">
 				{% for project in site.data.settings.projects %}
@@ -18,13 +18,12 @@ permalink: /portfolio
 								<div class="thumb-text"> 
 									<strong>{{ project.name }}</strong>
 									<br>{{ project.subName }}
-									<br><br>{{ project.description }} 
+									<div class="thumb-description">
+									<p>{{ project.description }} </p>
+								</div>
 								</div>
 									
-								<div class="arrow">
-									<img class="bottom" src="{{ site.github.url }}/assets/img/icons/arrowWhite.png" alt="➤">
-									<img class="top" src="{{ site.github.url }}/assets/img/icons/arrow.png" alt="➤">
-								</div>
+								<div class="icon-arrow"></div>
 							</div>
 					</a>
 				{% endfor %}
