@@ -11,6 +11,8 @@ Icon
 
 # Thumbnails
 ._*
+assets/fonts/selection.json
+assets/css/base/syntax.css
 
 # Files that might appear on external disk
 .Spotlight-V100
@@ -31,4 +33,3 @@ _posts/
 
 ### Sass ###
 .sass-cache
-_includes/index/samples.html
