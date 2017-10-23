@@ -33,8 +33,8 @@ education_courses:
 - {name: Artificial Intelligence, id: CSC 462}
 - {name: Computer Networks, id: CSC 431}
 - {name: Senior Research Methods, id: CSC 498}
-- {name: Senior Research and Development, id: CSC 499}
 - {name: Big Data, id: CSC 493}
+- {name: Senior Research and Development, id: CSC 499}
 
 
 # Experience
