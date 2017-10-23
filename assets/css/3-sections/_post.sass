@@ -6,24 +6,21 @@
 	img
 		border-radius: 5px
 .post-abstract
+	padding: 0px 2% 0px 2%
 	line-height: 1.6em
 	margin: 0 auto
 	+clearfix
 .post-abstract-text
-	padding: 0 2% 0 2%
-	width: 46%
+	padding-bottom: 10px
+	width: 100%
 	display: block
-	float: left
 	h1
 		margin: 0
 		padding: 0
-		
 .post-abstract-img
+	width: 100%
 	height: 100%
-	width: 48%
 	display: block
-	float: left
-	
 .post-text-bar
 	@include grayBoxShade
 .post-text
@@ -33,7 +30,24 @@
 	p
 		max-width: 700px
 		margin: 0 auto
-
+.post-end-bar
+	@include whiteBoxShade
+	width: 100%
+.language-c
+	margin: 10px
+.post-end
+	padding: 2%
+.post-end-left, .post-end-right
+	width: 100%
+	display: block
+.post-end-left
+	pre
+		height: 500px
+.post-relatedWorks
+	width: 100%
+.post-end-wrap
+	+clearfix
+	
 .img-wrap
 	max-width: 700px
 	margin: 10px auto 20px auto
@@ -49,26 +63,12 @@
 .full
 	max-width: 100% !important
 
-.post-end-bar
-	@include whiteBoxShade
-
-.post-end
-	padding: 2%
-.post-end-left, .post-end-right
-	display: block
-	width: 46%
-	float: left
-.post-end-right
-	padding-left: 2%
-	padding-right: 1%
-.post-end-left
-	.highlight
-		overflow: scroll
-		max-height: 400px
-		padding: none
-	padding-right: 2%
-	padding-left: 1%
-.post-relatedWorks
-	width: 100%
-.post-end-wrap
-	+clearfix
+@media only screen and (min-width: $lrgWidth)
+	.post-end-left, .post-end-right
+		width: 48% !important
+		float: left
+	.post-end-right, .post-abstract-text
+		padding-right: 2%
+	.post-abstract-img, .post-abstract-text
+		width: 48% !important
+		float: left

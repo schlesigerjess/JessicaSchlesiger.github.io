@@ -11,99 +11,93 @@ tag: [C, OpenGL, glut]
 abstract: "For my Introduction To Computer Graphics course, I was tasked with recreation of an Artai game using OpenGL and C as a platform. The requirements included:
 
 <ul>
-<li>Pause menu</li>
-<li>One level</li>
-<li>Animation</li>
-<li>Interactive</li>
-<li>Likiness</li>
+	<li>Pause menu</li>
+	<li>One level</li>
+	<li>Animation</li>
+	<li>Interactive</li>
+	<li>Likiness</li>
 </ul>
 
 I chose to recreate Pheonix - a famous retro game which has similarities with Space Invadors and Galaga."
 
 ---
 <div class="post-text-bar">
-<div class="post-text container">
-
-<h1>The Process:</h1>
-<p>
-Recreating the original game's sprites was my initial step. The game's two main sprites were for the enemy ship, and the player's ship. Each would need an "idle" and "moving" sprite to swap between. While the task is relatively simple, it took over 200 lines of code carefully craft each pixel’s position in OpenGL. </p>
-
-
-<div class="img-wrap">
-	<div class="img-center">
-		<h3>Original vs Recreation</h3>
-		<img src="{{ site.baseurl }}/assets/img/work/{{ page.projectFolder }}/mySprites.png" alt="Recreated Sprites">
-		<img src="{{ site.baseurl }}/assets/img/work/{{ page.projectFolder }}/atariSprites.png" alt="Original Sprites">
-	</div>
-</div>
-<p>
-After crafting the sprites, it was time to for them to move - literally! Creating movement was reliant on two main concepts: having a timer set to update the screen every few milliseconds, and buffering the new screen in a hidden buffer to prevent screen flickering.
-</p>
-{% highlight c %}
-void idle (void){
-	Time = clock();
-	if (Time > ResetTime) {
-		ResetTime = ResetTime + 0.08 * CLOCKS_PER_SEC;
-		glutPostRedisplay(); // Update the screen
-		enemyCycle++;       // Increments enemy’s sprite cycle
-		cycle++; // Increments player’s sprite cycle
-	}
+	<div class="post-text container">
+		
+		<h1>The Process:</h1>
+		<p>
+		Recreating the original game's sprites was my initial step. The game's two main sprites were for the enemy ship, and the player's ship. Each would need an "idle" and "moving" sprite to swap between. While the task is relatively simple, it took over 200 lines of code carefully craft each pixel’s position in OpenGL. </p>
+		
+		
+		<div class="img-wrap">
+			<div class="img-center">
+				<h3>Original vs Recreation</h3>
+				<img src="{{ site.baseurl }}/assets/img/work/{{ page.projectFolder }}/mySprites.png" alt="Recreated Sprites">
+				<img src="{{ site.baseurl }}/assets/img/work/{{ page.projectFolder }}/atariSprites.png" alt="Original Sprites">
+			</div>
+		</div>
+		<p>
+			After crafting the sprites, it was time to for them to move - literally! Creating movement was reliant on two main concepts: having a timer set to update the screen every few milliseconds, and buffering the new screen in a hidden buffer to prevent screen flickering.
+		</p>
+		{% highlight c %}
+void idle(void) {
+  Time = clock();
+  if (Time > ResetTime) {
+    ResetTime = ResetTime + 0.08 * CLOCKS_PER_SEC;
+    glutPostRedisplay(); // Update the screen
+    enemyCycle++; // Increments enemy’s sprite cycle
+    cycle++; // Increments player’s sprite cycle
+  }
 }
-{% endhighlight %}
-
-<p>
-After calling the post redisplay, the idle function increments the cycle variable for both the player and enemies. Which sprite displayed is based on an even or odd value of the cycle. These variables are separate as the player’s movement input will be what triggers the ship to move. Changing the value after the post redisplay allowed the new screen to render in the hidden buffer pattern. By the time glutPostRedisplay() is called again, the new graphics had time to render and will instantly display - no flickering!
-
-</p>
-<div class="img-wrap">
-	<div class="img-center">
-		<img src="{{ site.baseurl }}/assets/img/work/{{ page.projectFolder }}/playerAnimation.gif" alt="Player Ship Animation">
-		<img src="{{ site.baseurl }}/assets/img/work/{{ page.projectFolder }}/enemyAnimation.gif" alt="Enemy Ship Animation">
+		{% endhighlight %}
+		
+		<p>
+			After calling the post redisplay, the idle function increments the cycle variable for both the player and enemies. Which sprite displayed is based on an even or odd value of the cycle. These variables are separate as the player’s movement input will be what triggers the ship to move. Changing the value after the post redisplay allowed the new screen to render in the hidden buffer pattern. By the time glutPostRedisplay() is called again, the new graphics had time to render and will instantly display - no flickering!
+			
+		</p>
+		<div class="img-wrap">
+			<div class="img-center">
+				<img src="{{ site.baseurl }}/assets/img/work/{{ page.projectFolder }}/playerAnimation.gif" alt="Player Ship Animation">
+				<img src="{{ site.baseurl }}/assets/img/work/{{ page.projectFolder }}/enemyAnimation.gif" alt="Enemy Ship Animation">
+			</div>
+		</div>
+		
+		<p>
+			With these basic elements in place, many of the basic operations such as: handling player’s move commands, shooting, and scoreboard, were easily implemented. The next largest piece to the game was creating hit detection.
+			The only form of hits in the game were the bullets every ship could shoot. This posed two requirements: move the bullet until reaching out of bound, or move the bullet until contacting a ship. To meet those requirements, the game would have to keep track of all bullets in play so their position could be incremented until reaching out of bounds.
+		</p>
+		
+		<div class="img-wrap full">
+			<div class="img-center">
+				<h3>Final Result<br>Original vs Recreation</h3>
+				<img width="48%" src="{{ site.baseurl }}/assets/img/work/{{ page.projectFolder }}/atariPheonix.jpg" alt="Original Pheonix">
+				<img width="48%" src="{{ site.baseurl }}/assets/img/work/{{ page.projectFolder }}/myPheonix.jpg" alt="Recreation Result">
+			</div>
+		</div>
+		
 	</div>
-</div>
-
-<p>
-	With these basic elements in place, many of the basic operations such as: handling player’s move commands, shooting, and scoreboard, were easily implemented. The next largest piece to the game was creating hit detection.
-	The only form of hits in the game were the bullets every ship could shoot. This posed two requirements: move the bullet until reaching out of bound, or move the bullet until contacting a ship. To meet those requirements, the game would have to keep track of all bullets in play so their position could be incremented until reaching out of bounds.
-</p>
-
-<div class="img-wrap full">
-	<div class="img-center">
-		<h3>Final Result<br>Original vs Recreation</h3>
-		<img width="48%" src="{{ site.baseurl }}/assets/img/work/{{ page.projectFolder }}/atariPheonix.jpg" alt="Original Pheonix">
-		<img width="48%" src="{{ site.baseurl }}/assets/img/work/{{ page.projectFolder }}/myPheonix.jpg" alt="Recreation Result">
-	</div>
-</div>
-
-</div>
 </div>
 
 <div class="post-end-bar">
 	<div class="post-end container">
-	<div class="post-end-wrap">
-		<div class="post-end-right">
-<h2>Ending Statement</h2>
-<p>
-As the first large project in OpenGL, this was a major accomplishment. The final project was more than the professor expected, granting a bonus of 10 points.
-While this project was successful, I do feel some aspects could have been better planned. With better planning of my x or Y function, it would have saved me grief when coding X or Y. 
-</p>
-
-		</div>
-		<div class="post-end-left">
-		
-{% highlight c %}
+		<div class="post-end-wrap">
+			<div class="post-end-right">
+				<h1>Ending Statement</h1>
+				<p>
+					As the first large project in OpenGL, this was a major accomplishment. The final project was more than the professor expected, granting a bonus of 10 points.
+					While this project was successful, I do feel some aspects could have been better planned. With better planning of my x or Y function, it would have saved me grief when coding X or Y. 
+				</p>
+				
+			</div>
+			<div class="post-end-left">
+				<h1>Source Code:</h1>
+				{% highlight c %}
 {% include pheonix.txt %}
-{% endhighlight %}
+				{% endhighlight %}
+				
+			</div>
+		</div>
+		<div class="post-relatedWorks"><h2>Related Projects: </h2>Coming soon!</div>
 		
-		</div>
-		</div>
-		<div class="post-relatedWorks"><br><br>
-		** Similar to portfolio look, only one row of suggestions **
-		** Similar to portfolio look, only one row of suggestions **
-		** Similar to portfolio look, only one row of suggestions **
-		** Similar to portfolio look, only one row of suggestions **
-		** Similar to portfolio look, only one row of suggestions **
-		</div>
-
 	</div>
 </div>
