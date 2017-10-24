@@ -1,0 +1,149 @@
+---
+layout: post
+title: "Phoenix Atari 2600"
+projectFolder: "proj-1"
+description: "Recreation of the Atari arcade game Phenoix using OpenGL and C for my Intro To Computer Graphics project."
+date: 2016-10-25
+img: myPhoenix.png
+tag: [C, OpenGL, glut]
+
+
+abstract: "For my Introduction To Computer Graphics course, I was tasked with recreation of an Atari game using OpenGL, glut, and C as a platform. The project requirements were:
+
+<ul>
+	<li>Pause menu</li>
+	<li>One level</li>
+	<li>Animation</li>
+	<li>Interactive</li>
+	<li>Likiness</li>
+</ul>
+
+I chose to recreate Phoenix - a famous retro arcade game which has similarities to Space Invadors and Galaga."
+---
+<div class="post-text-bar">
+	<div class="post-text container">
+		
+		<h1>The Process:</h1>
+		<p>
+		My initial step was recreating the original game's sprites. The game's two main sprites were the enemy ship, and the player's ship. Each would also need an "idle" and "moving" sprite to swap between. While the task is relatively simple, it took roughly 200 lines of code to carefully craft each pixel’s position in OpenGL. 
+		</p>
+		
+		
+		<div class="img-wrap">
+			<div class="img-center">
+				<h3>Original vs Recreation</h3>
+				<img src="{{ site.baseurl }}/assets/img/work/{{ page.projectFolder }}/atariSprites.png" alt="Original Sprites">
+				<img src="{{ site.baseurl }}/assets/img/work/{{ page.projectFolder }}/mySprites.png" alt="Recreated Sprites">
+			</div>
+		</div>
+		<p>
+			After crafting the sprites, it was time to for them to move - literally! Creating movement was reliant on two main concepts: having a timer set to update the screen every few milliseconds, and rendering the new screen in a hidden buffer to prevent screen flickering.
+		</p>
+		{% highlight c %}
+void idle(void) {
+  Time = clock();
+  if (Time > ResetTime) {
+    ResetTime = ResetTime + 0.08 * CLOCKS_PER_SEC;
+    glutPostRedisplay(); // Update the screen
+    enemyCycle++; // Increments enemy’s sprite cycle
+    cycle++; // Increments player’s sprite cycle
+  }
+}
+		{% endhighlight %}
+		
+		<p>
+			After calling the post redisplay, the idle function increments the cycle variable for both the player and enemies. Which sprite displayed is based on an even or odd value of the cycle. These variables are separate as the player’s movement input will be the trigger for the ship to move. Changing the cycle's value
+after <i>glutPostRedisplay()</i> allowed the new screen to render in the hidden buffer. By the time <i>glutPostRedisplay()</i> is called again, the new graphics had time to render and will instantly display - no flickering!
+			
+		</p>
+		<div class="img-wrap">
+			<div class="img-center">
+				<img src="{{ site.baseurl }}/assets/img/work/{{ page.projectFolder }}/playerAnimation.gif" alt="Player Ship Animation">
+				<img src="{{ site.baseurl }}/assets/img/work/{{ page.projectFolder }}/enemyAnimation.gif" alt="Enemy Ship Animation">
+			</div>
+		</div>
+		
+		<p>
+			With these basic elements in place, many of the basic operations such as: handling player’s move commands, shooting, 
+			and scoreboard, were easily implemented. The next large piece for the game was creating hit detection. 
+			The only form of "hits" in the game were the bullets every ship could shoot. 
+			The bullets posed two terminal requirements: move the bullet until out of bounds, 
+			or move the bullet until contacting a ship. To meet these requirements, an array for all the bullets would be necessary. This array would track each bullet’s position; that way it could be incremented until one of the terminal states were met.
+			
+			</p>
+		{% highlight c %}
+/** Recognizes hits on enemies **/
+void hitRecognition(int bulletToCheck) {
+  if (pause == FALSE) {
+    for (int j = 0; j < STARTING_ENEMIES; j++) {
+      if (enemies[j].active == TRUE && shipBullets[bulletToCheck].active == TRUE) {
+        int difference = abs(shipBullets[bulletToCheck].x - (enemies[j].x + 10 + moveEnemy));
+        if (difference < 20) {
+          difference = abs(shipBullets[bulletToCheck].y + 10 - enemies[j].y);
+          if (difference < 20) {
+            enemies[j].active = FALSE;
+            shipBullets[bulletToCheck].active = FALSE;
+            score = score + 20;
+            numAliveEnemies--;
+          }
+        }
+      }
+    }
+  }
+}
+		{% endhighlight %}
+		
+		<p>
+		Above is the hit recognition method for enemy ships. This method checks all currently active ship's position against the player's bullet's positions. 
+		If the bullet is within 20 pixels of an enemy's ship, it will count as a hit. When a hit occurs, the enemy and the bullet are set to inactive, and the scoreboard is updated. Hit recognition was easily the hardest method to create for this project.
+		
+		
+		</p>
+		
+		
+		<div class="img-wrap full">
+			<div class="img-center">
+				<h3>Final Result<br>Original vs Recreation</h3>
+				<img width="48%" src="{{ site.baseurl }}/assets/img/work/{{ page.projectFolder }}/originalPhoenix.png" alt="Original Pheonix">
+				<img width="48%" src="{{ site.baseurl }}/assets/img/work/{{ page.projectFolder }}/myPhoenix.png" alt="Recreation Result">
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+<div class="post-end-bar">
+	<div class="post-end container">
+		<div class="post-end-wrap">
+			<div class="post-end-right">
+				<h1>Ending Statement</h1>
+				<p>
+					As the first large project in OpenGL, this was a major accomplishment. The final project was more than the professor expected and granted a bonus of 10 points.
+					While this project was successful, I do feel some aspects could have been better planned. 
+					With better planning for the pause function, it would have saved me grief when coding the idle function and hit recognition. 
+					<br><br>
+					
+					No future progress is planned; however, this project was very fun and challenging to do and I'd happily do this again as a side project. 
+				</p>
+				
+			</div>
+			<div class="post-end-left">
+				<h1>Source Code:</h1>
+				
+		<div class="img-wrap full">
+			<div class="img-center">
+			<img width="100%" src="{{ site.baseurl }}/assets/img/work/{{ page.projectFolder }}/gameplay.gif" alt="Original Pheonix">
+					
+				</div>
+		</div>
+
+					<a href="https://github.com/schlesigerjess/Phoenix-Atari-2600" alt="{{ link.icon }}" target="_blank" rel="noopener"><b class="icon-github"></b> See full source at Github.</a>
+				
+				
+				
+			</div>
+		</div>
+		<div class="post-relatedWorks"><h2>Related Projects: </h2>Coming soon!</div>
+		
+	</div>
+</div>
