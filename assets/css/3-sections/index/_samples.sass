@@ -1,5 +1,5 @@
 .sample-bar 
-	@include grayBoxShade 
+	@include whiteBoxShade
 	table
 		text-align: center
 .sample
@@ -17,8 +17,8 @@
 	height: 200px
 	position: relative
 	overflow: hidden
-	background-color: #fff
-	border: 1px solid $grayAccent
+	background-color: $grayAccent-light
+	border: 1px solid $mainAccent
 	&:hover 
 		.thumb-overlay
 			background: fade-out($mainAccent-dark, .1)
@@ -63,8 +63,8 @@
 	margin-top: 5px
 .portfolio-link
 	text-decoration: none
-	background-color: #fff
-	border: 1px solid $grayAccent
+	background-color: $grayAccent-light
+	border: 1px solid $mainAccent
 	padding: 10px 10px 5px 10px
 	border-radius: 5px
 	font-weight: bold

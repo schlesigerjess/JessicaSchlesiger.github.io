@@ -40,12 +40,12 @@ education_courses:
 # Experience
 hullEntertainment_duties:
 - {name: Script creation}
-- {name: Maintaining file system}
-- {name: Sumarize payroll}
-- {name: Document creation}
 - {name: Scheduling events & staff}
 - {name: Human resources}
 - {name: Onboarding}
+- {name: Maintaining file system}
+- {name: Sumarize payroll}
+- {name: Document creation}
 - {name: Newsletter}
 
 # Skills
