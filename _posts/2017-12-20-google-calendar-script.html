@@ -21,10 +21,39 @@ The project was modified from the customized version to act as Google Add-on for
 	<div class="post-text container">
 		
 		<h1>The Process:</h1>
-		<p>
-		Parsing the upcoming event spreadsheet was the first step in this project. There are two types of data in this project: critical and optional. Critical data is basic data necessary to create an event on a google calendar. Critical data included: a date, a time, a title, and an unique event ID. Should the user attempt to create an event without one of these, it will change the cell’s background color to red, and then continue adding the remaining events. Optional data is data that some events may have. Optional data included: description, location, and calendar. 
+		<p>This script has two phases: parsing the spreadsheet, and creating or updating events on Google Calendar.
 		</p>
-		
+		<h2>Parsing The Spreadsheet.</h2>
+		<p>Before coding, I had to identify the possible data coming in and its importance when creating an event. In this case, there are two types of data: optional and critical. 
+<br><br>Optional data are details that some but not all events may have. Optional data includes: a description, a location, and a calendar. Should no calendar be specified, the event is created on the user’s default calendar.
+<br><br>Critical data are basic details necessary to create an event on a google calendar. Critical data includes: an event ID, a date, a start time, a duration or an end time, and a title. With these basic concepts in place, a spreadsheet which implements these edge cases is below.
+</p>
+<br><br>img here<br><br>
+<p>Deciding how to handle errors was my next step. Should one or more events be invalid, that does not imply all events logged are invalid. Each event is independent, and should be logged regardless. So, this means the script needs to mark bad entries while continuing to push events to the calendar. 
+</p>
+{% highlight javascript %}
+function main() {
+  data = getSpreadsheetData();
+  findTitles();
+  for (var row=1;row<lastRow;row++) {
+    try {                          // Try to parse event data
+      getDuration(row);
+      var calendar = getCalendar(row);
+      setCell(title, row, null, "#c6ffc3", ""); // successful
+    } catch (errorMsg) {
+      setCell(title, row, null, "#ffb7ab", "Error - "+errorMsg); // error
+    }
+}
+{% endhighlight %}
+
+<p>Should an error arise, the script will change the cell’s background color to red, add an error message in a note, 
+and then continue. Upon fixing the error and re-running the script, it will alter the background color to green and clear the note. The image below displays what the spreadsheet looks like after being run.
+</p>
+<br><br>img here<br><br>
+<h2>Google Calendar Event Creation.</h2>
+<p>Writeup is still a WIP :) </p>
+
+	
 	</div>
 </div>
 

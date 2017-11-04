@@ -14,7 +14,8 @@ permalink: /{{page.title}}
 			{% endfor %}
 		</div>
 		{% if page.img %}
-		<img class="post-abstract-img" src="{{ site.baseurl }}/assets/img/work/{{ page.projectFolder }}/{{ page.img }}" alt="{{page.title}}">
+		<div class="post-abstract-img">
+		<img src="{{ site.baseurl }}/assets/img/work/{{ page.projectFolder }}/{{ page.img }}" alt="{{page.title}}"></div>
 		{% endif %}
 		
 		
