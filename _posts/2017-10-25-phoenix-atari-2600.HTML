@@ -50,12 +50,7 @@ void idle(void) {
   }
 }
 		{% endhighlight %}
-		
-		<p>
-			After calling the post redisplay, the idle function increments the cycle variable for both the player and enemies. Which sprite displayed is based on an even or odd value of the cycle. These variables are separate as the player’s movement input will be the trigger for the ship to move. Changing the cycle's value
-after <i>glutPostRedisplay()</i> allowed the new screen to render in the hidden buffer. By the time <i>glutPostRedisplay()</i> is called again, the new graphics had time to render and will instantly display - no flickering!
-			
-		</p>
+		<p>	After calling the post redisplay, the idle function increments the cycle variable for both the player and enemies. Which sprite displayed is based on an even or odd value of the cycle. These variables are separate as the player’s movement input will be the trigger for the ship to move. Changing the cycle's value after <i>glutPostRedisplay()</i> allowed the new screen to render in the hidden buffer. By the time <i>glutPostRedisplay()</i> is called again, the new graphics had time to render and will instantly display - no flickering!</p>
 		<div class="img-wrap">
 			<div class="img-center">
 				<img src="{{ site.baseurl }}/assets/img/work/{{ page.projectFolder }}/playerAnimation.gif" alt="Player Ship Animation">
@@ -69,8 +64,7 @@ after <i>glutPostRedisplay()</i> allowed the new screen to render in the hidden 
 			The only form of "hits" in the game were the bullets every ship could shoot. 
 			The bullets posed two terminal requirements: move the bullet until out of bounds, 
 			or move the bullet until contacting a ship. To meet these requirements, an array for all the bullets would be necessary. This array would track each bullet’s position; that way it could be incremented until one of the terminal states were met.
-			
-			</p>
+		</p>
 		{% highlight c %}
 /** Recognizes hits on enemies **/
 void hitRecognition(int bulletToCheck) {
@@ -92,12 +86,9 @@ void hitRecognition(int bulletToCheck) {
   }
 }
 		{% endhighlight %}
-		
 		<p>
 		Above is the hit recognition method for enemy ships. This method checks all currently active ship's position against the player's bullet's positions. 
 		If the bullet is within 20 pixels of an enemy's ship, it will count as a hit. When a hit occurs, the enemy and the bullet are set to inactive, and the scoreboard is updated. Hit recognition was easily the hardest method to create for this project.
-		
-		
 		</p>
 		
 		
