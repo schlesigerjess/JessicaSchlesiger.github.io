@@ -31,7 +31,7 @@ The project was modified from the customized version to act as Google Add-on for
 <br><br>img here<br><br>
 <p>Deciding how to handle errors was my next step. Should one or more events be invalid, that does not imply all events logged are invalid. Each event is independent, and should be logged regardless. So, this means the script needs to mark bad entries while continuing to push events to the calendar. 
 </p>
-{% highlight javascript %}
+	{% highlight javascript %}
 function main() {
   data = getSpreadsheetData();
   findTitles();
@@ -44,15 +44,80 @@ function main() {
       setCell(title, row, null, "#ffb7ab", "Error - "+errorMsg); // error
     }
 }
-{% endhighlight %}
+	{% endhighlight %}
 
 <p>Should an error arise, the script will change the cell’s background color to red, add an error message in a note, 
 and then continue. Upon fixing the error and re-running the script, it will alter the background color to green and clear the note. The image below displays what the spreadsheet looks like after being run.
 </p>
 <br><br>img here<br><br>
 <h2>Google Calendar Event Creation.</h2>
-<p>Writeup is still a WIP :) </p>
 
+<p>Two main concepts that must be covered: update existing or create the event, and parse the given data for the event. Checking for existing events required an event ID to be provided. The method checks for the event on a given calendar with the event ID that was generated when initially creating the event. 
+</p>
+
+	{% highlight javascript %}
+/* 
+* If the event exists, update the event then return true
+* If the event does not exist, return false
+*/
+function eventExists(row, calendar) {
+  var checkExistingEvents = calendar.getEventById(data[row][eventIDCol]);
+  if (checkExistingEvents != null) {
+    updateEvent(row, checkExistingEvents, calendar); 
+    return true;
+  } else
+    return false;
+}
+	{% endhighlight %}
+	
+<p>Should the above method find nothing, the following method is called to create the new event.</p>
+
+	{% highlight javascript %}
+/**
+* Creates the event on Google Calendar
+* Sets the cell to the returned event ID so it can be found later
+**/
+function createEvent(row, calendar) {
+  var eventID = calendar.createEvent(data[row][title], startDate, endDate, 
+                                     {location: data[row][address], 
+                                      description: data[row][description],
+                                      colorId: data[row][eventColor]});
+  setCell(eventIDCol, row, eventID.getId());  
+}
+	{% endhighlight %}
+
+<p>This mainly utilized the <i>createEvent()</i> method provided in Google Calendar's API; however, the important part is the startDate and endDate variables. These variables are set using a method that creates two dates based on parsed data.</p>
+
+	{% highlight javascript %}
+/**
+* Gets the startDate and endDate
+**/
+function getDuration(row) {
+  startDate = new Date(Date.parse(data[row][dateHeader]
+                                  +" "+data[row][startTime]));
+  checkDate(startDate, "Date and/or Start Time");
+  
+  if (data[row][duration].length > 0) {
+    endDate = new Date(startDate);
+    addHours(endDate, Number(data[row][duration]));
+  } else if (data[row][endTime].length > 0) {
+    endDate = new Date(data[row][dateHeader]+" "+data[row][endTime]);  
+  } else
+    throw ("user does not have either a duration or an endTime");
+  
+  checkDate(endDate, "End Time or Duration");
+  if (endDate <= startDate) 
+    throw ("something wrong with end time or start time.");
+}
+
+/** Checks if our created date is valid **/
+function checkDate(date, string) {
+  if (isNaN(date.getTime())) 
+    throw ("cell not valid: "+string); 
+}
+	{% endhighlight %}
+
+	<p>Surprisinly, the hardest part was parsing the date information. Since the user had the liberty of using either a duration or end time, the method needed mulitple checks in place to handle the options. In addition, parsing a date from a string can be unreliable should it be formatted incorrectly or with a spelling error, and thus each date required a validity check. In the end, the method does account for any user error, but addmittingly is sensitive to the information given to it.</p><br><br>
 	
 	</div>
 </div>
@@ -60,15 +125,28 @@ and then continue. Upon fixing the error and re-running the script, it will alte
 <div class="post-end-bar">
 	<div class="post-end container">
 		<div class="post-end-wrap">
-			<div class="post-end-right">
+			<div class="post-end-left">
 				<h1>Ending Statement</h1>
 				<p>
+				Overall, this project was highly sucessful. The version for the company cut down hundreds of hours spent synconizing events, and garunteed the data between the portal and our Google Calendar was up to date. 
+				<br><br>
+				This project was an introduction to Google's API. Google's API writeup is fantastic, and I highly reccomend utilizing the 
+
+<a href="https://developers.google.com/apps-script/reference/spreadsheet/" target="_blank" rel="noopener">Spreadsheet API</a> and 
+
+
+<a href="https://developers.google.com/apps-script/reference/calendar/" target="_blank" rel="noopener">Google Calendar API</a> 
+
+pages as references for all the methods used. Also, applications do have some limitations on quotas such as a runtime of six minutes. <a href="https://developers.google.com/apps-script/guides/services/quotas" target="_blank" rel="noopener">See the list of Google's Service Quotas for more details.</a>
 					</p>
 				
 			</div>
-			<div class="post-end-left">
-				<h1>Source Code:</h1>
-				
+			<div class="post-end-right">
+		<div class="img-wrap full">
+				<img width="100%" src="{{ site.baseurl }}/assets/img/work/{{ page.projectFolder }}/filler.jpg" alt="Sample Image"><br><br>
+			
+				<a href="https://github.com/schlesigerjess/Spreadsheet-To-Google-Calendar" alt="{{ link.icon }}" target="_blank" rel="noopener"><b class="icon-github"></b> See full source and setup instructions at Github.</a>
+				</div>
 			</div>
 		</div>
 		<div class="post-relatedWorks"><h2>Related Projects: </h2>Coming soon!</div>
