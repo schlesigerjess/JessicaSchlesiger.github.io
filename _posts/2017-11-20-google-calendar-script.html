@@ -3,7 +3,7 @@ layout: post
 title: "Google Calendar Script"
 projectFolder: "proj-4"
 description: "Scheduling script which pulls dates from a spreadsheet and updates or creates the events on designated Google Calendars."
-date: 2016-12-20
+date: 2016-11-20
 img: abstract-img.jpg
 tag: [JavaScript, Google Spreadsheet, Google Calendar]
 
@@ -14,7 +14,7 @@ abstract: "During my employment at Hull Entertainment with Paint Nite and Plant 
 <li>Update or Create events on Google Calendar
 <li>Events are on separate calendars based on their regions
 </ul>
-The project was modified from the customized version to act as Google Add-on for anyone to use as of October 24th, 2017."
+The project is modified from the customized version to act as a free to use script for anyone to use."
 
 ---
 <div class="post-text-bar">
@@ -117,7 +117,7 @@ function checkDate(date, string) {
 }
 	{% endhighlight %}
 
-	<p>Surprisinly, the hardest part was parsing the date information. Since the user had the liberty of using either a duration or end time, the method needed mulitple checks in place to handle the options. In addition, parsing a date from a string can be unreliable should it be formatted incorrectly or with a spelling error, and thus each date required a validity check. In the end, the method does account for any user error, but addmittingly is sensitive to the information given to it.</p><br><br>
+	<p>Surprisingly, the hardest part was parsing the date information. Since the user had the liberty of using either a duration or end time, the method needed mulitple checks in place to handle the options. In addition, parsing a date from a string can be unreliable should it be formatted incorrectly or with a spelling error, and thus each date required a validity check. In the end, the method does account for any user error, but addmittingly is sensitive to the information given to it.</p><br><br>
 	
 	</div>
 </div>
@@ -130,14 +130,14 @@ function checkDate(date, string) {
 				<p>
 				Overall, this project was highly sucessful. The version for the company cut down hundreds of hours spent synconizing events, and garunteed the data between the portal and our Google Calendar was up to date. 
 				<br><br>
-				This project was an introduction to Google's API. Google's API writeup is fantastic, and I highly reccomend utilizing the 
+				This project introduced me to Google's API. Google's API writeup is fantastic, and I highly reccomend utilizing the 
 
 <a href="https://developers.google.com/apps-script/reference/spreadsheet/" target="_blank" rel="noopener">Spreadsheet API</a> and 
 
 
 <a href="https://developers.google.com/apps-script/reference/calendar/" target="_blank" rel="noopener">Google Calendar API</a> 
 
-pages as references for all the methods used. Also, applications do have some limitations on quotas such as a runtime of six minutes. <a href="https://developers.google.com/apps-script/guides/services/quotas" target="_blank" rel="noopener">See the list of Google's Service Quotas for more details.</a>
+pages as references for all the methods used. Also, applications do have some limitations on quotas such as a runtime of six minutes and frequency of queries. Due to this limitation, the script required a X second delay after every Xth event updated. <a href="https://developers.google.com/apps-script/guides/services/quotas" target="_blank" rel="noopener">See the list of Google's Service Quotas for more details.</a>
 					</p>
 				
 			</div>
