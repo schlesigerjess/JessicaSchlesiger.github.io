@@ -1,28 +1,28 @@
-.post-end-bar
+.project-end-bar
 	@include whiteBoxShade-end
 	width: 100%
 	img
-		border-radius: 5px
-.post-end
+		@include imgBorder
+.project-end
 	padding: 2%
 	h1
 		margin-top: 0px
-.post-end-left, .post-end-right
+.project-end-left, .project-end-right
 	width: 100%
 	display: block
-.post-relatedWorks
+.project-relatedWorks
 	width: 100%
-.post-end-wrap
+.project-end-wrap
 	+clearfix
-.post-end-right
+.project-end-right
 	a
 		text-decoration: none
 	.icon-github
 		font-size: 20px
 @media only screen and (min-width: $lrgWidth)
-	.post-end-left
+	.project-end-left
 		padding-right: 2%
-	.post-end-left, .post-end-right
+	.project-end-left, .project-end-right
 		width: 48% !important
 		display: table-cell !important
 		vertical-align: middle

@@ -1,8 +1,12 @@
 # Build settings
 markdown: kramdown
 #permalink: pretty
-permalink: '/portfolio/:title/'
+#permalink: '/portfolio/:title/'
 
+collections:
+  portfolio:
+    output: true
+    permalink: /portfolio/:title
 
 sass:
   sass_dir: assets/css

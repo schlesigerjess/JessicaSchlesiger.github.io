@@ -1,28 +1,26 @@
-.post-abstract-bar
+.project-abstract-bar
 	@include whiteBoxShade-starter
 	padding: 30px 0px 15px 0px
-.post-abstract
+.project-abstract
+	h1
+		margin: 0
 	padding: 0px 2% 0px 2%
 	line-height: 1.6em
 	margin: 0 auto
 	+clearfix
-.post-abstract-text, .post-abstract-img
+.project-abstract-text, .project-abstract-img
 	width: 100%
 	display: block
 	padding-bottom: 10px
-.post-abstract-text
-	h1
-		margin: 0
-.post-abstract-img
+.project-abstract-img
 	img
 		width: 100%
-		border-radius: 5px
 		@include imgBorder
 		
-@media only screen and (min-width: $lrgWidth)
-	.post-abstract-text
+@media only screen and (min-width: 830px)
+	.project-abstract-text
 		padding-right: 2%
-	.post-abstract-img, .post-abstract-text
+	.project-abstract-img, .project-abstract-text
 		width: 48% !important
 		display: table-cell !important
 		vertical-align: middle
