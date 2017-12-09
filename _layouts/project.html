@@ -41,6 +41,14 @@ permalink: /{{page.title}}
 <div class="project-end-bar">
 	<div class="project-end container">
 		<div class="project-end-wrap">
+		{% if page.end %}
+			<div class="project-end">
+				<h1>Ending Statement</h1>
+				<p>
+				{{ page.end }}
+				</p>
+			</div>
+		{% else %}
 			<div class="project-end-left">
 				<h1>Ending Statement</h1>
 				<p>
@@ -50,6 +58,7 @@ permalink: /{{page.title}}
 			<div class="project-end-right">			
 				{{ page.end-right | markdownify }}
 			</div>
+		{% endif %}
 		</div>
 		<div class="project-relatedWorks"><h2>Related Projects: </h2>Coming soon!</div>
 	</div>

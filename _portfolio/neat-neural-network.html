@@ -1,0 +1,63 @@
+---
+layout: project
+title: NEAT Neural Network
+projectFolder: NEAT-neural-network
+description: Testing for domain-general intelligence using a NEAT Neural Network in Super Mario World.
+dated: 12-04-2017
+img: filler.jpg
+tag: [Adobe Illustrator, Adobe Photoshop]
+
+
+abstract: "For my Shippensburg University capstone project, I explored developing an artificial intelligence which has the ability to solve problems it has not been trained against, also known as domain-general intelligence, in <i>Super Mario Bros (USA)</i> utilizing a NEAT neural network. To determine if the NEAT neural network is capable of developing domain-general intelligence within the game <i>Super Mario Bros (USA)</i>, I committed roughly 120 person-hours and subjected the experiment to the following governing propositions: only above-ground levels and chosen levels must share a similar theme for platforms and obstacles.
+"
+
+end-left: "While the possibility of domain-general intelligence cannot be dismissed in this case, there is a constant 1/3rd of the population differing from the rest of the group. For future work, I would reccommend possibily testing on mulitple levels rather than just one, and/or altering the training method with either a longer duration, varrying training levels, or perhaps having a minimal fitness requirement."
+
+end-right: <img width="100%" src="/assets/img/project/digital-art/filler.jpg" alt="Sample Image"><br><br>
+---
+
+<p>
+NEAT stands for: <b>N</b>euro<b>E</b>volution of <b>A</b>ugmenting <b>T</b>opologies. It is an algorithm developed by Kenneth O. Stanley and Risto Miikkulainen back in 2002. The NEAT neural network algorithm aims to address the computational limitations of traditional neural networks by utilizing genetic algorithms to produce better results with simplified a neural network. It utilizes the key concepts of genetic algorithms, such as genomes, mutations, and species breeding, to produce an optimized and minimalized topology. For further details, please see my full research paper.<br><br>
+
+	
+My research was inspired by a YouTuber called SethBling. He utilized a NEAT neural network to train an artificial intelligence, or AI, to play Super Mario World.</p><br><br>
+<div class="iframeContainer">
+<iframe src="https://www.youtube.com/embed/qv6UVOQ0F44" frameborder="0" gesture="media" allowfullscreen></iframe>
+</div>
+<p><br>His research proved an AI could be trained to play Super Mario World; however, it had no evidence that the AI is learning how to play rather than just memorizing the level. This is where my research explores. Based on the governing propositions set earlier, I chose <i>Yoshi's Island 1</i> as my training level, and <i>Yoshi's Island 2.</i> <br></p>
+	
+<div class="img-wrap">
+	<div class="img-center">
+		<img width="100%" src="{{ site.baseurl }}/assets/img/project/{{ page.projectFolder }}/sss.png" alt="Initial Spreadsheet">
+	</div>
+</div>	
+
+<p>
+Both levels have the same general theme, yet obstales are positioned differently and it introduces new enemies. I trained 32 AIs on <i>Yoshi's Island 1</i> with the desire of at least 30 qualifiers. I allowed each roughly 9 hours on overclocked computers, and then cut back to the last completed generation. If the AI's duration was within 8 hours +/- 30 minutes, then it qualified for the testing set. Only AI #19 did not qualify. Below is the max fittness achieved in the AI's most recent generation. Around 4,000 fitness is the completetion of the level.</p>
+
+<div class="img-wrap">
+	<div class="img-center">
+		<img width="100%" src="{{ site.baseurl }}/assets/img/project/{{ page.projectFolder }}/filler.jpg" alt="Initial Spreadsheet">
+	</div>
+</div>	
+
+<p>
+This chart shows roughly 2/3rds of the population is around the 4,000 fittness mark. For reasons unknown, a 1/3rd of the population is not up to par. This could simply be due to random chance, or even just bad luck. All of these AIs were then tested against <i>Yoshi's Island 2</i>, and their fitness is graphed below. 
+</p>
+
+<div class="img-wrap">
+	<div class="img-center">
+		<img width="100%" src="{{ site.baseurl }}/assets/img/project/{{ page.projectFolder }}/filler.jpg" alt="Initial Spreadsheet">
+	</div>
+</div>	
+<p>
+This graph is exteremly similar to the training set. Roughly 2/3rds of the population is around the 4,000 fittness mark, and again 1/3rd is different from the group. Both of the datasets are graphed together below. 
+</p>
+<div class="img-wrap">
+	<div class="img-center">
+		<img width="100%" src="{{ site.baseurl }}/assets/img/project/{{ page.projectFolder }}/filler.jpg" alt="Initial Spreadsheet">
+	</div>
+</div>	
+<p>
+	These graphs have a clear relation. If there was no domain general intelligence, the test data set should be significantly lower in fitness score than the training data set; however, this is clearly not the case with two thirds of the population having scores around 4,000. While this is great news, there is around a third of the population constantly diverging from the general population. In this case, roughly 1/3rd of the AIs have flip flopped in scores. Reasons for this is unknown; it could be purely due to good or bad luck, or some unforeseen issue with the training methods.<br><br>
+	</p>
