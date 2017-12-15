@@ -3,28 +3,37 @@
 		<h1>Sample Projects</h1>
 		<div class="sample-wrap">
 			 <div class="thumb-wrap">
-				{% for project in site.data.settings.projects limit:6 %}
-					<a href="" class="thumb-unit">
-							<div class="thumb-image" data-url="{{ site.github.url }}/work/{{ project.folder }}/">
-								<img src="{{ site.github.url }}/assets/img/work/{{project.folder}}/thumb.jpg" alt="{{ project.name }}" />
-							</div>
-							<div class="thumb-overlay">
-								<div class="thumb-text"> 
-									<strong>{{ project.name }}</strong>
-									<br>{{ project.subName }}
-									<div class="thumb-description">
-									<p>{{ project.description }} </p>
-								</div>
-								</div>
+				{% for page in site.portfolio limit:4 %}
+					<a href="{{ page.url }}" class="thumb-unit">
+						<div class="thumb-image {{page.align}}" data-url="{{ page.url }}">
+							<img src="{{ site.baseurl }}/assets/img/project/{{ page.projectFolder }}/{{ page.img }}" alt="{{page.title}}">
+						</div>
+						<div class="thumb-overlay">
+							<div class="thumb-text"> 
+								<strong>{{ page.title }}</strong><br>
+								{% assign tagString = "" %}
+								{% for tag in page.tags %}
+									{% assign tempString = tagString %}
+									{% if forloop.last == false %}
+										{% capture tagString %} {{tagString}}{{tag}}, {% endcapture %}
+									{% else %}
+										{% capture tagString %} {{tagString}} & {{tag}} {% endcapture %}
+									{% endif %}
 									
-								<div class="icon-arrow"></div>
+								{% endfor %}
+										
+								<i>{{tagString}}</i>
+								
+								<div class="thumb-description">
+									<p>{{ page.description }} </p>
+								</div>
 							</div>
+
+						</div>
 					</a>
 				{% endfor %}
 			</div>
-			<a href="{{ site.github.url }}/portfolio" class="portfolio-link">Full Portfolio 
-				<div class="icon-arrow"></div>
-			</a>
+			<a href="{{ site.github.url }}/portfolio" class="portfolio-link">Full Portfolio<div class="icon-arrow"></div></a>
 		</div>
 	</div>
 </div>

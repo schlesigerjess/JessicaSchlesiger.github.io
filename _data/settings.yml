@@ -51,49 +51,31 @@ hullEntertainment_duties:
 # Skills
 
 skills_programming:
-- {name: C, value: '90', example: has Example}
-- {name: JavaScript, value: '100', example: }
+- {name: C, value: '90', example: /portfolio/phoenix-atari-2600}
+- {name: JavaScript, value: '100', example: /portfolio/google-calendar-script}
 - {name: Java, value: '100', example: }
-- {name: HTML, value: '90', example: has Example}
-- {name: CSS, value: '90', example: has Example}
-- {name: SASS, value: '90', example: has Example}
-- {name: Jekyll, value: '70', example: has Exsdaample}
-- {name: Liquid, value: '40', example: has Exsdaample}
-- {name: Lua, value: '40', example: has Example}
-- {name: OpenGL, value: '70', example: has Example}
+- {name: HTML, value: '90', example: /portfolio/portfolio-webpage}
+- {name: CSS, value: '90', example: /portfolio/portfolio-webpage}
+- {name: SASS, value: '90', example: /portfolio/portfolio-webpage}
+- {name: Jekyll, value: '70', example: /portfolio/portfolio-webpage}
+- {name: Liquid, value: '40', example: /portfolio/portfolio-webpage}
+- {name: Lua, value: '40', example: portfolio/neat-neural-network}
+- {name: OpenGL, value: '70', example: /portfolio/phoenix-atari-2600}
+- {name: GLUT, value: '70', example: /portfolio/phoenix-atari-2600}
 skills_design:
-- {name: Adobe Illustrator, value: '70', example: has Example}
-- {name: Adobe Photoshop, value: '90', example: }
+- {name: Adobe Illustrator, value: '70', example: /portfolio/digital-art}
+- {name: Adobe Photoshop, value: '90', example: /portfolio/digital-art}
 - {name: Web Design, value: '80', example: }
 skills_utilities:
 - {name: Eclipse, value: '100', example: }
-- {name: Notepad++, value: '100', example: has Example}
-- {name: Github, value: '80', example: has Example}
-- {name: SourceForge, value: '70', example: has Example}
+- {name: Notepad++, value: '100', example: }
+- {name: Github, value: '80', example: }
+- {name: SourceForge, value: '70', example: }
 - {name: Word, value: '90', example: }
 - {name: Excel, value: '90', example: }
-- {name: UML, value: '100', example: has Example}
+- {name: UML, value: '100', example: }
 
-#-------------------------------
-# Work Section
 
-projects:
-- {name: NEAT Neural Network, subName: "Research, Lua", folder: 'proj-6', file: 'work/proj-6.html', 
-    description: "Testing for domain-general intelligence using a NEAT Neural Network in Super Mario World."}
-- {name: Pheonix Atari 2600, subName: "C, OpenGL", folder: 'proj-1', file: 'work/proj-1.html',  
-    description: "Recreation of the Atari arcade game Phenoix using OpenGL and C for my Intro To Computer Graphics project."}
-- {name: Google Calendar Script, subName: "Javascript, Google Drive", folder: 'proj-4', file: 'work/proj-4.html', 
-    description: "Scheduling script which pulls dates from a spreadsheet and updates or creates the events on designated Google Calendars."}
-- {name: Email Notification Script, subName: Java, folder: 'proj-5', file: 'work/proj-5.html', 
-    description: "Pulls data from the Employee Database and Upcoming Events Spreadsheet and notifies each staff member of upcoming events they are scheduled for."}
-- {name: Pokemon Battle Simulator, subName: Java, folder: 'proj-2', file: 'work/proj-2.html', 
-    description: aaaa}
-- {name: Illustrations, subName: "Illustrator, Photoshop", folder: 'proj-7', file: 'work/proj-7.html', 
-    description: "Hobbiest art creations."}
-- {name: Graphic Design, subName: "Photoshop", folder: 'proj-8', file: 'work/proj-8.html', 
-    description: aaaa}
-- {name: Graaaaaaaphic Design, subName: "Photoshop", folder: 'proj-3', file: 'work/proj-3.html', 
-    description: aaaa}
 #-------------------------------
 # Social Section
 

@@ -10,7 +10,6 @@
 .thumb-wrap
 	margin: 0px auto
 .thumb-unit
-	max-width: 400px
 	border-radius: 5px
 	margin: 1% auto 1% auto
 	display: block
@@ -29,14 +28,19 @@
 		.icon-arrow
 			margin-top: 0
 .thumb-image
-	max-height: 75%
+	max-height: 80%
 	display: block
 	overflow: hidden
 	border-bottom: 1px solid $grayAccent
 	img
 		display: block
 		max-width: 100%
-		vertical-align: bottom
+.imgAlignBottom
+	img
+		position: absolute
+		bottom: 19%
+		border-bottom: 1px solid $grayAccent
+
 	
 .thumb-overlay
 	padding: 10px
@@ -50,6 +54,7 @@
 	p
 		padding-top: 15px !important
 .thumb-text
+	padding-top: 5px
 	font-size: 15px
 	display: block
 	float: left
@@ -68,7 +73,6 @@
 	padding: 10px 10px 5px 10px
 	border-radius: 5px
 	font-weight: bold
-	max-width: 380px
 	display: block
 	margin: 0 auto
 	text-align: center
@@ -80,14 +84,8 @@
 	&:hover 
 		background-color: $mainAccent
 		color: #fff
-@media only screen and (min-width: 760px)
-	.thumb-unit, .portfolio-link
-		float: right !important
-		margin-right: 1% !important
-		margin-left: 1% !important
-	.thumb-unit
-		width: 31%		
-@media only screen and (min-width: 565px) and (max-width: 759px)
+	
+@media only screen and (min-width: 565px)
 	.thumb-unit, .portfolio-link
 		float: right !important
 		margin-right: 1% !important
