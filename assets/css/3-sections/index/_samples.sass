@@ -16,53 +16,46 @@
 	height: 200px
 	position: relative
 	overflow: hidden
-	background-color: $grayAccent-light
 	border: 1px solid $mainAccent
 	&:hover 
 		.thumb-overlay
-			background: fade-out($mainAccent-dark, .1)
+			background-color: $mainAccent-dark
 			+position(absolute, -5px 0px 0px 0px )
 			color: #fff 
-		.thumb-description
-			opacity: 1
+			border-top: none
 		.icon-arrow
 			margin-top: 0
 .thumb-image
-	max-height: 80%
+	max-height: 77%
 	display: block
-	overflow: hidden
-	border-bottom: 1px solid $grayAccent
 	img
 		display: block
 		max-width: 100%
 .imgAlignBottom
 	img
 		position: absolute
-		bottom: 19%
-		border-bottom: 1px solid $grayAccent
+		bottom: 23%
 
 	
 .thumb-overlay
-	padding: 10px
-	+position(absolute,  75% 0px 0px 0px )
+	padding: 8px
+	+position(absolute,  77% 0px 0px 0px )
 	height: 100%
+	border-top: 1px solid $grayAccent
 	+transition
-	background: fade-out($mainAccent, 1)
+	background-color: $grayAccent-light
 	td
 		text-align: left
 		vertical-align: top
 	p
 		padding-top: 15px !important
 .thumb-text
-	padding-top: 5px
 	font-size: 15px
 	display: block
 	float: left
 	width: 100%
-.thumb-description
-	opacity: 0
 .icon-arrow
-	float: right
+	display: inline-block
 	font-size: 25px
 	margin-left: -13%
 	margin-top: 5px
@@ -74,7 +67,7 @@
 	border-radius: 5px
 	font-weight: bold
 	display: block
-	margin: 0 auto
+	margin: 10px auto
 	text-align: center
 	vertical-align: middle
 	+transition
@@ -87,8 +80,7 @@
 	
 @media only screen and (min-width: 565px)
 	.thumb-unit, .portfolio-link
-		float: right !important
-		margin-right: 1% !important
-		margin-left: 2% !important
+		margin-left: 3% !important
 	.thumb-unit
+		float: left !important
 		width: 46%
