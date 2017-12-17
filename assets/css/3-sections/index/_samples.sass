@@ -1,33 +1,26 @@
 .sample-bar 
 	@include whiteBoxShade
-	table
-		text-align: center
 .sample
 	padding: 2%
 .sample-wrap
-	padding: 0px 2% 2% 2%
 	+clearfix
-.thumb-wrap
-	margin: 0px auto
 .thumb-unit
+	display: block
+	box-shadow: 0px 4px 15px -2px rgba(0,0,0,0.33)
 	border-radius: 5px
 	margin: 1% auto 1% auto
-	display: block
 	height: 200px
+	width: 100%
 	position: relative
 	overflow: hidden
 	border: 1px solid $mainAccent
 	&:hover 
 		.thumb-overlay
-			background-color: $mainAccent-dark
 			+position(absolute, -5px 0px 0px 0px )
-			color: #fff 
+			color: $mainAccent 
 			border-top: none
-		.icon-arrow
-			margin-top: 0
 .thumb-image
 	max-height: 77%
-	display: block
 	img
 		display: block
 		max-width: 100%
@@ -80,7 +73,7 @@
 	
 @media only screen and (min-width: 565px)
 	.thumb-unit, .portfolio-link
-		margin-left: 3% !important
+		margin-left: 2.5% !important
 	.thumb-unit
 		float: left !important
 		width: 46%
