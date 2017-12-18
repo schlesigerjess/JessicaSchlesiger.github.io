@@ -1,7 +1,8 @@
 .sample-bar 
 	@include whiteBoxShade
 .sample
-	padding: 2%
+	padding: 0 2% 2% 2%
+	+clearfix
 .sample-wrap
 	+clearfix
 .thumb-unit
@@ -28,8 +29,6 @@
 	img
 		position: absolute
 		bottom: 23%
-
-	
 .thumb-overlay
 	padding: 8px
 	+position(absolute,  77% 0px 0px 0px )
@@ -47,33 +46,22 @@
 	display: block
 	float: left
 	width: 100%
-.icon-arrow
-	display: inline-block
-	font-size: 25px
-	margin-left: -13%
-	margin-top: 5px
 .portfolio-link
+	font-size: 13px
 	text-decoration: none
-	background-color: $grayAccent-light
-	border: 1px solid $mainAccent
-	padding: 10px 10px 5px 10px
-	border-radius: 5px
+	margin: 20px 0 10px 0
 	font-weight: bold
-	display: block
-	margin: 10px auto
-	text-align: center
-	vertical-align: middle
-	+transition
+	float: right
 	.icon-arrow
-		margin-left: 10px !important
-		margin-top: -5px !important
-	&:hover 
-		background-color: $mainAccent
-		color: #fff
+		display: block
+		float: right
+		font-size: 20px
+		margin: -3px 0px 0px 10px
 	
 @media only screen and (min-width: 565px)
-	.thumb-unit, .portfolio-link
-		margin-left: 2.5% !important
+	.portfolio-link
+		margin-right: 3% !important
 	.thumb-unit
+		margin-left: 2.5% !important
 		float: left !important
 		width: 46%
