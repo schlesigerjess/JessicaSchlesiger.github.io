@@ -32,9 +32,11 @@ education_courses:
 - {name: Intro Computer Graphic, id: CSC 350}
 - {name: Artificial Intelligence, id: CSC 462}
 - {name: Computer Networks, id: CSC 431}
+- {name: Design and Analysis of Algorithms, id: CSC 310}
+- {name: Database Management, id: CSC 371}
 - {name: Senior Research Methods, id: CSC 498}
-- {name: Big Data, id: CSC 493}
 - {name: Senior Research and Development, id: CSC 499}
+- {name: Big Data, id: CSC 493}
 
 
 # Experience
