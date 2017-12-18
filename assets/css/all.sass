@@ -13,15 +13,14 @@ $logo-path: '{{ site.data.layout.logo }}'
 
 $mainAccent: {{ site.data.layout.mainAccent }}
 $grayAccent: {{ site.data.layout.grayAccent }}
+$textColor: {{ site.data.layout.textColor }}
 $mainAccent-light: saturate(lighten($mainAccent, 30%), 20%)
 $mainAccent-dark: saturate(darken($mainAccent, 10%), 20%)
 $grayAccent-light: lighten($grayAccent, 25%)
 $lrgWidth: '700px'
-$textColor: {{ site.data.layout.textColor }}
 
 
-@import '2-base/-base-dir'
 @import 'mixins'
+@import '2-base/-base-dir'
 @import '3-sections/-sections-dir'
-@import '2-base/syntax.sass'
 

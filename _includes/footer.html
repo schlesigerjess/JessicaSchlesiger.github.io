@@ -1,11 +1,10 @@
 <footer class="footer-bar">
   <div class="footer container">
-  <nav>
-    <ul>
-    {% for item in site.data.settings.menu %}
-      <li><a href="{{ site.github.url }}{{ item.url }}">{{ item.name }}</a></li>
-    {% endfor %}
-    </ul>
-  </nav>
+	<div class="footer-copyright">© 2017 Jessica Schlesiger</div>
+	<div class="footer-icons">
+		{% for link in site.data.settings.social %}
+			<a href="{{ link.link }}" class="icon-{{ link.icon }}" alt="{{ link.icon }}" target="_blank" rel="noopener"></a>
+		{% endfor %}
+	</div>
   </div>
 </footer>
