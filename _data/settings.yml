@@ -54,16 +54,17 @@ hullEntertainment_duties:
 
 skills_programming:
 - {name: C, value: '90', example: /portfolio/phoenix-atari-2600}
-- {name: JavaScript, value: '100', example: /portfolio/google-calendar-script}
 - {name: Java, value: '100', example: }
-- {name: HTML, value: '90', example: /portfolio/portfolio-webpage}
-- {name: CSS, value: '90', example: /portfolio/portfolio-webpage}
-- {name: SASS, value: '90', example: /portfolio/portfolio-webpage}
-- {name: Jekyll, value: '70', example: /portfolio/portfolio-webpage}
-- {name: Liquid, value: '40', example: /portfolio/portfolio-webpage}
+- {name: JavaScript, value: '100', example: /portfolio/google-calendar-script}
+- {name: HTML, value: '100', example: /portfolio/portfolio-webpage}
+- {name: CSS, value: '100', example: /portfolio/portfolio-webpage}
+- {name: SASS, value: '100', example: /portfolio/portfolio-webpage}
+- {name: Jekyll, value: '90', example: /portfolio/portfolio-webpage}
+- {name: Liquid, value: '80', example: /portfolio/portfolio-webpage}
 - {name: Lua, value: '40', example: portfolio/neat-neural-network}
 - {name: OpenGL, value: '70', example: /portfolio/phoenix-atari-2600}
 - {name: GLUT, value: '70', example: /portfolio/phoenix-atari-2600}
+- {name: R, value: '40', example: }
 skills_design:
 - {name: Adobe Illustrator, value: '70', example: /portfolio/digital-art}
 - {name: Adobe Photoshop, value: '90', example: /portfolio/digital-art}

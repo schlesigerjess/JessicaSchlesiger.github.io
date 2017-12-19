@@ -23,7 +23,7 @@ permalink: /{{page.title}}
 			<br><br>Tags: 		
 				{% for tag in page.tags %}
 					{% if forloop.last == false %}
-						<a href="{{site.baseurl}}/tags#{{tag}}" class="tag">{{ tag }},</a> 
+						<a href="{{site.baseurl}}/tags#{{tag}}" class="tag">{{ tag }}</a>, 
 					{% else %}
 						& <a href="{{site.baseurl}}/tags#{{tag}}" class="tag">{{ tag }}</a>
 					{% endif %}
