@@ -12,6 +12,7 @@ tags:
  - Jekyll
  - Github
  - Liquid
+ - Web Design
 
 abstract: "This projected aimed at creating a responsive webpage which hosts information about myself and the projects I have done. The following are the requirements I set for myself: 
 <ul>
@@ -31,20 +32,28 @@ end: |
 
 ---
 
-<p>Before coding anything, a well thought-out design must be in place. This reduces the time spent adjusting code and leads to overall better source code. While the end result may diverge from the original design, the basic design and structure aids in predicting . See the initial design below.
-
-<br><br>img<br><br>
-
-With the design in place, next was deciding how I wanted to maintain the file system. Since this is a follow up project of my <a href="#">trial-run	webpage: WhatAKerfuffle.ml</a>, I set out to improve upon the mistakes previously made. The most pressing being an organized file structure. While the original webpage wasn’t terrible, it was a very manual system with lots of refactoring. This time, I sought out for a static webpage file management system. Luckily, I stumbled upon a fantastic YouTube Channel called Codecourse. He introduced me to Jekyll.</p><br><br>
+<p>Many of the previous hurdles from my trial-run webpage, <a href="/portfolio/what-a-kerfuffle">WhatAKerfuffle.ml</a> prepared me for the limitations of hosting this webpage for free. In the writeup I explain how Github Pages and Freenom.com can be used to host a webpage for free with a custom domain, and the only limitations being open source and not https secured. Since this is an open project and I do not collect nor store any user information, these limitations were acceptable costs for a free webpage. <br><br>
+	
+In addition, I set out to improve upon the mistakes previously made. The most pressing being an organized file structure. While the trial webpage wasn’t terrible, it was a very manual system with lots of refactoring. This time, I sought out for a static webpage file management system. Luckily, I stumbled upon Github's Jekyll static webpage generator.</p><br><br>
 
 <div class="quote">
 "Jekyll is a simple, blog-aware, static site generator perfect for personal, project, or organization sites. Think of it like a file-based CMS, without all the complexity. Jekyll takes your content, renders Markdown and Liquid templates, and spits out a complete, static website ready to be served by Apache, Nginx or another web server. Jekyll is the engine behind GitHub Pages, which you can use to host sites right from your GitHub repositories"
-</div><br><br>
+</div><br>
+
+<p>It took a couple of days of hammering through examples and trial-and-error processes, but by the end I had a comprehensive understanding of the file system, variables, imports, and site generation. This system is fantastic and enabled this webpage's file system to be less manual and better organized.<br><br></p>
 	
-<p>It took a couple of days of hammering through examples and trial-and-error processes, but by the end I had a comprehensive understanding of the file system, variables, imports, and site generation.<br><br>
 
-img of basic file system<br><br>
+<div class="img-wrap full">
+	<div class="img-center">
+		<h3>Trial-run Webpage vs Portfolio Webpage</h3>
+		<img src="{{ site.baseurl }}/assets/img/project/{{ page.projectFolder }}/badFileSystem.png" alt="Trial-run webpage's bad file structure.">
+		<img src="{{ site.baseurl }}/assets/img/project/{{ page.projectFolder }}/goodFileSystem.png" alt="Portfolio webpage's good file structure.">
+	</div>
+</div>
+<p>As seen above, the portfolio webpage has all subpages neatly organized. What's not shown here is how the portfolio webpage utilizes only one CSS file - which is optimal in terms of bandwidth, while the other has separate CSS files for each page - which aids in personal organization. Jekyll allows imports of numerous CSS files, and will compile all into one CSS file when building the webpage. This enables the user to be fully organized on their repository, while also being optimized for bandwidth use. With these structures in place, it was time for actual web design.<br><br>
+	
+Before coding anything, a well thought-out design must be in place. This reduces the time spent adjusting code and leads to overall better structured source code. While the end result may diverge from the original design, the basic design and structure aids in predicting future functionality needs between pages. See the initial design below.</p>
 
-After tackling this system, it was a matter of programming the back-end and ensuring the layout was adaptive and all-browsers comparable.<br><br>
+<br><br>img<br><br>
 
-Multiple small adjustments were made to the design since starting the project. Most of these adjustments were suggestions from one of my professors, Dr. Armstrong. Her feedback was invaluable and resulted in multiple small adjustments of the overall project.</p>
+<p>Multiple small adjustments were made to the design since starting the project. Most of these adjustments were suggestions from one of my professors, Dr. Armstrong. Her feedback was invaluable and resulted in multiple small adjustments of the overall project.</p>

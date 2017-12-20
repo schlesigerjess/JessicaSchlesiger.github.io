@@ -68,7 +68,7 @@ skills_programming:
 skills_design:
 - {name: Adobe Illustrator, value: '70', example: /portfolio/digital-art}
 - {name: Adobe Photoshop, value: '90', example: /portfolio/digital-art}
-- {name: Web Design, value: '80', example: }
+- {name: Web Design, value: '80', example: /portfolio/portfolio-webpage}
 skills_utilities:
 - {name: Eclipse, value: '100', example: }
 - {name: Notepad++, value: '100', example: }
