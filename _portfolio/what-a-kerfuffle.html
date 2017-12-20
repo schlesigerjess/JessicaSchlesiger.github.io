@@ -3,7 +3,7 @@ layout: project
 title: What A Kerfuffle
 projectFolder: what-a-kerfuffle
 description: 
-img: filler.jpg
+img: endResult.jpg
 tag: [HTML, CSS, Javascript]
 
 
@@ -16,9 +16,9 @@ abstract: "This project served as an introduction to web hosting and domain, whi
 While the goals here are simple, this project was a crucial warm up for the following, more important project: my portfolio webpage."
 
 end-left: 
- This project did serve its purpose. It taught me how to host a webpage and use a custom domain, and refreshed my HTML and CSS knowledge I hadn't used in years. As a bonus, I was also introduced to how Javascript can be used to enhance webpages.<br><br> While this project was successful, I must admit the webpage itself is nothing special, and the file system is very labor intensive to keep its currently <i>meh</i> organization system. This is something I improved on with my <a href="/portfolio/portfolio-webpage">portfolio webpage</a>, and I intend to revise this project in the future.
+ This project did serve its purpose. It taught me how to host a webpage and use a custom domain, and refreshed my HTML and CSS knowledge I hadn't used in years. As a bonus, I was also introduced to how Javascript can be used to enhance webpages.<br><br> While this project was successful, I must admit the file system is very labor intensive to maintain. This is something I improved on with my <a href="/portfolio/portfolio-webpage">portfolio webpage</a>, and I intend to revise this project in the future.
 
-end-right: <img width="100%" src="/assets/img/project/what-a-kerfuffle/filler.jpg" alt="Sample Image"><br><br>
+end-right: <img width="100%" src="/assets/img/project/what-a-kerfuffle/filler.jpg" alt="Sample Image"><a href="https://github.com/schlesigerjess/WhatAKerfuffle.github.io" alt="{{ link.icon }}" target="_blank" rel="noopener"><b class="icon-github"></b> See full project at Github.</a>
 ---
 
 <p>First thing's first: host the site somewhere and find a domain for free, if possible. This part arguable took the longest out of the whole project, but ultimately I did find a solution! After scouring the internet, I stumbled on <a href="https://pages.github.com/" target="_blank" rel="noopener">Github Pages.</a> Github Pages allows users to create repositories that host webpages. This will result in a URL along the lines of: http://<i>username</i>.github.io/<i>repository</i>, but they do support custom URLs at the cost of not being https secure. Since this webpage does not collect any user information and the site's content is completely open source, not being https secure is an acceptable cost of having a custom domain.<br><br>
@@ -33,14 +33,18 @@ With the web hosting and domain in place, designing the webpage is the next step
 	</div>
 </div>
 
-<p>This is the initial design for webpage, and intended to have a blog-like feel while featuring recent notable works. Overtime, I grew to dislike this design and realized the amount of text was unrealistic for the scope of the webpage. I then revised the design into the one below.</p>
+<p>This is the initial design for the webpage. It was intended to have a blog-like feel while featuring recent notable works. Overtime, I grew to dislike this design and realized the amount of text was unrealistic for the scope of the webpage. I then revised the design into the one below.</p>
 
 <div class="img-wrap full">
 	<div class="img-center">
 		<img width="100%" style="max-width:900px" src="{{ site.baseurl }}/assets/img/project/{{ page.projectFolder }}/secondDesign.jpg" alt="Second Design">
 	</div>
 </div>
-<p></p>
+
+<p>This new design features less text, and more works featured at once in a section that will scroll up and down. Users are able to interact with these images to see a larger version of the work. This section required a bit of Javascript to execute.<br><br>
+	
+First, I needed Javascript to generate the cascade title effect which handles images of all sizes. </p>
+
 <div class="img-wrap full">
 	<div class="img-center">
 		<img width="100%" style="max-width:900px" src="{{ site.baseurl }}/assets/img/project/{{ page.projectFolder }}/endResult.jpg" alt="Second Design">
