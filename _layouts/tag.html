@@ -4,7 +4,8 @@ layout: default
 <div class="tag-page-bar">
 	<div class="tag-page container">
 		<h1>Projects with tag: {{ page.title }}</h1>
-		{% for project in site.portfolio %}
+		{% assign projects = site.portfolio | sort: 'date' | reverse %}
+		{% for project in projects %}
 			{% if project.tags contains page.title %}
 				{% include projectContainer.html %}
 			{% endif %}
