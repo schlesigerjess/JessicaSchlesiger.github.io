@@ -5,20 +5,14 @@ title: Jessica Schlesiger Portfolio
 description: Jessica Schlesiger's online portfolio.
 email: Jessica.Schlesiger@gmail.com
 
-# NOTE: The Logo and Background image are defined in the all.sass document.
-
 menu:
 - {name: About, url: '/'}
 - {name: Portfolio, url: '/portfolio/'}
 - {name: Contact, url: '/contact/'}
 
-#-------------------------------
 # SEO Section
-
 seo:
   description: 'Online portfolio for Jessica Schlesiger.'
-
-#-------------------------------
 
 # Education
 education_courses:
@@ -51,38 +45,34 @@ hullEntertainment_duties:
 - {name: Newsletter}
 
 # Skills
-
 skills_programming:
-- {name: C, value: '90', example: /portfolio/phoenix-atari-2600}
-- {name: Java, value: '100', example: }
-- {name: JavaScript, value: '100', example: /portfolio/google-calendar-script}
-- {name: jQuery, value: '50', example: /portfolio/what-a-kerfuffle}
-- {name: HTML, value: '100', example: /portfolio/portfolio-webpage}
-- {name: CSS, value: '100', example: /portfolio/portfolio-webpage}
-- {name: SASS, value: '100', example: /portfolio/portfolio-webpage}
-- {name: Jekyll, value: '90', example: /portfolio/portfolio-webpage}
-- {name: Liquid, value: '80', example: /portfolio/portfolio-webpage}
-- {name: Lua, value: '40', example: portfolio/neat-neural-network}
-- {name: OpenGL, value: '70', example: /portfolio/phoenix-atari-2600}
-- {name: GLUT, value: '70', example: /portfolio/phoenix-atari-2600}
-- {name: R, value: '40', example: }
+- {tag: C, value: '90'}
+- {name: Java, value: '100'}
+- {tag: JavaScript, value: '100'}
+- {tag: jQuery, value: '50'}
+- {tag: HTML, value: '100'}
+- {tag: CSS, value: '100'}
+- {tag: SASS, value: '100'}
+- {tag: Jekyll, value: '90'}
+- {tag: Liquid, value: '90'}
+- {tag: Lua, value: '40'}
+- {tag: OpenGL, value: '70'}
+- {tag: GLUT, value: '70'}
+- {name: R, value: '40'}
 skills_design:
-- {name: Adobe Illustrator, value: '70', example: /portfolio/digital-art}
-- {name: Adobe Photoshop, value: '90', example: /portfolio/digital-art}
-- {name: Web Design, value: '80', example: /portfolio/portfolio-webpage}
+- {tag: Adobe Illustrator, value: '70'}
+- {tag: Adobe Photoshop, value: '90'}
+- {tag: Web Design, value: '80'}
 skills_utilities:
-- {name: Eclipse, value: '100', example: }
-- {name: Notepad++, value: '100', example: }
-- {name: Github, value: '80', example: }
-- {name: SourceForge, value: '70', example: }
-- {name: Word, value: '90', example: }
-- {name: Excel, value: '90', example: }
-- {name: UML, value: '100', example: }
+- {name: Eclipse, value: '100'}
+- {name: Notepad++, value: '100'}
+- {name: Github, value: '80'}
+- {name: SourceForge, value: '70'}
+- {name: Word, value: '90'}
+- {name: Excel, value: '90'}
+- {name: UML, value: '100'}
 
-
-#-------------------------------
 # Social Section
-
 social:
 - {icon: 'github', link: 'https://github.com/schlesigerjess'}
 - {icon: 'facebook', link: 'https://www.facebook.com/jessica.schlesiger'}

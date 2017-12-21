@@ -4,55 +4,19 @@
 			<h2><b class="icon-programming"></b> Programming:</h2>
 			<div class="skill-lockup">
 				{% for skill in site.data.settings.skills_programming %}
-				<div class="skill-unit">
-					<div class="skill-label">
-					{{ skill.name }}
-							{% if skill.example != %} 
-						<div class="example">
-							<a href="{{ skill.example }}">See example</a>
-						</div>
-						{% endif %}
-					</div>
-					<div class="skill-item">
-						<div class="skill-icons value-{{ skill.value }}"></div>
-					</div>
-				</div>
+					{% include index/skillUnit.html %}
 				{% endfor %}
 			</div>	
 			<h2><b class="icon-utilities"></b> Utilities:</h2>
 			<div class="skill-lockup">
 				{% for skill in site.data.settings.skills_utilities %}
-				<div class="skill-unit">
-					<div class="skill-label">
-					{{ skill.name }}
-						{% if skill.example != %} 
-						<div class="example">
-							<a href="{{ skill.example }}">See example</a>
-						</div>
-						{% endif %}
-					</div>
-					<div class="skill-item">
-						<div class="skill-icons value-{{ skill.value }}"></div>
-					</div>
-				</div>
+					{% include index/skillUnit.html %}
 				{% endfor %}
 			</div>
 			<h2><b class="icon-design"></b> Design:</h2>	
 			<div class="skill-lockup">		
 				{% for skill in site.data.settings.skills_design %}
-				<div class="skill-unit">
-					<div class="skill-label">
-					{{ skill.name }}
-						{% if skill.example != %} 
-						<div class="example">
-							<a href="{{ skill.example }}">See example</a>
-						</div>
-						{% endif %}
-					</div>
-					<div class="skill-item">
-						<div class="skill-icons value-{{ skill.value }}"></div>
-					</div>
-				</div>
+					{% include index/skillUnit.html %}
 				{% endfor %}
 			</div>
 		</div>

@@ -8,34 +8,8 @@ permalink: /portfolio/
 	<div class="portfolio container">			
 		<div class="sample-wrap">
 			 <div class="thumb-wrap">
-				{% for page in site.portfolio %}
-					<a href="{{ page.url }}" class="thumb-unit">
-						<div class="thumb-image {{page.align}}" data-url="{{ page.url }}">
-							<img src="{{ site.baseurl }}/assets/img/project/{{ page.projectFolder }}/{{ page.img }}" alt="{{page.title}}">
-						</div>
-						<div class="thumb-overlay">
-							<div class="thumb-text"> 
-								<strong>{{ page.title }}</strong><br>
-								{% assign tagString = "" %}
-								{% for tag in page.tags %}
-									{% assign tempString = tagString %}
-									{% if forloop.last == false %}
-										{% capture tagString %} {{tagString}}{{tag}}, {% endcapture %}
-									{% else %}
-										{% capture tagString %} {{tagString}} & {{tag}} {% endcapture %}
-									{% endif %}
-									
-								{% endfor %}
-										
-								<i>{{tagString}}</i>
-								
-								<div class="thumb-description">
-									<p>{{ page.description }} </p>
-								</div>
-							</div>
-
-						</div>
-					</a>
+				{% for project in site.portfolio %}
+					{% include projectContainer.html %}
 				{% endfor %}
 			</div>
 		</div>

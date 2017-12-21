@@ -1,0 +1,26 @@
+<a href="{{ project.url }}" class="thumb-unit">
+	<div class="thumb-image {{project.align}}" data-url="{{ project.url }}">
+		<img src="{{ site.baseurl }}/assets/img/project/{{ project.projectFolder }}/{{ project.img }}" alt="{{project.title}}">
+	</div>
+	<div class="thumb-overlay">
+		<div class="thumb-text"> 
+			<strong>{{ project.title }}</strong><br>
+			{% assign tagString = "" %}
+			{% for tag in project.tags %}
+				{% assign tempString = tagString %}
+				{% if forloop.last == false %}
+					{% capture tagString %} {{tagString}}{{tag}}, {% endcapture %}
+				{% else %}
+					{% capture tagString %} {{tagString}} & {{tag}} {% endcapture %}
+				{% endif %}
+				
+			{% endfor %}
+					
+			<i>{{tagString}}</i>
+			
+			<div class="thumb-description">
+				<p>{{ project.description }} </p>
+			</div>
+		</div>
+	</div>
+</a>

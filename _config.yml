@@ -8,7 +8,7 @@ collections:
     permalink: /portfolio/:title
   tags:
     output: true
-    permalink: /tag/:title
+    permalink: /tag/:tag
 sass:
   sass_dir: assets/css
   style: compressed
