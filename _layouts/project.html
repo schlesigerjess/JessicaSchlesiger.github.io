@@ -6,13 +6,13 @@ permalink: /{{page.title}}
 	<div class="project-abstract container">
 		<div class="project-abstract-text"> 
 			<h1 class="page-title">{{ page.title }}</h1>
-			{% if page.dated %}
+			{% if page.date %}
 				<h4>
-					{% assign d = page.dated | date: "%-d"  %}
-					{{ page.dated | date: "%B" }} 
+					{% assign d = page.date | date: "%-d"  %}
+					{{ page.date | date: "%B" }} 
 					{% case d %}
 					{% when '1' or '21' or '31' %}{{ d }}st{% when '2' or '22' %}{{ d }}nd{% when '3' or '23' %}{{ d }}rd{% else %}{{ d }}th{% endcase %}, 
-					{{ page.dated | date: "%Y" }}					
+					{{ page.date | date: "%Y" }}					
 				</h4>
 			{% else %}
 				<br>

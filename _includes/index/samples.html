@@ -3,7 +3,8 @@
 		<h1>Sample Projects</h1>
 		<div class="sample-wrap">
 			 <div class="thumb-wrap">
-				{% for project in site.portfolio limit:4 %}
+				{% assign projects = site.portfolio | sort: 'date' | reverse %}
+				{% for project in projects limit:4 %}
 					{% include projectContainer.html %}
 				{% endfor %}
 			</div>
