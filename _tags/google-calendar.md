@@ -1,4 +1,4 @@
 ---
 layout: tag
-tag: Google Calendar
+title: Google Calendar
 ---

@@ -3,9 +3,9 @@ layout: default
 ---
 <div class="tag-page-bar">
 	<div class="tag-page container">
-		<h1>Projects with tag: {{ page.tag }}</h1>
+		<h1>Projects with tag: {{ page.title }}</h1>
 		{% for project in site.portfolio %}
-			{% if project.tags contains page.tag %}
+			{% if project.tags contains page.title %}
 				{% include projectContainer.html %}
 			{% endif %}
 		{% endfor %}

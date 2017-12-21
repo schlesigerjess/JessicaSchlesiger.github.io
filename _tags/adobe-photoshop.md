@@ -1,4 +1,4 @@
 ---
 layout: tag
-tag: Adobe Photoshop
+title: Adobe Photoshop
 ---

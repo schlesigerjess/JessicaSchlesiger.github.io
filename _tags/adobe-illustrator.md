@@ -1,4 +1,4 @@
 ---
 layout: tag
-tag: Adobe Illustrator
+title: Adobe Illustrator
 ---

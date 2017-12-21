@@ -1,4 +1,4 @@
 ---
 layout: tag
-tag: Web Design
+title: Web Design
 ---
