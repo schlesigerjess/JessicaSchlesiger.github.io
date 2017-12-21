@@ -2,14 +2,12 @@
 layout: default
 ---
 <div class="tag-page-bar">
-<div class="tag-page container">
-<h1>Projects with tag: {{ page.tag }}</h1>
-
- {% for project in site.portfolio %}
-    {% if project.tags contains page.tag %}
-    
-					{% include projectContainer.html %}
-    {% endif %}
-  {% endfor %}
-
-</div></div>
+	<div class="tag-page container">
+		<h1>Projects with tag: {{ page.tag }}</h1>
+		{% for project in site.portfolio %}
+			{% if project.tags contains page.tag %}
+				{% include projectContainer.html %}
+			{% endif %}
+		{% endfor %}
+	</div>
+</div>

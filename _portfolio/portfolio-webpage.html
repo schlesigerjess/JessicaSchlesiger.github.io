@@ -22,11 +22,13 @@ abstract: "This projected aimed at creating a responsive webpage which hosts inf
 	<li>Project write-up pages which detail the purpose and process
 	<li>Allow reader to get a professional but personal feel for who I am
 	<li>Improve upon the file system I used in a previous trial-run project
-</ul>"
+</ul>
+
+Before beginning this project, I had no experience with SASS, Jekyll, and Liquid; however, each were heavily utilized throughout the webpage and now I feel great confidence using each of these."
 
 end: | 
  I feel immensely proud of the outcome for this project. The webpage is sleek and quick, while being fully responsive. The file system which Jekyll enables was perfect for this project and will allow for easy additions and modifications in the future. <br><br>
- One thing I’d do for my next project is use something like SAMPLE - where you can create a job and tasks and overall keep track of progress. While I wasn’t having problems implementing every design aspect, it would have been nice to have a place which tracks all of my progress, bugs, and list what I am to do next. With a larger project, a simple "to do" word document will not be enough.<br><br>
+ One thing I’d do for my next project is use something like SAMPLE - where you can create a job and tasks and overall keep track of progress. While I wasn’t having problems implementing every design aspect, it would have been nice to have a place which tracks all of my progress, bugs, and list what I am to do next. With a larger project, a simple to-do word document will not be sufficient.<br><br>
  <a href="https://github.com/schlesigerjess/JessicaSchlesiger.github.io" alt="{{ link.icon }}" target="_blank" rel="noopener"><b class="icon-github"></b> See project at Github.</a>
 
 
@@ -40,8 +42,7 @@ In addition, I set out to improve upon the mistakes previously made. The most pr
 "Jekyll is a simple, blog-aware, static site generator perfect for personal, project, or organization sites. Think of it like a file-based CMS, without all the complexity. Jekyll takes your content, renders Markdown and Liquid templates, and spits out a complete, static website ready to be served by Apache, Nginx or another web server. Jekyll is the engine behind GitHub Pages, which you can use to host sites right from your GitHub repositories"
 </div><br>
 
-<p>It took a couple of days of hammering through examples and trial-and-error processes, but by the end I had a comprehensive understanding of the file system, variables, imports, and site generation. This system is fantastic and enabled this webpage's file system to be less manual and better organized.<br><br></p>
-	
+<p>It took a couple of days of hammering through examples and trial-and-error processes, but by the end I had a comprehensive understanding of the file system, variables, imports, and site generation. This system is fantastic and enabled this webpage's file system to be less manual and better organized.</p>
 
 <div class="img-wrap full">
 	<div class="img-center">
@@ -54,6 +55,42 @@ In addition, I set out to improve upon the mistakes previously made. The most pr
 	
 Before coding anything, a well thought-out design must be in place. This reduces the time spent adjusting code and leads to overall better structured source code. While the end result may diverge from the original design, the basic design and structure aids in predicting future functionality needs between pages. See the initial design below.</p>
 
-<br><br>img<br><br>
+<div class="img-wrap full">
+	<div class="img-center">
+		<img width="100%" style="max-width:800px" src="{{ site.baseurl }}/assets/img/project/{{ page.projectFolder }}/originalDesign.png" alt="First Design">
+	</div>
+</div>
 
-<p>Multiple small adjustments were made to the design since starting the project. Most of these adjustments were suggestions from one of my professors, Dr. Armstrong. Her feedback was invaluable and resulted in multiple small adjustments of the overall project.</p>
+<p>Multiple small adjustments were made to the design since starting the project such as: adding a logo, removing personal image, swapping the order of Skill Sets and Sample Projects, etc. All of these small adjustments lead to a more visually clean and inciting experience for the user. Most of these adjustments were suggestions from one of my professors, Dr. Armstrong. Her feedback was invaluable.<p>
+
+<div class="img-wrap full">
+	<div class="img-center">
+		<img width="100%" style="max-width:800px" src="{{ site.baseurl }}/assets/img/project/{{ page.projectFolder }}/finishedPage.png" alt="First Design">
+	</div>
+</div>
+	
+<p>There are a few big-ticket features with this webpage. First being the use of Liquid headers. These liquid headers a reduce need for repeated code, while still sharing certain layouts, variables, etc in common with other pages. For example, project writeup pages, like this one, share the following Liquid header. I have added comments for clarity. </p>
+	
+{% highlight c %}
+---
+layout: project
+title: 
+projectFolder: 
+dated:    	// optional
+tags: 
+description:	// project's thumbnail text
+img: 		// project's thumbnail and abstract image 
+abstract: 
+end: 		// if there is no ending image
+end-left:	// used for text if there is an ending image
+end-right:	// used for img 
+---
+{% endhighlight %}
+
+<p>Following this Liquid header is the page's main body content - what you're reading through right now. This allows the rest of the HTML to sit in a layout HTML file titled <i>project.html</i> which uses the Liquid variables given here to build the page. This greatly reduces the need to repeat snippets of code, such as the div declaration. One adjustment to the <i>project.html</i> will automatically be reflected on all the pages that use the layout, which allows for speedy reformatting when needed.<br><br>
+	
+This is not the only used of Liquid for this webpage. Liquid is also used to generate the tag system used. Should one of the tags listed at the beginning of this page be clicked, it will bring the user to a page that lists all projects that contain that tag. In addition, on the homepage under Skill Sets the "See example" text will bring the user to the tag page. Liquid is used to gather all the pages listed with the desired tag, and thus eliminates the need to manually fill and update every tag page available.<br><br>
+
+Liquid was an easy language to learn, and offers many complex behaviors that reduces a creator's manual work.<br><br>
+ </p>
+
