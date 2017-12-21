@@ -6,6 +6,9 @@ collections:
   portfolio:
     output: true
     permalink: /portfolio/:title
+  tags:
+    output: true
+    permalink: /tag/:title
 sass:
   sass_dir: assets/css
   style: compressed

@@ -56,6 +56,7 @@ skills_programming:
 - {name: C, value: '90', example: /portfolio/phoenix-atari-2600}
 - {name: Java, value: '100', example: }
 - {name: JavaScript, value: '100', example: /portfolio/google-calendar-script}
+- {name: jQuery, value: '50', example: /portfolio/what-a-kerfuffle}
 - {name: HTML, value: '100', example: /portfolio/portfolio-webpage}
 - {name: CSS, value: '100', example: /portfolio/portfolio-webpage}
 - {name: SASS, value: '100', example: /portfolio/portfolio-webpage}

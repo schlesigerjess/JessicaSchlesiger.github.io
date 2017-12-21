@@ -24,7 +24,24 @@ permalink: /404
 
 
 <h3>Tags: </h3>
-WIP
+{% assign tags =  site.portfolio | map: 'tags' | join: ','  | split: ',' | uniq %}
+{% for tag in tags %}
+  <b>{{ tag }}</b>: 
+
+  {% for project in site.portfolio %}
+    {% if project.tags contains tag %}
+    <a href="{{ site.baseurl }}{{ project.url }}">{{ project.title }}</a> 
+    {% endif %}
+  {% endfor %}
+  <br>
+
+{% endfor %}
+<br><br><br>
+{% assign tags =  site.portfolio | map: 'tags' | join: ','  | split: ',' | uniq %}
+{% for tag in tags %}
+  <a href="/tag/{{ tag }}">{{ tag }}</a>, 
+
+{% endfor %}
 
 	</div>
 </div>
