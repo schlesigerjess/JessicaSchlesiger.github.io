@@ -4,8 +4,10 @@
 		<div class="sample-wrap">
 			 <div class="thumb-wrap">
 				{% assign projects = site.portfolio | sort: 'date' | reverse %}
-				{% for project in projects limit:4 %}
-					{% include projectContainer.html %}
+				{% for project in projects %}
+					{% if project.featured != %}
+						{% include projectContainer.html %}
+					{% endif %}
 				{% endfor %}
 			</div>
 		</div>

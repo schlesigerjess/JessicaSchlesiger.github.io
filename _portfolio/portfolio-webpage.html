@@ -13,6 +13,7 @@ tags:
  - Github
  - Liquid
  - Web Design
+featured: true
 
 abstract: "This projected aimed at creating a responsive webpage which hosts information about myself and the projects I have done. The following are the requirements I set for myself: 
 <ul>
@@ -69,7 +70,7 @@ Before coding anything, a well thought-out design must be in place. This reduces
 	</div>
 </div>
 	
-<p>There are a few big-ticket features with this webpage. First being the use of Liquid headers. These liquid headers a reduce need for repeated code, while still sharing certain layouts, variables, etc in common with other pages. For example, project writeup pages, like this one, share the following Liquid header. I have added comments for clarity. </p>
+<p>There are a few big-ticket features with this webpage. First being the use of Liquid and YAML headers. These headers reduce the need for repeated code by allowing the user to declare variables accessed through Liquid tags. For example, project writeup pages, like this one, share the following YAML front matter. I have added comments for clarity. </p>
 	
 {% highlight c %}
 ---
@@ -87,7 +88,7 @@ end-right:	// used for img
 ---
 {% endhighlight %}
 
-<p>Following this Liquid header is the page's main body content - what you're reading through right now. This allows the rest of the HTML to sit in a layout HTML file titled <i>project.html</i> which uses the Liquid variables given here to build the page. This greatly reduces the need to repeat snippets of code, such as the div declaration. One adjustment to the <i>project.html</i> will automatically be reflected on all the pages that use the layout, which allows for speedy reformatting when needed.<br><br>
+<p>Following this header is the page's main body content - what you're reading through right now. This allows the rest of the HTML to sit in a layout HTML file titled <i>project.html</i> which uses the Liquid variables given here to build the page. This greatly reduces the need to repeat snippets of code, such as the div declaration. One adjustment to the <i>project.html</i> will automatically be reflected on all the pages that use the layout, which allows for speedy reformatting when needed.<br><br>
 	
 This is not the only used of Liquid for this webpage. Liquid is also used to generate the tag system used. Should one of the tags listed at the beginning of this page be clicked, it will bring the user to a page that lists all projects that contain that tag. In addition, on the homepage under Skill Sets the "See example" text will bring the user to the tag page. Liquid is used to gather all the pages listed with the desired tag, and thus eliminates the need to manually fill and update every tag page available.<br><br>
 
