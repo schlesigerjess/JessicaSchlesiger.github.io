@@ -27,8 +27,8 @@ abstract: "This projected aimed at creating a responsive webpage which hosts inf
 Before beginning this project, I had no experience with SASS, Jekyll, and Liquid; however, each were heavily utilized throughout the webpage and now I feel great confidence using each of these."
 
 end: | 
- I feel immensely proud of the outcome for this project. The webpage is sleek and quick, while being fully responsive. The file system which Jekyll enables was perfect for this project and will allow for easy additions and modifications in the future. <br><br>
- One thing I’d do for my next project is use something like SAMPLE - where you can create a job and tasks and overall keep track of progress. While I wasn’t having problems implementing every design aspect, it would have been nice to have a place which tracks all of my progress, bugs, and list what I am to do next. With a larger project, a simple to-do word document will not be sufficient.<br><br>
+ I feel immensely proud of the outcome for this project. The webpage is sleek and quick, while being fully responsive. The file system which Jekyll enables was perfect for this project and will allow for easy additions and modifications in the future. Liquid and SASS were new concepts when beginning the project; however, now I feel great confidence in both languages and plan to use them in all future webpages.<br><br>
+ One thing I’d do differently for my next project is use something like SAMPLE. This application allows you to create a job with tasks and keep track of overall progress. While I wasn’t having problems staying on task with this project, it would have been nice to have a place which tracks all of my progress, bugs, and list what I am to do next. With a larger project, a simple to-do word document will not be sufficient.<br><br>
  <a href="https://github.com/schlesigerjess/JessicaSchlesiger.github.io" alt="{{ link.icon }}" target="_blank" rel="noopener"><b class="icon-github"></b> See project at Github.</a>
 
 
@@ -91,6 +91,18 @@ end-right:	// used for img
 	
 This is not the only used of Liquid for this webpage. Liquid is also used to generate the tag system used. Should one of the tags listed at the beginning of this page be clicked, it will bring the user to a page that lists all projects that contain that tag. In addition, on the homepage under Skill Sets the "See example" text will bring the user to the tag page. Liquid is used to gather all the pages listed with the desired tag, and thus eliminates the need to manually fill and update every tag page available.<br><br>
 
-Liquid was an easy language to learn, and offers many complex behaviors that reduces a creator's manual work.<br><br>
- </p>
+Liquid was an easy language to learn, and offers many complex behaviors that reduces a creator's manual work. In a similar vein, SASS also enhanced my ability to stay organized and without repeated code. SASS is a CSS extension that allows use of variables, nested rules, imports, and much more. SASS is not only easier to read, it also enables variables which reduce the need to scatter common values throughout the code. For example, text color, main accent color, and link color will always be the same throughout all pages, so a variable can be assigned to each and used in place of the hex color. This enables the user to only make one change to the variable if he or she ever wants to change the color, rather than having to dig through their code and find all instances.</p>
+
+{% highlight sass %}
+$textColor: {{ site.data.layout.textColor }}
+
+$mainAccent: {{ site.data.layout.mainAccent }}
+$mainAccent-light: lighten($mainAccent, 25%)
+$mainAccent-dark: saturate(darken($mainAccent, 10%), 20%)
+
+$grayAccent: {{ site.data.layout.grayAccent }}
+$grayAccent-light: lighten($grayAccent, 25%)
+{% endhighlight %}
+
+<p>As seen above, I declare six different colors that are used throughout the webpage. Say I want to change the main accent color from blue to green, it will only take the adjustment of <i>$mainAccent</i> for the whole webpage to follow suite. This kind of capability is not available in CSS, yet SASS is close enough to the the language it is easy to pickup and learn.<br><br></p>
 
