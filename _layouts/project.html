@@ -64,6 +64,72 @@ permalink: /{{page.title}}
 			</div>
 		{% endif %}
 		</div>
-		<div class="project-relatedWorks"><h2>Related Projects: </h2>Coming soon!</div>
+	</div>
+</div>
+<div class="project-moreWorks-bar">
+	<div class="project-moreWorks container">
+		<h1>Additional Projects: </h1>
+		
+
+{% assign maxRelated = 2 %}
+{% assign minCommonTags =  1 %}
+{% assign maxRelatedCounter = 0 %}
+{% assign listedProject = '' | split: '' %}
+{% assign projects = site.portfolio | sort: 'date' | reverse %}
+
+{% for project in projects %}
+
+  {% assign sameTagCount = 0 %}
+  {% assign commonTags = '' %}
+
+	{% for tag in project.tags %}
+	  {% if project.url != page.url %}
+		{% if page.tags contains tag %}
+		  {% assign sameTagCount = sameTagCount | plus: 1 %}
+		  {% capture tagmarkup %} <span class="label label-default">{{ tag }}</span> {% endcapture %}
+		  {% assign commonTags = commonTags | append: tagmarkup %}
+		{% endif %}
+	  {% endif %}
+	{% endfor %}
+
+	{% if sameTagCount >= minCommonTags %}
+	  
+	  
+		{% include projectContainer.html %}
+					{% assign projectTitle = project.title | split: '_' %}
+					{% assign listedProject = listedProject | concat: projectTitle %}
+	  
+		{% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
+		{% if maxRelatedCounter >= maxRelated %}
+			{% break %}
+		{% endif %}
+	{% endif %}
+
+  {% endfor %}
+
+
+{% if maxRelatedCounter < maxRelated %}
+	{% for project in projects %}
+		{% if project.url != page.url %}
+			{% assign notListedWatcher = 0 %}
+			{% for listed in listedProject %}
+				{% if project.title != listed %}
+					{% assign notListedWatcher = notListedWatcher | plus: 1 %}
+				{% endif %}
+			{% endfor %}
+			{% if notListedWatcher == listedProject.size %}
+				{% include projectContainer.html %}
+				{% assign projectTitle = project.title | split: '_' %}
+				{% assign listedProject = listedProject | concat: projectTitle %}
+				{% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
+				{% if maxRelatedCounter >= maxRelated %}
+					{% break %}
+				{% endif %}
+			{% endif %}	
+		{% endif %}
+	{% endfor %}
+{% endif %}
+
+
 	</div>
 </div>
