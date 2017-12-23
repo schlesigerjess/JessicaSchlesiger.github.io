@@ -5,7 +5,7 @@ description: "Jessica Schlesiger Contact"
 permalink: /contact/
 ---
 <div class="contact-page-bar">
-	<div class="contact container">
+	<div class="contact-page container">
 		<div class="contact-info">
 			<div class="contact-icons"><br>
 				{% for link in site.data.settings.social %}
@@ -18,7 +18,6 @@ permalink: /contact/
 
 
 		<div class="contact-form">
-			<h2 id="contact">Let's work together</h2>
 			<form method="POST" action="//formspree.io/{{ site.data.settings.email }}">
 			  <fieldset class="contact-info-group">
 				<label><span>Your Name</span>
