@@ -46,31 +46,32 @@ hullEntertainment_duties:
 
 # Skills
 skills_programming:
-- {tag: C, value: '90'}
-- {name: Java, value: '100'}
-- {tag: JavaScript, value: '100'}
-- {tag: jQuery, value: '50'}
-- {tag: HTML, value: '100'}
-- {tag: CSS, value: '100'}
-- {tag: SASS, value: '100'}
-- {tag: Jekyll, value: '90'}
-- {tag: Liquid, value: '90'}
-- {tag: Lua, value: '40'}
-- {tag: OpenGL, value: '70'}
-- {tag: GLUT, value: '70'}
-- {name: R, value: '40'}
+- {tag: C, value: 90}
+- {name: Java, value: 100}
+- {tag: JavaScript, value: 100}
+- {tag: jQuery, value: 50}
+- {tag: HTML, value: 100}
+- {tag: CSS, value: 100}
+- {tag: SASS, value: 100}
+- {tag: Jekyll, value: 90}
+- {tag: Liquid, value: 90}
+- {tag: Lua, value: 40}
+- {tag: OpenGL, value: 70}
+- {tag: GLUT, value: 70}
+- {name: R, value: 40}
+- {tag: AutoHotKey, value: 80}
 skills_design:
-- {tag: Adobe Illustrator, value: '70'}
-- {tag: Adobe Photoshop, value: '90'}
-- {tag: Web Design, value: '80'}
+- {tag: Adobe Illustrator, value: 70}
+- {tag: Adobe Photoshop, value: 90}
+- {tag: Web Design, value: 80}
 skills_utilities:
-- {name: Eclipse, value: '100'}
-- {name: Notepad++, value: '100'}
-- {name: Github, value: '80'}
-- {name: SourceForge, value: '70'}
-- {name: Word, value: '90'}
-- {name: Excel, value: '90'}
-- {name: UML, value: '100'}
+- {name: Eclipse, value: 100}
+- {name: Notepad++, value: 100}
+- {name: Github, value: 80}
+- {name: SourceForge, value: 70}
+- {name: Word, value: 90}
+- {name: Excel, value: 90}
+- {name: UML, value: 100}
 
 # Social Section
 social:

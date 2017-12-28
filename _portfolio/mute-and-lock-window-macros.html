@@ -1,0 +1,50 @@
+---
+layout: project
+title: Mute & Lock Window Macros
+projectFolder: mute-and-lock-window-macros
+date: 2017-11-21
+description: This simple script using AutoHotKey can mute applications and/or force them to always stay on-top.
+img: ahk.png
+tags: AutoHotKey
+
+
+abstract: This is a small script using AutoHotKey can mute applications and/or force them to always stay on-top using keyboard shortcuts.
+
+end: Although this script is rather simple, it offers simple macros that are a common need. The ability to force a window to stay on top can be terrific for keeping references in view while interacting with a separate window, and the mute macro is great when swapping between media.
+---
+
+<p>To begin, <a href="https://autohotkey.com/" target="_blank" rel="noopener">AutoHotKey</a> must be installed for the script to work. AutoHotkey is a free, open-source scripting language for Windows that allows users to easily create scripts for all kinds of tasks such as: form fillers, auto-clicking, macros, etc.<br><br>
+
+An AutoHotKey script is created by saving a text document as ".ahk". Running any of these scripts can be done by double clicking the .ahk file. Adding the code below to the document will lock the currently active window to always be on top. It is activated by hitting CTRL + SPACE.</p> 
+
+{% highlight ahk %}
+^SPACE::  Winset, Alwaysontop, , A
+{% endhighlight %}
+
+<p>These keys can be swapped out to any other desired key by changing <i>^SPACE</i>. <i>^</i> stands for CTRL, and <i>SPACE</i> stands for the spacebar.<br><br>
+	
+The code to mute a currently active window is a little more complicated. This method is activated by pressing CTRL + M and it takes roughly half a second to work.<p/>
+
+{% highlight ahk %}
+^m::
+DetectHiddenWindows On
+WinGetActiveTitle, Active
+Run, %A_WinDir%\System32\SndVol.exe, %A_WinDir%\System32\, Hide
+WinWaitActive, ahk_class #32770,, 3
+WinActivate, ahk_class #32770
+Sleep 500
+ControlClick, Mute for %Active%
+WinKill, ahk_class #32770
+DetectHiddenWindows Off
+return
+{% endhighlight %}
+
+<p>Since this method is more complicated, I will address each part step-by-step. First, it activates the ability to interact with hidden windows; this is so there is minimal disturbance to any current activities. Then, it activates the method that will allow access to a window's title; this will be used for identifying the window it needs to interact with. Next, it runs the volume control options and waits for it open. This moment will cause a slight disturbance to the user. After waiting, it presses the Mute button for the window. Afterwards, it ends all the processes.<br><br>
+	
+Saving both of these methods as a .ahk file will allow the user to run the script in the background. That way, these macros can be used at any given time. To confirm if it's running, there should be the AutoHotKey logo in the Icon Tray. If one wants to hide this icon, add the following to the code.</p>
+
+{% highlight ahk %}
+#NoTrayIcon
+{% endhighlight %}
+	
+<p>Lastly, to run this macro on startup, it will require converting the .ahk to a .exe file using the AutoHotKey's Convert .ahk or .exe application. After converting it, adding the .exe to the startup system configuration will allow it to always run on startup.</p><br><br>

@@ -5,17 +5,17 @@
 	<div class="thumb-overlay">
 		<div class="thumb-text"> 
 			<strong>{{ project.title }}</strong><br>
-			{% assign tagString = "" %}
-			{% for tag in project.tags %}
-				{% assign tempString = tagString %}
-				{% if forloop.last == false %}
-					{% capture tagString %} {{tagString}}{{tag}}, {% endcapture %}
-				{% else %}
-					{% capture tagString %} {{tagString}} & {{tag}} {% endcapture %}
-				{% endif %}
-				
-			{% endfor %}
-					
+			{% if project.tags.size == 1 %}
+				{{ project.tags }}
+			{% else %}
+				{% for tag in project.tags %}
+					{% if forloop.last == false %}
+						{{ tag }}, 
+					{% else %}
+						& {{ tag }}
+					{% endif %}
+				{% endfor %}
+			{% endif %}
 			<i>{{tagString}}</i>
 			
 			<div class="thumb-description">
