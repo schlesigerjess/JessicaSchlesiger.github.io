@@ -69,9 +69,9 @@ skills_utilities:
 - {name: Notepad++, value: 100}
 - {name: Github, value: 80}
 - {name: SourceForge, value: 70}
-- {name: Word, value: 90}
-- {name: Excel, value: 90}
-- {name: UML, value: 100}
+- {name: Word, value: 100}
+- {name: Excel, value: 100}
+- {name: UML Design, value: 100}
 
 # Social Section
 social:
