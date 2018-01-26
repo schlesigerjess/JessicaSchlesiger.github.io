@@ -23,7 +23,7 @@ education_courses:
 - {name: Design Patterns, id: SWE 200}
 - {name: Operating Systems, id: CMPE 320}
 - {name: Compiler Design, id: CSC 440}
-- {name: Intro Computer Graphic, id: CSC 350}
+- {name: Intro Computer Graphics, id: CSC 350}
 - {name: Artificial Intelligence, id: CSC 462}
 - {name: Computer Networks, id: CSC 431}
 - {name: Design and Analysis of Algorithms, id: CSC 310}
