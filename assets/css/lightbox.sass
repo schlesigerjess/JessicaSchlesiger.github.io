@@ -2,19 +2,38 @@
 	position: fixed
 	opacity: 0
 	overflow: hidden
+.icon-zoom
+	opacity: 0
 @media only screen and (min-width: 830px)
-	.lightbox
-		&:hover
-			box-shadow: 0px 0px 10px rgba(0,0,0,.3)
+	.lightbox-unit
+		padding: 3px
+		display: block
+		border-radius: 5px
+		max-width: 100%
+		position: relative
+		overflow: hidden
+		&:hover 
+			.icon-zoom
+				opacity: .9
+		img
+			display: block
+			width: 100%
+			height: 100%
+	.lightbox-overlay
+		+position(absolute,  13px 0px 1px 0px )
+		text-align: right
+		.icon-zoom
+			+transition
+			padding: 10px
+			border-radius: 5px
+			background-color: $mainAccent
+			font-size: 50px
+			color: #fff
 	.lightbox-target
 		z-index: 1000
-		padding: 0 2% 0 2%
+		padding: 0 $defaultPadding 0 $defaultPadding
 		width: 100%
 		margin-left: -50%
-		-webkit-transition: opacity .5s ease-in-out
-		-moz-transition: opacity .5s ease-in-out
-		-o-transition: opacity .5s ease-in-out
-		transition: opacity .5s ease-in-out
 		+transition
 		img
 			margin: auto
@@ -44,9 +63,6 @@
 		img 
 			max-height: 92%
 			max-width: 92%
-			min-width: 360px
-		a.lightbox-close 
-			top: 0px
 @media only screen and (max-width: 829px)
-	.lightbox
+	.lightbox-unit
 		cursor: context-menu
