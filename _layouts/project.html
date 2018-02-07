@@ -23,6 +23,9 @@ permalink: /{{page.title}}
 			<br><br>Tags: 	
 				{% if page.tags.size == 1 %}
 					<a href="{{site.baseurl}}/tag/{{ page.tags[0] | slugify }}" class="tag">{{ page.tags }}</a>
+				{% elsif page.tags.size == 2 %}
+					<a href="{{site.baseurl}}/tag/{{ page.tags[0] | slugify }}" class="tag">{{  page.tags[0] }}</a> & 
+					<a href="{{site.baseurl}}/tag/{{ page.tags[1] | slugify }}" class="tag">{{ page.tags[1] }}</a>
 				{% else %}
 					{% for tag in page.tags %}
 						{% if forloop.last == false %}

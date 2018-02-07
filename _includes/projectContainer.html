@@ -7,6 +7,8 @@
 			<strong>{{ project.title }}</strong><br>
 			{% if project.tags.size == 1 %}
 				{{ project.tags }}
+			{% elsif project.tags.size == 2 %}
+				{{  project.tags[0] }} & {{  project.tags[1] }}
 			{% else %}
 				{% for tag in project.tags %}
 					{% if forloop.last == false %}
