@@ -6,22 +6,9 @@ permalink: /404
 ---
 
 <div class="error-bar">
-	<div class="error Container">
-		Page not found! :(<br><br>
-		
-		
-
-<h3>Current Pages: </h3>
-{% assign sitepages = site.pages | sort: 'order' %}
-{% for sitepage in sitepages %}
-    <a href="{{ sitepage.url }}">{{ sitepage.title }}</a><br>
-{% endfor %}
-
-<h3>Portfolio: </h3>
-{% for page in site.portfolio %}
-<a href="{{ page.url }}">{{ page.title }}</a><br>
-{% endfor %}
-
-
+	<div class="error container">
+		<h3>Error 404</h3>
+	<p>The requested page does not exist.<br> 
+	Please return to the <a href="/">homepage</a> or <a href="/contact/">contact me</a> about the problem.</p>
 	</div>
 </div>
