@@ -82,7 +82,7 @@ permalink: /{{page.title}}
 {% assign minCommonTags =  1 %}
 {% assign maxRelatedCounter = 0 %}
 {% assign listedProject = '' | split: '' %}
-{% assign projects = site.portfolio | sort: 'date' | reverse %}
+{% assign projects = site.portfolio | sample:site.portfolio.size %}
 
 {% for project in projects %}
 
