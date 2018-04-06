@@ -60,6 +60,7 @@ skills_programming:
 - {tag: GLUT, value: 70}
 - {name: R, value: 40}
 - {tag: AutoHotKey, value: 80}
+- {name: SQL, value: 50}
 skills_design:
 - {tag: Adobe Illustrator, value: 70}
 - {tag: Adobe Photoshop, value: 90}
