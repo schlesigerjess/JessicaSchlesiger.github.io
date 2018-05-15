@@ -14,15 +14,15 @@ tag:
 
 
 abstract: |
- This project served as an introduction to web hosting and domain, while also refreshing my knowledge on HTML and CSS. The basic goals I set were as following:  
+ This project served as an introduction to web hosting and domain, while also refreshing my knowledge of HTML and CSS. The basic goals I set were as following:  
  <ul>
- <li>Host full web page with custom domain, ideally for free
+ <li>Host full web page with a custom domain, ideally for free
  <li>Create a simple design which hosts my artwork
  </ul>
- While the goals here are simple, this project was a crucial warm up for the following, more important project: my <a href="/portfolio/portfolio-webpage">portfolio webpage.</a>
+ While the goals here are simple, this project was a crucial warm-up for the following, more important project: my <a href="/portfolio/portfolio-webpage">portfolio webpage.</a>
 
 end: 
- This project did serve its purpose. It taught me how to host a webpage and use a custom domain, and refreshed my HTML and CSS knowledge I hadn't used in years. As a bonus, I was also introduced to how jQuery can be used to enhance webpages.<br><br> While this project was successful, I must admit the file system is very labor intensive to maintain. This is something I improved on with my <a href="/portfolio/portfolio-webpage">portfolio webpage</a>, and I intend to revise this project in the future.<br><br>
+ This project did serve its purpose. It taught me how to host a webpage and use a custom domain, and refreshed my HTML and CSS knowledge I hadn't used in years. As a bonus, I was also introduced to how jQuery can be used to enhance websites.<br><br> While this project was successful, I must admit the file system is very labor intensive to maintain. This is something I improved on with my <a href="/portfolio/portfolio-webpage">portfolio webpage</a>, and I intend to revise this project in the future.<br><br>
  <a href="http://whatakerfuffle.ml" target="_blank" rel="noopener" alt="{{ link.icon }}"><b class="icon-link"></b> Visit WhatAKerfuffle.ml.</a><br>
  <a href="https://github.com/schlesigerjess/WhatAKerfuffle.github.io" target="_blank" rel="noopener" alt="{{ link.icon }}"><b class="icon-github"></b> See full source code at Github.</a>
 
@@ -31,7 +31,7 @@ end:
  
 ---
 
-<p>First thing's first: host the site somewhere and find a domain for free, if possible. This part arguably took the longest out of the whole project, but ultimately I did find a solution! After scouring the internet, I stumbled on <a href="https://pages.github.com/" target="_blank" rel="noopener">Github Pages.</a> Github Pages allows users to create repositories that host webpages. This will result in a URL along the lines of: http://<i>username</i>.github.io/<i>repository</i>, but they do support custom URLs at the cost of not being https secure. Since this webpage does not collect any user information and the site's content is completely open source, not being https secure is an acceptable cost of having a custom domain.<br><br>
+<p>First thing's first: host the site somewhere and find a domain for free, if possible. This part arguably took the longest out of the whole project, but ultimately I did find a solution! After scouring the internet, I stumbled on <a href="https://pages.github.com/" target="_blank" rel="noopener">Github Pages.</a> Github Pages allow users to create repositories that host websites. This will result in a URL like http://<i>[username]</i>.github.io/<i>[repository]</i>, but they do support custom URLs at the cost of not being https secure. Since this webpage does not collect any user information and the site's content is completely open source, not being https secure is an acceptable cost of having a custom domain.<br><br>
 	
 This is where <a href="http://www.freenom.com/en/index.html?lang=en" target="_blank" rel="noopener">Freenom.com</a> comes in. Freenom allows users to claim domains for free - although they'll be a domain with an alternative protocol identifier like <i>.ml</i> and <i>.tk</i>. While that's not ideal, it is still a free domain. I chose the title What A Kerfuffle as kerfuffle is my favorite word, and I use it for most of my personal accounts. This resulted in the webpage's URL: <i>WhatAKerfuffle.ml</i>.<br><br>
 	
@@ -43,7 +43,7 @@ With the web hosting and domain in place, the next step is to create a web desig
 	</div>
 </div>
 
-<p>The initial design was intended to have a blog-like feel while featuring recent notable works. Overtime, I grew to dislike this design and realized the amount of text was unrealistic for the scope of the webpage. I then revised the design into the one below.</p>
+<p>The initial design was intended to have a blog-like feel while featuring recent notable works. Over time, I grew to dislike this design and realized the amount of text was unrealistic for the scope of the webpage. I then revised the design into the one below.</p>
 
 <div class="img-wrap full">
 	<div class="img-center">
@@ -51,7 +51,7 @@ With the web hosting and domain in place, the next step is to create a web desig
 	</div>
 </div>
 
-<p>This new design features less text, and more works featured at once in a section that will scroll up and down. Users are able to interact with these images to see a larger version of the work. This section required a bit of jQuery to execute.<br><br>
+<p>This new design features less text and more works featured at once in a section that will scroll up and down. Users are able to interact with these images to see a larger version of the work. This section required a bit of jQuery to execute.<br><br>
 	
 First, I needed a jQuery plug-in to generate the cascade title effect which handles images of all sizes. After much digging, I found <a href="http://unitegallery.net/" target="_blank" rel="noopener">Unite Gallery</a> to be the most effective. This is a free plugin that will take in a feed of images and fill the desired space with tiles of the given images, while also automatically adjusting the image's widths and heights to best fit the screen.<br><br>
 

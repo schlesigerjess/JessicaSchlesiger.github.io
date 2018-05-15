@@ -59,8 +59,8 @@ skills_programming:
 - {tag: OpenGL, value: 70}
 - {tag: GLUT, value: 70}
 - {name: R, value: 40}
-- {tag: AutoHotKey, value: 80}
-- {name: SQL, value: 50}
+- {tag: AutoHotkey, value: 80}
+- {name: SQL, value: 60}
 skills_design:
 - {tag: Adobe Illustrator, value: 70}
 - {tag: Adobe Photoshop, value: 90}
@@ -77,5 +77,5 @@ skills_utilities:
 # Social Section
 social:
 - {icon: 'github', link: 'https://github.com/schlesigerjess'}
-- {icon: 'facebook', link: 'https://www.facebook.com/jessica.schlesiger'}
 - {icon: 'linkedin', link: 'https://www.linkedin.com/in/jessicaschlesiger/'}
+- {icon: 'facebook', link: 'https://www.facebook.com/jessica.schlesiger'}

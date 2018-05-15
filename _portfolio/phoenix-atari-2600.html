@@ -10,7 +10,7 @@ tags:
  - OpenGL
  - GLUT
 
-abstract: "For my Introduction To Computer Graphics course, I was tasked with recreation of an Atari game using OpenGL, glut, and C as a platform. The project requirements were:
+abstract: "For my Introduction To Computer Graphics course, I was tasked with the recreation of an Atari game using OpenGL, glut, and C as a platform. The project requirements were:
 <ul>
 	<li>Pause menu
 	<li>One level
@@ -28,7 +28,7 @@ end-left: "As the first large project in OpenGL, this was a major accomplishment
 end-right: <img width="100%" src="/assets/img/project/pheonix-atari-2600/gameplay.gif" alt="Original Pheonix"><a href="https://github.com/schlesigerjess/Phoenix-Atari-2600" alt="{{ link.icon }}" target="_blank" rel="noopener"><b class="icon-github"></b> See full source at Github.</a>
 ---
 
-<p>My initial step was recreating the original game's sprites. The game's two main sprites were the enemy ship, and the player's ship. Each would also need an "idle" and "moving" sprite to swap between. While the task is relatively simple, it took roughly 200 lines of code to carefully craft each pixel’s position in OpenGL.</p>
+<p>My initial step was recreating the original game's sprites. The game's two main sprites were the enemy ship and the player's ship. Each would also need an "idle" and "moving" sprite to swap between. While the task is relatively simple, it took roughly 200 lines of code to carefully craft each pixel’s position in OpenGL.</p>
 		
 <div class="img-wrap">
 	<div class="img-center">
@@ -60,7 +60,7 @@ void idle(void) {
 	</div>
 </div>
 		
-<p>With these basic elements in place, many of the basic operations such as: handling player’s move commands, shooting, and scoreboard, were easily implemented. The next large piece for the game was creating hit detection. The only form of "hits" in the game were the bullets every ship could shoot. The bullets posed two terminal requirements: move the bullet until out of bounds, or move the bullet until contacting a ship. To meet these requirements, an array for all the bullets would be necessary. This array would track each bullet’s position; that way it could be incremented until one of the terminal states were met.</p>
+<p>With these basic elements in place, many of the basic operations such as handling player’s move commands, shooting, and scoreboard, were easily implemented. The next large piece for the game was creating hit detection. The only form of "hits" in the game were the bullets every ship could shoot. The bullets posed two terminal requirements: move the bullet until out of bounds, or move the bullet until contacting a ship. To meet these requirements, an array for all the bullets would be necessary. This array would track each bullet’s position; that way it could be incremented until one of the terminal states were met.</p>
 
 {% highlight c %}
 /** Recognizes hits on enemies **/

@@ -19,23 +19,23 @@ abstract: "This projected aimed at creating a responsive webpage which hosts inf
 <ul>
 	<li>Simple, sleek design; allow content to be the main focus with little to no distractions
 	<li>Index’s Content: About, Experience, Projects, Skill Sets, and Contact
-	<li>Portfolio subpage with full list of projects
+	<li>Portfolio subpage with a full list of projects
 	<li>Project write-up pages which detail the purpose of the project and process it took to complete it
-	<li>Allow reader to get a professional but personal feel for who I am
+	<li>Allow the reader to get a professional but personal feel for who I am
 	<li>Improve upon the file system I used in a previous trial-run project
 </ul>
 
-Before beginning this project, I had no experience with Jekyll, Liquid and SASS; however, each were heavily utilized throughout the webpage and now I feel great confidence using each of these."
+Before beginning this project, I had no experience with Jekyll, Liquid, and SASS; however, each was heavily utilized throughout the webpage and now I feel great confidence using all of these."
 
 end: | 
- I feel immensely proud of the outcome for this project. The webpage is sleek and quick, while being fully responsive. The file system which Jekyll enables was perfect for this project and will allow for easy additions and modifications in the future. Liquid and SASS were new concepts when beginning the project; however, now I feel great confidence in both languages and plan to use them in all future webpages.<br><br>
- One thing I’d do differently for my next project is use a task management system. This allows users to create a job with tasks and keep track of overall progress. While I wasn’t having problems staying on task with this project, it would have been nice to have a place which tracks all of my progress, bugs, and future goals. With a larger project, a simple to-do word document will not be sufficient.<br><br>
+ I feel immensely proud of the outcome for this project. The webpage is sleek and quick while also being fully responsive. The file system which Jekyll enables was perfect for this project and will allow for easy additions and modifications in the future. Liquid and SASS were new concepts when beginning the project; however, now I feel great confidence in both languages and plan to use them in all future websites.<br><br>
+ One thing I’d adjust for my next project is to use a task management system. This allows users to create a job with tasks and keep track of overall progress. While I wasn’t having problems staying on task with this project, it would have been nice to have a place which tracks all of my progress, bugs, and future goals. With a larger project, a simple to-do word document will not be sufficient.<br><br>
  <a href="https://github.com/schlesigerjess/JessicaSchlesiger.github.io" alt="{{ link.icon }}" target="_blank" rel="noopener"><b class="icon-github"></b> See project at Github.</a>
 
 
 ---
 
-<p>Many of the previous hurdles from my trial-run webpage, <a href="/portfolio/what-a-kerfuffle">WhatAKerfuffle.ml</a> prepared me for the limitations of hosting this webpage for free. In the previous writeup I explain how Github Pages and Freenom.com can be used to host a webpage for free with a custom domain with the only limitations being open source and not https secured. Since this is an open project and I do not collect nor store any user information, these limitations were acceptable costs for a free webpage. <br><br>
+<p>Many of the previous hurdles from my trial-run webpage, <a href="/portfolio/what-a-kerfuffle">WhatAKerfuffle.ml</a> prepared me for the limitations of hosting this webpage for free. In the previous write-up I explain how Github Pages and Freenom.com can be used to host a webpage for free with a custom domain with the only limitations being open source and not https secured. Since this is an open project and I do not collect nor store any user information, these limitations were acceptable costs for a free webpage. <br><br>
 	
 In addition, I set out to improve upon the mistakes previously made. The most pressing being an organized file structure. While the trial webpage wasn’t terrible, it was a very manual system with lots of refactoring. This time, I sought out for a static webpage file management system. Luckily, I stumbled upon Github's Jekyll static webpage generator.</p><br><br>
 
@@ -52,9 +52,9 @@ In addition, I set out to improve upon the mistakes previously made. The most pr
 		<img src="{{ site.baseurl }}/assets/img/project/{{ page.projectFolder }}/goodFileSystem.png" alt="Portfolio webpage's good file structure.">
 	</div>
 </div>
-<p>As seen above, the portfolio webpage has all subpages neatly organized. What's not shown here is how the portfolio webpage utilizes only one CSS file - which is optimal in terms of bandwidth, while the other has separate CSS files for each page - which aids in personal organization. Jekyll allows imports of numerous CSS files, and will compile all into one CSS file when building the webpage. This enables the user to be fully organized on their repository, while also being optimized for bandwidth use. With these structures in place, it was time for actual web design.<br><br>
+<p>As seen above, the portfolio webpage has all subpages neatly organized. What's not shown here is how Jekyll allows imports of numerous stylesheets which will be compiled into one file when building the webpage. This enables the user to be fully organized in their repository, while also being optimized for bandwidth use. With these structures in place, it was time for actual web design.<br><br>
 	
-Before coding anything, a well thought-out design must be in place. This reduces the time spent adjusting code and leads to overall better structured source code. While the end result may diverge from the original design, the basic design and structure aids in predicting future functionality needs between pages. See the initial design below.</p>
+Before coding anything, a well thought-out design must be in place. This reduces the time spent adjusting the code for design adjustments, while also producing properly structured source code. While the end result may diverge from the original design, the basic design and structure aids in predicting future functionality needs between pages. See the initial design below.</p>
 
 <div class="img-wrap full">
 	<div class="img-center">
@@ -62,7 +62,7 @@ Before coding anything, a well thought-out design must be in place. This reduces
 	</div>
 </div>
 
-<p>Multiple small adjustments were made to the design since starting the project such as: adding a logo, removing personal image, swapping the order of Skill Sets and Sample Projects, etc. All of these small adjustments lead to a more visually clean and inciting experience for the user. Most of these adjustments were suggestions from one of my professors, Dr. Armstrong. Her feedback was invaluable.<p>
+<p>Multiple small adjustments were made to the design since starting the project such as: adding a logo, removing the personal image, swapping the order of Skill Sets and Sample Projects, etc. All of these small adjustments lead to a more visually clean and inviting experience for the user. Most of these adjustments were suggestions from one of my professors, Dr. Armstrong. Her feedback was invaluable.<p>
 
 <div class="img-wrap full">
 	<div class="img-center">
@@ -70,7 +70,7 @@ Before coding anything, a well thought-out design must be in place. This reduces
 	</div>
 </div>
 	
-<p>There are a few big-ticket features with this webpage. First being the use of Liquid and YAML headers. These headers reduce the need for repeated code by allowing the user to declare variables accessed through Liquid tags. For example, project writeup pages, like this one, share the following YAML front matter. I have added comments for clarity. </p>
+<p>There are a few big-ticket features with this webpage. First is the use of Liquid and YAML headers. These headers reduce the need for repeated code by allowing the user to declare variables accessed through Liquid tags. For example, project writeup pages, like this one, share the following YAML front matter. I have added comments for clarity.</p>
 	
 {% highlight c %}
 ---
@@ -108,7 +108,7 @@ This is not the only use of Liquid for this webpage. Liquid is also used to gene
 {% endraw %}
 {% endhighlight %}
 
-<p>Liquid was an easy language to learn, and offers many complex behaviors that reduces a creator's manual work. In a similar vein, SASS also enhanced my ability to stay organized and reduce repeated code. SASS is a CSS extension that allows use of variables, nested rules, imports, and much more. SASS is not only easier to read, but it also enables variables which reduce the need to scatter common values throughout the code. For example, a typical webpage's text color, main accent color, and link color will always be the same throughout all pages, so a variable can be assigned to each hex color. Then, this variable can be used in place of the hex color. This enables the user to only make one change to the variable if he or she ever wants to change the color, rather than having to dig through their code and find all instances.</p>
+<p>Liquid is an easy language to learn and it offers many complex behaviors that reduce a creator's manual work. In a similar vein, SASS also enhanced my ability to stay organized and reduce repeated code. SASS is a CSS extension that allows the use of variables, nested rules, imports, and much more. SASS is not only easier to read, but it also enables variables which reduce the need to scatter common values throughout the code. For example, a typical webpage's text color, main accent color, and link color will always be the same throughout all pages, so a variable can be assigned to each hex color. Then, this variable can be used in place of the hex color. This enables the user to only make one change to the variable if he or she ever wants to change the color, rather than having to dig through their code and find all instances.</p>
 
 {% highlight sass %}
 $textColor: {{ site.data.layout.textColor }}
@@ -121,5 +121,5 @@ $grayAccent: {{ site.data.layout.grayAccent }}
 $grayAccent-light: lighten($grayAccent, 25%)
 {% endhighlight %}
 
-<p>As seen above, I declare six different colors that are used throughout the webpage. Say I want to change the main accent color from blue to green, it will only take the adjustment of <i>$mainAccent</i> for the whole webpage to follow suite. This kind of capability is not available in CSS, yet SASS is close enough to the the language it is easy to pickup and learn.<br><br></p>
+<p>As seen above, I declare six different colors that are used throughout the webpage. Say I want to change the main accent color from blue to green, it will only take the adjustment of <i>$mainAccent</i> for the whole webpage to follow suit. This kind of capability is not available in CSS, yet SASS is close enough to the language it is easy to pick up and learn.<br><br></p>
 

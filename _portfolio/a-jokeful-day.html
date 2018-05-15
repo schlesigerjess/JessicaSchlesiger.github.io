@@ -12,22 +12,22 @@ tags:
  - Jekyll
  - Liquid
 
-abstract: "This project served as a light-hearted way to create a website that featured a little custom JavaScript. The goals for the project were as following:
+abstract: "This project served as a light-hearted way to create a website that featured a little custom JavaScript. The goals of the project were as following:
 	<ul>
 	<li>Feature a random joke on refresh
 	<li>Two joke categories: One-liners and Traditional
 	<li>Feature a decent and simple web design
 	<li>Have an excuse to store my favorite corny jokes forever
 	</ul>
-	While this webpage is mainly just a portfolio item, it was a fun small project that I'll use as reference for future creations."
-end: A Jokeful Day is a simple corny joke generator that utilizes a little custom JavaScript to generate the joke on refresh. While the project itself is simple and small, it provides a good example of my ability to use JavaScript to manipulate webpages.  <br><br><a href="http://ajokefulday.ml" target="_blank" rel="noopener" alt="{{ link.icon }}"><b class="icon-link"></b> Visit AJokefulDay.ml.</a><br>
+	While this webpage is mainly just a portfolio item, it was a fun small project that acts as a reference for future creations."
+end: A Jokeful Day is a simple corny joke generator that utilizes a little custom JavaScript to generate the joke on refresh. While the project itself is simple and small, it provides a good example of my ability to use JavaScript to manipulate websites.<br><br><a href="http://ajokefulday.ml" target="_blank" rel="noopener" alt="{{ link.icon }}"><b class="icon-link"></b> Visit AJokefulDay.ml.</a><br>
  <a href="https://github.com/schlesigerjess/AJokefulDay" target="_blank" rel="noopener" alt="{{ link.icon }}"><b class="icon-github"></b> See full source code at Github.</a>
 
 
 ---
 
 
-<p>Like my previous projects, the portfolio website and What A Kerfuffle, this webpage is hosted entirely for free. For further details, What A Kerfuffle explains hows to have an entirely free webpage, but in summary this comes with two limitations: no https and a .ml protocol identifier. Since this webpage is mainly for show and it collects no sensitive information, these were acceptable costs for having an entirely free webpage.<br><br>
+<p>Like my previous projects, this portfolio website and WhatAKerfuffle, AJokefulDay webpage is hosted entirely for free. For further details on free web hosting, <a href="/portfolio/what-a-kerfuffle">WhatAKerfuffle's project write-up</a> explains hows to have an entirely free webpage. In summary, hosting for free comes with two limitations: no https and a .ml protocol identifier. Since this webpage is mainly for show and it collects no sensitive information, these were acceptable costs for having an entirely free webpage.<br><br>
 
 When creating the webpage's name and logo I only had one idea: the word 'joke' with a sun as the 'o'. Below are the four different styles I was initially considering.</p>
 
@@ -70,7 +70,7 @@ function generateRandomJokes(numberOfJokes, type) {
 }
 {% endhighlight %}
 
-<p>The method above is a little more complicated than it needs to be, but that is because of accounting for future possible uses. While each page in their current state only feature one joke, this method is capable of producing as many jokes as the call to it specifies. When a joke is selected, it will create the desired HTML divs and links, and then remove the joke from the main array. This guarantees it will not be selected again if we wanted more than one random joke.<br><br>
+<p>The method above is a little more complicated than it needs to be, but that is because of accounting for future possible uses. While each page in their current state only features one joke, this method is capable of producing as many jokes as the call to it specifies. When a joke is selected, it will create the desired HTML divs and links, and then remove the joke from the main array. This guarantees it will not be selected again if we wanted more than one random joke.<br><br>
 	
 An interesting utilization of Jekyll's capabilities is also featured in the JavaScript file. Rather than creating an array containing all the jokes directly in the <i>.js</i> file, all jokes are stored and categorized in separate <i>.yml</i> files in the _data folder. This allows for an easy to read and modify format as seen below.
 
@@ -80,7 +80,7 @@ An interesting utilization of Jekyll's capabilities is also featured in the Java
  ...
 {% endhighlight %}
 
-<p>To import the data into the <i>.js</i> file, it requires the YAML header. This is denoted by two lines of '---' at the top of the file. This signals to Jekyll to parse this file and look for any liquid tags. In this case, we use liquid to import the data from the <i>.yml</i> file. Below is the file <b>before</b> jekyll generates the static webpage.</p>
+<p>To import the data into the <i>.js</i> file, it requires the YAML header. This is denoted by two lines of '---' at the top of the file. This signals to Jekyll to parse this file and look for any liquid tags. In this case, we use liquid to import the data from the <i>.yml</i> file. Below is the file <b>before</b> Jekyll generates the static webpage.</p>
 
 {% highlight JavaScript %}
 {% raw %}

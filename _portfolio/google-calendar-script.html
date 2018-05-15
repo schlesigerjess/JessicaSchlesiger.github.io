@@ -2,7 +2,7 @@
 layout: project
 title: Google Calendar Script
 projectFolder: google-cal-script
-description: This scheduling script that pulls event data from a spreadsheet and updates or creates them on a desired Google Calendar.
+description: This scheduling script that pulls event data from a spreadsheet and updates or creates them on the desired Google Calendar.
 date: 2017-11-20
 img: abstract.png
 tags: 
@@ -20,11 +20,11 @@ abstract: "During my employment at Hull Entertainment with Paint Nite and Plant 
 <li>Update or Create events on Google Calendar
 <li>Events are on separate calendars based on their regions
 </ul>
-The project is modified from the customized version to act as a free to use script for anyone to use."
+This project is modified from the customized version and anyone may use it freely. "
 
 end-left: |
- Overall, this project was highly successful. The version for the company cut down hundreds of hours spent synchronizing events, and guaranteed the data between the portal and our Google Calendar was up to date.<br><br>
- This project introduced me to Google's API. Google's API write up is fantastic, and I highly recommend utilizing the <a href="https://developers.google.com/apps-script/reference/spreadsheet/" target="_blank" rel="noopener">Spreadsheet API</a> and <a href="https://developers.google.com/apps-script/reference/calendar/" target="_blank" rel="noopener">Google Calendar API</a> pages as references for all the methods used. Also, applications do have some limitations on quotas such as a runtime of six minutes and frequency of queries. Due to this limitation, the script required a 4 second delay after every 5th event updated. <a href="https://developers.google.com/apps-script/guides/services/quotas" target="_blank" rel="noopener">See the list of Google's Service Quotas for more details.</a>
+ Overall, this project was highly successful. The version for the company cut down hundreds of hours spent synchronizing events and guaranteed the data between the portal and our Google Calendar is synchronized.<br><br>
+ This project introduced me to Google's API. Google's API write up is fantastic, and I highly recommend utilizing the <a href="https://developers.google.com/apps-script/reference/spreadsheet/" target="_blank" rel="noopener">Spreadsheet API</a> and <a href="https://developers.google.com/apps-script/reference/calendar/" target="_blank" rel="noopener">Google Calendar API</a> pages as references for all the methods used. Also, applications do have some limitations on quotas such as a runtime of six minutes and frequency of queries. Due to this limitation, the script required a 4-second delay after every 5th event updated. <a href="https://developers.google.com/apps-script/guides/services/quotas" target="_blank" rel="noopener">See the list of Google's Service Quotas for more details.</a>
 
 end-right: <img width="100%" src="/assets/img/project/google-cal-script/cal.png" alt="Sample Image"><br><br><a href="https://github.com/schlesigerjess/Spreadsheet-To-Google-Calendar" alt="{{ link.icon }}" target="_blank" rel="noopener"><b class="icon-github"></b> See full source and setup instructions at Github.</a>
 
@@ -36,9 +36,9 @@ end-right: <img width="100%" src="/assets/img/project/google-cal-script/cal.png"
 
 <p>Before coding, I had to identify the possible data coming in and its importance when creating an event. In this case, there are two types of data: optional and critical. 
 
-<br><br>Optional data are details that some but not all events may have. Optional data includes: a description, a location, and a calendar. Should no calendar be specified, the event is created on the user’s default calendar.
+<br><br>Optional data are details that some but not all events may have. Optional data includes a description, a location, and a calendar. Should no calendar be specified, the event is created on the user’s default calendar.
 
-<br><br>Critical data are basic details necessary to create an event on a google calendar. Critical data includes: an event ID, a date, a start time, a duration or an end time, and a title. With these basic concepts in place, a spreadsheet which implements these edge cases is below.
+<br><br>Critical data are basic details necessary to create an event on a google calendar. Critical data includes an event ID, a date, a start time, a duration or an end time, and a title. With these basic concepts in place, a spreadsheet which implements these edge cases is below.
 <br><br></p>
 
 <div class="img-wrap full">
@@ -47,7 +47,7 @@ end-right: <img width="100%" src="/assets/img/project/google-cal-script/cal.png"
 	</div>
 </div>
 
-<p>Deciding how to handle errors was my next step. Should one or more events be invalid, that does not imply all events logged are invalid. Each event is independent, and should be logged regardless. So, this means the script needs to mark bad entries while continuing to push events to the calendar. 
+<p>Deciding how to handle errors was my next step. Should one or more events be invalid, that does not imply all events logged are invalid. Each event is independent and should be logged regardless. So, this means the script needs to mark bad entries while continuing to push events to the calendar. 
 </p>
 {% highlight javascript %}
 function main() {
@@ -139,4 +139,4 @@ function checkDate(date, string) {
 }
 {% endhighlight %}
 
-<p>Surprisingly, the hardest part was parsing the date information. Since the user had the liberty of using either a duration or end time, the method needed multiple checks in place to handle the options. In addition, parsing a date from a string can be unreliable should it be formatted incorrectly or with a spelling error, and thus each date required a validity check. In the end, the method does account for any user error, but admittingly is sensitive to the information given to it.</p><br><br>
+<p>Surprisingly, the hardest part was parsing the date information. Since the user had the liberty of using either a duration or end time, the method needed multiple checks in place to handle the options. In addition, parsing a date from a string can be unreliable should it be formatted incorrectly or with a spelling error and thus each date required a validity check. In the end, the method does account for any user error, but admittingly is sensitive to the information given to it.</p><br><br>

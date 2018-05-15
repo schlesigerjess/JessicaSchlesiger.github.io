@@ -3,9 +3,9 @@ layout: project
 title: Mute & Lock Window Macros
 projectFolder: mute-and-lock-window-macros
 date: 2017-11-21
-description: This simple AutoHotKey script can mute applications and/or force them to always stay on-top using simple macro controls.
+description: This simple AutoHotkey script can mute applications and/or force them to always stay on-top using simple macro controls.
 img: ahk.png
-tags: AutoHotKey
+tags: AutoHotkey
 
 
 abstract: This is a small script using AutoHotKey can mute applications and/or force them to always stay on-top using keyboard shortcuts.
@@ -13,9 +13,9 @@ abstract: This is a small script using AutoHotKey can mute applications and/or f
 end: Although this script is rather simple, it offers simple macros that are a common need. The ability to force a window to stay on top can be terrific for keeping references in view while interacting with a separate window, and the mute macro is great when swapping between media.
 ---
 
-<p>To begin, <a href="https://autohotkey.com/" target="_blank" rel="noopener">AutoHotKey</a> must be installed for the script to work. AutoHotkey is a free, open-source scripting language for Windows that allows users to easily create scripts for all kinds of tasks such as: form fillers, auto-clicking, macros, etc.<br><br>
+<p>To begin, <a href="https://autohotkey.com/" target="_blank" rel="noopener">AutoHotkey</a> must be installed for the script to work. AutoHotkey is a free, open-source scripting language for Windows that allows users to easily create scripts for all kinds of tasks such as form fillers, auto-clicking, macros, etc.<br><br>
 
-An AutoHotKey script is created by saving a text document as ".ahk". Running any of these scripts can be done by double clicking the .ahk file. Adding the code below to the document will lock the currently active window to always be on top. It is activated by hitting CTRL + SPACE.</p> 
+An AutoHotkey script is created by saving a text document as ".ahk". Running any of these scripts can be done by double-clicking the .ahk file. Adding the code below to the document will lock the currently active window to always be on top. It is activated by hitting CTRL + SPACE.</p> 
 
 {% highlight ahk %}
 ^SPACE::  Winset, Alwaysontop, , A
@@ -39,7 +39,7 @@ DetectHiddenWindows Off
 return
 {% endhighlight %}
 
-<p>Since this method is more complicated, I will address each part step-by-step. First, it activates the ability to interact with hidden windows; this is so there is minimal disturbance to any current activities. Then, it activates the method that will allow access to a window's title; this will be used for identifying the window it needs to interact with. Next, it runs the volume control options and waits for it open. This moment will cause a slight disturbance to the user. After waiting, it presses the Mute button for the window. Afterwards, it ends all the processes.<br><br>
+<p>Since this method is more complicated, I will address each part step-by-step. First, it activates the ability to interact with hidden windows; this is so there is minimal disturbance to any current activities. Then, it activates the method that will allow access to a window's title; this will be used for identifying the window it needs to interact with. Next, it runs the volume control options and waits for it open. This moment will cause a slight disturbance to the user. After waiting, it presses the Mute button for the window. Afterward, it ends all the processes.<br><br>
 	
 Saving both of these methods as a .ahk file will allow the user to run the script in the background. That way, these macros can be used at any given time. To confirm if it's running, there should be the AutoHotKey logo in the Icon Tray. If one wants to hide this icon, add the following to the code.</p>
 

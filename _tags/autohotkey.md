@@ -1,4 +1,4 @@
 ---
 layout: tag
-title: AutoHotKey
+title: AutoHotkey
 ---
