@@ -1,7 +1,6 @@
 ---
 layout: project
 title: Phoenix Atari 2600
-projectFolder: pheonix-atari-2600
 description: This project recreated one level of the Atari arcade game Phoenix utilizing OpenGL and C. 
 date: 2016-10-25
 img: myPhoenix.png
@@ -25,7 +24,7 @@ end-left: "As the first large project in OpenGL, this was a major accomplishment
  No future progress is planned; however, this project was very fun and challenging to do and I'd happily do this again as a side project."
 
 
-end-right: <img width="100%" src="/assets/img/project/pheonix-atari-2600/gameplay.gif" alt="Original Pheonix"><a href="https://github.com/schlesigerjess/Phoenix-Atari-2600" alt="{{ link.icon }}" target="_blank" rel="noopener"><b class="icon-github"></b> See full source at Github.</a>
+end-right: <img width="100%" src="/assets/img/project/phoenix-atari-2600/gameplay.gif" alt="Original Pheonix"><a href="https://github.com/schlesigerjess/Phoenix-Atari-2600" alt="{{ link.icon }}" target="_blank" rel="noopener"><b class="icon-github"></b> See full source at Github.</a>
 ---
 
 <p>My initial step was recreating the original game's sprites. The game's two main sprites were the enemy ship and the player's ship. Each would also need an "idle" and "moving" sprite to swap between. While the task is relatively simple, it took roughly 200 lines of code to carefully craft each pixel’s position in OpenGL.</p>
@@ -33,8 +32,8 @@ end-right: <img width="100%" src="/assets/img/project/pheonix-atari-2600/gamepla
 <div class="img-wrap">
 	<div class="img-center">
 		<h3>Original vs Recreation</h3>
-		<img src="{{ site.baseurl }}/assets/img/project/{{ page.projectFolder }}/atariSprites.png" alt="Original Sprites">
-		<img src="{{ site.baseurl }}/assets/img/project/{{ page.projectFolder }}/mySprites.png" alt="Recreated Sprites">
+		<img src="{{ site.baseurl }}/assets/img/project/{{ page.title | slugify}}/atariSprites.png" alt="Original Sprites">
+		<img src="{{ site.baseurl }}/assets/img/project/{{ page.title | slugify}}/mySprites.png" alt="Recreated Sprites">
 	</div>
 </div>
 <p>After crafting the sprites, it was time to for them to move - literally! Creating movement was reliant on two main concepts: having a timer set to update the screen every few milliseconds, and rendering the new screen in a hidden buffer to prevent screen flickering.</p>
@@ -55,8 +54,8 @@ void idle(void) {
 
 <div class="img-wrap">
 	<div class="img-center">
-		<img src="{{ site.baseurl }}/assets/img/project/{{ page.projectFolder }}/playerAnimation.gif" alt="Player Ship Animation">
-		<img src="{{ site.baseurl }}/assets/img/project/{{ page.projectFolder }}/enemyAnimation.gif" alt="Enemy Ship Animation">
+		<img src="{{ site.baseurl }}/assets/img/project/{{ page.title | slugify}}/playerAnimation.gif" alt="Player Ship Animation">
+		<img src="{{ site.baseurl }}/assets/img/project/{{ page.title | slugify}}/enemyAnimation.gif" alt="Enemy Ship Animation">
 	</div>
 </div>
 		
@@ -88,7 +87,7 @@ void hitRecognition(int bulletToCheck) {
 <div class="img-wrap full">
 	<div class="img-center">
 		<h3>Final Result<br>Original vs Recreation</h3>
-		<img width="48%" src="{{ site.baseurl }}/assets/img/project/{{ page.projectFolder }}/originalPhoenix.png" alt="Original Pheonix">
-		<img width="48%" src="{{ site.baseurl }}/assets/img/project/{{ page.projectFolder }}/myPhoenix.png" alt="Recreation Result">
+		<img width="48%" src="{{ site.baseurl }}/assets/img/project/{{ page.title | slugify}}/originalPhoenix.png" alt="Original Pheonix">
+		<img width="48%" src="{{ site.baseurl }}/assets/img/project/{{ page.title | slugify}}/myPhoenix.png" alt="Recreation Result">
 	</div>
 </div>		

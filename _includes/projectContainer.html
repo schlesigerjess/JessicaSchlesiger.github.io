@@ -1,6 +1,6 @@
 <a href="{{ project.url }}" class="thumb-unit">
-	<div class="thumb-image {{project.align}}" data-url="{{ project.url }}">
-		<img src="{{ site.baseurl }}/assets/img/project/{{ project.projectFolder }}/{{ project.img }}" alt="{{project.title}}">
+	<div class="thumb-image {{ project.align }}" data-url="{{ project.url }}">
+		<img src="{{ site.baseurl }}/assets/img/project/{{ project.title | slugify}}/{{ project.img }}" alt="{{project.title}}">
 	</div>
 	<div class="thumb-overlay">
 		<div class="thumb-text"> 

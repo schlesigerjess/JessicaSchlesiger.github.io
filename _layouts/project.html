@@ -37,7 +37,7 @@ permalink: /{{page.title}}
 				{% endif %}
 			</div>
 		<div class="project-abstract-img">
-			<img src="{{ site.baseurl }}/assets/img/project/{{ page.projectFolder }}/{{ page.img }}" alt="{{page.title}}">
+			<img src="{{ site.baseurl }}/assets/img/project/{{ page.title | slugify}}/{{ page.img }}" alt="{{page.title}}">
 		</div>
 	</div>
 </div>

@@ -1,7 +1,6 @@
 ---
 layout: project
 title: Portfolio Webpage
-projectFolder: portfolio-webpage
 description: Creation of a responsive portfolio webpage to provide more details than a typical resume. This project utilized new concepts such as Jekyll, SASS, and Liquid.
 date: 2017-12-21
 img: finishedPage.png
@@ -48,8 +47,8 @@ In addition, I set out to improve upon the mistakes previously made. The most pr
 <div class="img-wrap full">
 	<div class="img-center">
 		<h3>Trial-run Webpage vs Portfolio Webpage</h3>
-		<img src="{{ site.baseurl }}/assets/img/project/{{ page.projectFolder }}/badFileSystem.png" alt="Trial-run webpage's bad file structure.">
-		<img src="{{ site.baseurl }}/assets/img/project/{{ page.projectFolder }}/goodFileSystem.png" alt="Portfolio webpage's good file structure.">
+		<img src="{{ site.baseurl }}/assets/img/project/{{ page.title | slugify }}/badFileSystem.png" alt="Trial-run webpage's bad file structure.">
+		<img src="{{ site.baseurl }}/assets/img/project/{{ page.title | slugify }}/goodFileSystem.png" alt="Portfolio webpage's good file structure.">
 	</div>
 </div>
 <p>As seen above, the portfolio webpage has all subpages neatly organized. What's not shown here is how Jekyll allows imports of numerous stylesheets which will be compiled into one file when building the webpage. This enables the user to be fully organized in their repository, while also being optimized for bandwidth use. With these structures in place, it was time for actual web design.<br><br>
@@ -58,7 +57,7 @@ Before coding anything, a well thought-out design must be in place. This reduces
 
 <div class="img-wrap full">
 	<div class="img-center">
-		<img width="100%" style="max-width:800px" src="{{ site.baseurl }}/assets/img/project/{{ page.projectFolder }}/originalDesign.png" alt="First Design">
+		<img width="100%" style="max-width:800px" src="{{ site.baseurl }}/assets/img/project/{{ page.title | slugify }}/originalDesign.png" alt="First Design">
 	</div>
 </div>
 
@@ -66,7 +65,7 @@ Before coding anything, a well thought-out design must be in place. This reduces
 
 <div class="img-wrap full">
 	<div class="img-center">
-		<img width="100%" style="max-width:800px" src="{{ site.baseurl }}/assets/img/project/{{ page.projectFolder }}/finishedPage.png" alt="First Design">
+		<img width="100%" style="max-width:800px" src="{{ site.baseurl }}/assets/img/project/{{ page.title | slugify }}/finishedPage.png" alt="First Design">
 	</div>
 </div>
 	

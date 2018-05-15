@@ -1,7 +1,6 @@
 ---
 layout: project
 title: Google Calendar Script
-projectFolder: google-cal-script
 description: This scheduling script that pulls event data from a spreadsheet and updates or creates them on the desired Google Calendar.
 date: 2017-11-20
 img: abstract.png
@@ -26,7 +25,7 @@ end-left: |
  Overall, this project was highly successful. The version for the company cut down hundreds of hours spent synchronizing events and guaranteed the data between the portal and our Google Calendar is synchronized.<br><br>
  This project introduced me to Google's API. Google's API write up is fantastic, and I highly recommend utilizing the <a href="https://developers.google.com/apps-script/reference/spreadsheet/" target="_blank" rel="noopener">Spreadsheet API</a> and <a href="https://developers.google.com/apps-script/reference/calendar/" target="_blank" rel="noopener">Google Calendar API</a> pages as references for all the methods used. Also, applications do have some limitations on quotas such as a runtime of six minutes and frequency of queries. Due to this limitation, the script required a 4-second delay after every 5th event updated. <a href="https://developers.google.com/apps-script/guides/services/quotas" target="_blank" rel="noopener">See the list of Google's Service Quotas for more details.</a>
 
-end-right: <img width="100%" src="/assets/img/project/google-cal-script/cal.png" alt="Sample Image"><br><br><a href="https://github.com/schlesigerjess/Spreadsheet-To-Google-Calendar" alt="{{ link.icon }}" target="_blank" rel="noopener"><b class="icon-github"></b> See full source and setup instructions at Github.</a>
+end-right: <img width="100%" src="/assets/img/project/google-calendar-script/cal.png" alt="Sample Image"><br><br><a href="https://github.com/schlesigerjess/Spreadsheet-To-Google-Calendar" alt="{{ link.icon }}" target="_blank" rel="noopener"><b class="icon-github"></b> See full source and setup instructions at Github.</a>
 
 ---
 
@@ -43,7 +42,7 @@ end-right: <img width="100%" src="/assets/img/project/google-cal-script/cal.png"
 
 <div class="img-wrap full">
 	<div class="img-center">
-		<img width="100%" style="max-width:899px" src="{{ site.baseurl }}/assets/img/project/{{ page.projectFolder }}/initialSpread.png" alt="Initial Spreadsheet">
+		<img width="100%" style="max-width:899px" src="{{ site.baseurl }}/assets/img/project/{{ page.title | slugify }}/initialSpread.png" alt="Initial Spreadsheet">
 	</div>
 </div>
 
@@ -69,7 +68,7 @@ and then continue. Upon fixing the error and re-running the script, it will alte
 
 <div class="img-wrap full">
 	<div class="img-center">
-		<img width="100%" style="max-width:899px" src="{{ site.baseurl }}/assets/img/project/{{ page.projectFolder }}/finalSpread.png" alt="Final Spreadsheet">
+		<img width="100%" style="max-width:899px" src="{{ site.baseurl }}/assets/img/project/{{ page.title | slugify }}/finalSpread.png" alt="Final Spreadsheet">
 	</div>
 </div>
 
