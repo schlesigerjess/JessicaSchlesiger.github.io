@@ -47,7 +47,7 @@ hullEntertainment_duties:
 # Skills
 skills_programming:
 - {tag: C, value: 90}
-- {name: Java, value: 100}
+- {tag: Java, value: 100}
 - {tag: JavaScript, value: 100}
 - {tag: jQuery, value: 50}
 - {tag: HTML, value: 100}
@@ -60,7 +60,7 @@ skills_programming:
 - {tag: GLUT, value: 70}
 - {name: R, value: 40}
 - {tag: AutoHotkey, value: 80}
-- {name: SQL, value: 60}
+- {tag: SQL, value: 60}
 skills_design:
 - {tag: Adobe Illustrator, value: 70}
 - {tag: Adobe Photoshop, value: 90}

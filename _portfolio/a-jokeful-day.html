@@ -1,31 +1,28 @@
 ---
 layout: project
 title: A Jokeful Day
-projectFolder: a-jokeful-day
 date: 2018-03-14
-description: A small website dedicated to providing its users the best and worst jokes around.
+tags: [JavaScript, HTML, CSS, Jekyll, Liquid, SASS, Web Design]
 img: completed-webpage.png
-tags: 
- - JavaScript
- - HTML
- - CSS
- - Jekyll
- - Liquid
+featured: true
 
-abstract: "This project served as a light-hearted way to create a website that featured a little custom JavaScript. The goals of the project were as following:
-	<ul>
-	<li>Feature a random joke on refresh
-	<li>Two joke categories: One-liners and Traditional
-	<li>Feature a decent and simple web design
-	<li>Have an excuse to store my favorite corny jokes forever
-	</ul>
-	While this webpage is mainly just a portfolio item, it was a fun small project that acts as a reference for future creations."
-end: A Jokeful Day is a simple corny joke generator that utilizes a little custom JavaScript to generate the joke on refresh. While the project itself is simple and small, it provides a good example of my ability to use JavaScript to manipulate websites.<br><br><a href="http://ajokefulday.ml" target="_blank" rel="noopener" alt="{{ link.icon }}"><b class="icon-link"></b> Visit AJokefulDay.ml.</a><br>
+description: A small website dedicated to providing its users the best and worst jokes around.
+
+abstract: |
+ This project served as a light-hearted way to create a website that featured a little custom JavaScript. The goals of the project were as following:
+ <ul>
+   <li>Feature a random joke on refresh
+   <li>Two joke categories: One-liners and Traditional
+   <li>Feature a decent and simple web design
+   <li>Have an excuse to store my favorite corny jokes forever
+ </ul>
+ While this webpage is mainly just a portfolio item, it was a fun small project that acts as a reference for future creations.
+
+end: |
+ A Jokeful Day is a simple corny joke generator that utilizes a little custom JavaScript to generate the joke on refresh. While the project itself is simple and small, it provides a good example of my ability to use JavaScript to manipulate websites.<br><br>
+ <a href="http://ajokefulday.ml" target="_blank" rel="noopener" alt="{{ link.icon }}"><b class="icon-link"></b> Visit AJokefulDay.ml.</a><br>
  <a href="https://github.com/schlesigerjess/AJokefulDay" target="_blank" rel="noopener" alt="{{ link.icon }}"><b class="icon-github"></b> See full source code at Github.</a>
-
-
 ---
-
 
 <p>Like my previous projects, this portfolio website and WhatAKerfuffle, AJokefulDay webpage is hosted entirely for free. For further details on free web hosting, <a href="/portfolio/what-a-kerfuffle">WhatAKerfuffle's project write-up</a> explains hows to have an entirely free webpage. In summary, hosting for free comes with two limitations: no https and a .ml protocol identifier. Since this webpage is mainly for show and it collects no sensitive information, these were acceptable costs for having an entirely free webpage.<br><br>
 
@@ -33,7 +30,7 @@ When creating the webpage's name and logo I only had one idea: the word 'joke' w
 
 <div class="img-wrap full">
 	<div class="img-center">
-		<img width="100%" style="max-width:500px" src="{{ site.baseurl }}/assets/img/project/{{ page.projectFolder }}/logo-design.png" alt="Logo Design for A Jokeful Day">
+		<img width="100%" style="max-width:500px" src="{{ site.baseurl }}/assets/img/project/{{ page.title | slugify }}/logo-design.png" alt="Logo Design for A Jokeful Day">
 	</div>
 </div>
 
@@ -41,7 +38,7 @@ When creating the webpage's name and logo I only had one idea: the word 'joke' w
 
 <div class="img-wrap full">
 	<div class="img-center">
-		<img width="100%" style="max-width:500px" src="{{ site.baseurl }}/assets/img/project/{{ page.projectFolder }}/final-logo.png" alt="Final Logo for A Jokeful Day">
+		<img width="100%" style="max-width:500px" src="{{ site.baseurl }}/assets/img/project/{{ page.title | slugify }}/final-logo.png" alt="Final Logo for A Jokeful Day">
 	</div>
 </div>
 
@@ -49,7 +46,7 @@ When creating the webpage's name and logo I only had one idea: the word 'joke' w
 
 <div class="img-wrap full">
 	<div class="img-center">
-		<img width="100%" src="{{ site.baseurl }}/assets/img/project/{{ page.projectFolder }}/web-design.png" alt="Web Design for A Jokeful Day">
+		<img width="100%" src="{{ site.baseurl }}/assets/img/project/{{ page.title | slugify }}/web-design.png" alt="Web Design for A Jokeful Day">
 	</div>
 </div>
 
@@ -114,6 +111,6 @@ function grabValidJokes(type) {
 
 <div class="img-wrap full">
 	<div class="img-center">
-		<img width="100%" src="{{ site.baseurl }}/assets/img/project/{{ page.projectFolder }}/completed-webpage.png" alt="Final result for A Jokeful Day">
+		<img width="100%" src="{{ site.baseurl }}/assets/img/project/{{ page.title | slugify }}/completed-webpage.png" alt="Final result for A Jokeful Day">
 	</div>
 </div>

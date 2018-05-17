@@ -1,32 +1,29 @@
 ---
 layout: project
 title: Google Calendar Script
-description: This scheduling script that pulls event data from a spreadsheet and updates or creates them on the desired Google Calendar.
 date: 2017-11-20
+tags: [JavaScript, Google Spreadsheet, Google Calendar]
 img: abstract.png
-tags: 
- - JavaScript
- - Google Spreadsheet
- - Google Calendar
 align: imgAlignBottom
 featured: true
 
+description: This scheduling script that pulls event data from a spreadsheet and updates or creates them on the desired Google Calendar.
 
-
-abstract: "During my employment at Hull Entertainment with Paint Nite and Plant Nite, I automated many tasks such as keeping the Google Calendars in sync with the Paint Nite and Plant Nite admin portal. This Google Calendar script pulls dates from a spreadsheet, that can be downloaded straight from the admin portal, and updates or creates the events on designated Google Calendars. This project required the following criteria to be met:
-<ul>
-<li>Parse Upcoming Events Spreadsheets
-<li>Update or Create events on Google Calendar
-<li>Events are on separate calendars based on their regions
-</ul>
-This project is modified from the customized version and anyone may use it freely. "
+abstract: |
+ During my employment at Hull Entertainment with Paint Nite and Plant Nite, I automated many tasks such as keeping the Google Calendars in sync with the Paint Nite and Plant Nite admin portal. This Google Calendar script pulls dates from a spreadsheet, that can be downloaded straight from the admin portal, and updates or creates the events on designated Google Calendars. This project required the following criteria to be met:
+ <ul>
+  <li>Parse Upcoming Events Spreadsheets
+  <li>Update or Create events on Google Calendar
+  <li>Events are on separate calendars based on their regions
+ </ul>
+ This project is modified from the customized version and anyone may use it freely.
 
 end-left: |
  Overall, this project was highly successful. The version for the company cut down hundreds of hours spent synchronizing events and guaranteed the data between the portal and our Google Calendar is synchronized.<br><br>
  This project introduced me to Google's API. Google's API write up is fantastic, and I highly recommend utilizing the <a href="https://developers.google.com/apps-script/reference/spreadsheet/" target="_blank" rel="noopener">Spreadsheet API</a> and <a href="https://developers.google.com/apps-script/reference/calendar/" target="_blank" rel="noopener">Google Calendar API</a> pages as references for all the methods used. Also, applications do have some limitations on quotas such as a runtime of six minutes and frequency of queries. Due to this limitation, the script required a 4-second delay after every 5th event updated. <a href="https://developers.google.com/apps-script/guides/services/quotas" target="_blank" rel="noopener">See the list of Google's Service Quotas for more details.</a>
 
-end-right: <img width="100%" src="/assets/img/project/google-calendar-script/cal.png" alt="Sample Image"><br><br><a href="https://github.com/schlesigerjess/Spreadsheet-To-Google-Calendar" alt="{{ link.icon }}" target="_blank" rel="noopener"><b class="icon-github"></b> See full source and setup instructions at Github.</a>
-
+end-right: |
+ <img width="100%" src="/assets/img/project/google-calendar-script/cal.png" alt="Sample Image"><br><br><a href="https://github.com/schlesigerjess/Spreadsheet-To-Google-Calendar" alt="{{ link.icon }}" target="_blank" rel="noopener"><b class="icon-github"></b> See full source and setup instructions at Github.</a>
 ---
 
 <p>This script has two phases: parsing the spreadsheet, and creating or updating events on Google Calendar.</p>

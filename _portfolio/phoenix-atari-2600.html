@@ -1,30 +1,31 @@
 ---
 layout: project
 title: Phoenix Atari 2600
-description: This project recreated one level of the Atari arcade game Phoenix utilizing OpenGL and C. 
 date: 2016-10-25
+tags: [C, OpenGL, GLUT]
 img: myPhoenix.png
-tags: 
- - C
- - OpenGL
- - GLUT
+featured: true
 
-abstract: "For my Introduction To Computer Graphics course, I was tasked with the recreation of an Atari game using OpenGL, glut, and C as a platform. The project requirements were:
-<ul>
-	<li>Pause menu
-	<li>One level
-	<li>Animation
-	<li>Interactive
-	<li>Likeness
-</ul>
-I chose to recreate Phoenix - a famous retro arcade game which has similarities to Space Invaders and Galaga."
+description: This project recreated one level of the Atari arcade game Phoenix utilizing OpenGL and C. 
 
-end-left: "As the first large project in OpenGL, this was a major accomplishment. The final project was more than the professor expected and granted a bonus of 10 points. While this project was successful, I do feel some aspects could have been better planned. With better planning for the pause function, it would have saved me grief when coding the idle function and hit recognition. <br><br>
+abstract: |
+ For my Introduction To Computer Graphics course, I was tasked with the recreation of an Atari game using OpenGL, glut, and C as a platform. The project requirements were:
+ <ul>
+   <li>Pause menu
+   <li>One level
+   <li>Animation
+   <li>Interactive
+   <li>Likeness
+ </ul>
+ I chose to recreate Phoenix - a famous retro arcade game which has similarities to Space Invaders and Galaga.
 
- No future progress is planned; however, this project was very fun and challenging to do and I'd happily do this again as a side project."
+end-left: |
+ As the first large project in OpenGL, this was a major accomplishment. The final project was more than the professor expected and granted a bonus of 10 points. While this project was successful, I do feel some aspects could have been better planned. With better planning for the pause function, it would have saved me grief when coding the idle function and hit recognition. <br><br>
+ No future progress is planned; however, this project was very fun and challenging to do and I'd happily do this again as a side project.
 
-
-end-right: <img width="100%" src="/assets/img/project/phoenix-atari-2600/gameplay.gif" alt="Original Pheonix"><a href="https://github.com/schlesigerjess/Phoenix-Atari-2600" alt="{{ link.icon }}" target="_blank" rel="noopener"><b class="icon-github"></b> See full source at Github.</a>
+end-right: |
+ <img width="100%" src="/assets/img/project/phoenix-atari-2600/gameplay.gif" alt="Original Pheonix">
+ <a href="https://github.com/schlesigerjess/Phoenix-Atari-2600" alt="{{ link.icon }}" target="_blank" rel="noopener"><b class="icon-github"></b> See full source at Github.</a>
 ---
 
 <p>My initial step was recreating the original game's sprites. The game's two main sprites were the enemy ship and the player's ship. Each would also need an "idle" and "moving" sprite to swap between. While the task is relatively simple, it took roughly 200 lines of code to carefully craft each pixel’s position in OpenGL.</p>
