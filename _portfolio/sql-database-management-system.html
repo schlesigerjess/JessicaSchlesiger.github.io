@@ -1,0 +1,110 @@
+---
+layout: project
+title: SQL Database Management System
+date: 2018-05-02
+tags: [SQL, Java]
+img: SQL-logo.png
+align: imgAlignBottom
+
+description: A medium sized UI project that utilizes Java to interact with a MySQL database.
+
+abstract: |
+ The final project for my Database Management course at Shippensburg University set the following requirements for a group of three people:
+ <ul>
+   <li>Create SQL tables and insert one row of data for each
+   <li>Create a Java application that has a user interface (UI) for the SQL database
+   <li>Allow the user to select, insert, modify, and delete data
+ </ul>
+ The database's tables and foreign key constraints are based on previous assignments where we designed an entity-relationship diagram and a relation table which satisfies the client's database requirements. 
+
+end-left: |
+ Unfortunately, this project is not complete. My group members did not complete their tasks. Fortunately, this assignment was graded individually based on the amount of personal work completed. While I did have the most simple UI to create, I spent most of my time setting up the database and doing the groundwork for the application.<br><br>
+ Although the project is not complete, it did provide excellent experience using Java to interact with a SQL database.
+
+end-right: |
+ <div id="img-wrap full">
+ <div class="img-center">
+ <img style="max-width:266px" width="100%" src="/assets/img/project/sql-database-management-system/select-table-finished.jpg" alt="Finished Table View"><br><br>
+ <a href="https://github.com/schlesigerjess/DatabaseManagementSystem" alt="{{ link.icon }}" target="_blank" rel="noopener"><b class="icon-github"></b> See full source at Github.</a>
+ </div> </div>
+---
+
+<p>To begin this project, the general design for the UI had to be created. This design satisfied the requirements by utilizing three different UI screens. One for selecting from available tables, another to view rows, and a final screen to modify, insert, and delete data. Below are the initial designs; please note that this project did not expect beautiful UI designs.</p>
+
+<div class="img-wrap">
+	<div class="img-center">
+		<img width="62%" src="{{ site.baseurl }}/assets/img/project/{{ page.title | slugify}}/view-tables-design.png" alt="View Tables Design">
+		<img  width="34%" src="{{ site.baseurl }}/assets/img/project/{{ page.title | slugify}}/edit-row-design.png" alt="Edit Rows Design">
+		<img width="100%" src="{{ site.baseurl }}/assets/img/project/{{ page.title | slugify}}/view-row-design.png" alt="View Rows Design">
+	</div>
+</div>
+
+<p>After dividing up the work, I became responsible for the Database Viewer UI (top left design). Since my UI is the most simplistic, my responsibility also included setting up the database and providing some general methods the group may need for their designs. One example is the ability to reset the database between test runs.</p>
+	
+{% highlight java %}
+/**
+ * Resets our database. 
+ * Deletes all current tables and creates new ones based off our text file.
+ * Will Initialize one row of data for each table
+ * @throws Exception if it fails to find the tables or delete the tables
+ * @author Jessica Schlesiger
+ */
+private void resetDatabase() throws Exception {
+  ArrayList<String> tables = getTables();
+  for (int i=0;i<tables.size();i++) {
+    runSQLCommands("SET FOREIGN_KEY_CHECKS=0;");
+    runSQLCommands("DROP TABLE IF EXISTS "+tables.get(i)+" CASCADE");
+    runSQLCommands("SET FOREIGN_KEY_CHECKS=1;");
+  }
+  initializeDatabase();
+}
+{% endhighlight %}
+
+<p>The method above will run through a list of our tables and drop each one. While doing this, it must turn off foreign key constraints or else it won't be able to remove the dependant tables. After removing all the tables, it calls the <i>initializeDatabase</i> method. This method will run all of the create tables and insert data commands from our command text files.<br><br>
+Creating the <i>resetDatabase</i> method forced the creation of <i>getTables</i>. This method utilizes SQL metadata to grab all of the current table names.</p>
+
+{% highlight java %}
+/**
+ * Grabs all the SQL's tables and creates a string array of them.
+ * @return array of all the tables
+ * @throws Exception failed to get the tables
+ * @author Jessica Schlesiger
+ */
+private ArrayList<String> getTables() throws Exception {
+  DatabaseMetaData md = m_dbConn.getMetaData();
+  ResultSet rs = md.getTables(null, null, "%", null);
+  ArrayList<String> tables = new ArrayList<String>();
+  while (rs.next()) {
+    tables.add(rs.getString(3));
+  }
+  return tables;
+}	
+{% endhighlight %}
+
+<p>After compiling all the table's metadata into a ResultSet, it then runs through each item and compiles the table's names into an ArrayList. This ArrayList is then returned for the UI to use.<br><br>
+The constructor for Select_Table will take in a String array. It then uses the array to generate a clickable list. Once an item on the list is clicked, it will call the row view UI with the passed on table name.</p>
+
+{% highlight java %}
+/**
+ * Creates the UI for the given tables
+ * @param tables we want to select from
+ */
+public Select_Table(String[] tables) {
+  JFrame frame = new JFrame();
+  tableList = new JList<String>(tables);
+  tableList.setLayoutOrientation(JList.VERTICAL);
+
+  tableList.addListSelectionListener(new ListSelectionListener() {
+  public void valueChanged(ListSelectionEvent event) {
+    itemSelected(event);
+    }
+  });
+	
+  JScrollPane listScroller = new JScrollPane(tableList);
+  listScroller.setPreferredSize(new Dimension(width, height));
+  frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+  frame.add(listScroller);
+  frame.pack();
+  frame.setVisible(true);
+}
+{% endhighlight %}
