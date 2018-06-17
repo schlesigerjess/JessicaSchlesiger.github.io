@@ -1,81 +1,150 @@
-#-------------------------------
 # General Site Settings
-
 title: Jessica Schlesiger Portfolio
 description: Jessica Schlesiger's online portfolio.
 email: Jessica.Schlesiger@gmail.com
 
+# Navigation bar
 menu:
-- {name: About, url: '/'}
-- {name: Portfolio, url: '/portfolio/'}
-- {name: Contact, url: '/contact/'}
+- name: About
+  url: /
+- name: Portfolio
+  url: /portfolio/
+- name: Contact
+  url: /contact/
+
 
 # SEO Section
-seo:
-  description: 'Online portfolio for Jessica Schlesiger.'
+seo: Online portfolio for Jessica Schlesiger.
 
 # Education
-education_courses:
-- {name: Computer Science I, id: CSC 107}
-- {name: Computer Science II, id: CSC 111}
-- {name: Computer Organization, id: CMPE 220}
-- {name: Design Patterns, id: SWE 200}
-- {name: Operating Systems, id: CMPE 320}
-- {name: Compiler Design, id: CSC 440}
-- {name: Intro Computer Graphics, id: CSC 350}
-- {name: Artificial Intelligence, id: CSC 462}
-- {name: Computer Networks, id: CSC 431}
-- {name: Design and Analysis of Algorithms, id: CSC 310}
-- {name: Database Management, id: CSC 371}
-- {name: Big Data, id: CSC 493}
-- {name: Senior Research Methods, id: CSC 498}
-- {name: Senior Research and Development, id: CSC 499}
+education:
+ - school: Shippensburg University
+   date: Fall 2014 - May 2018
+   logo: ship.png
+   title: Bachelor - Computer Science
+   description: "Shippensburg University's computer science program is ABET accredited with Java and C as the main programming languages taught. The curriculum is concentrated on team building, design patterns, and good programming habits such as test-driven development."
+   url: 
+    - link: http://www.ship.edu/
+      name: Ship.edu
+   courses: 
+    - Computer Science I
+    - Computer Science II
+    - Computer Organization
+    - Design Patterns
+    - Operating Systems
+    - Compiler Design
+    - Intro Computer Graphics
+    - Artificial Intelligence
+    - Computer Networks
+    - Design and Analysis of Algorithms
+    - Database Management
+    - Big Data
+    - Senior Research Methods
+    - Senior Research and Development
+
 
 
 # Experience
-hullEntertainment_duties:
-- {name: Script creation}
-- {name: Scheduling events & staff}
-- {name: Human resources}
-- {name: Onboarding}
-- {name: Maintaining file system}
-- {name: Summarize payroll}
-- {name: Document creation}
-- {name: Newsletter}
-- {name: Creating marketing graphics}
+experience:
+ - company: Highmark Health
+   date: June 2018 - Present
+   logo: HMHS.png
+   title: Associate IT Project Leader; Deployment Coordinator
+   description: "This job provides support to the project leadership of complex product and technology solutions throughout the Infrastructure & Security group. The incumbent exhibits and applies the core behaviors which define success for HMHS and their customers: Purposeful Execution, Teamwork, Transformational Leadership, and a Customer-First mentality."
+   url: 
+    - link: https://www.highmarkhealth.org/hmk/index.shtml
+      name: HighmarkHealth.org
+   duties-single: 
+    - Assist with the definition, planning, and delivery of technology projects
+    - Ensure achievement of the defined project goals
+    - Participate in budgetary oversight and staffing
+    - Maintain high standard of quality for projects
+    - Collaborate with all project stakeholders
+ - company: Paint Nite & Plant Nite<br>Hull Entertainment
+   date: January 2016 - April 2018
+   logo: PN.png
+   title: Executive Assistant
+   description: "Hull Entertainment is owned by a local licensee for the Paint Nite and Plant Nite platform. The Company's territory included Central PA, Northern WV, Northern MD, and Portland, ME. As the Executive Assistant, I worked directly with the company owner and performed tasks as per needs of the company." 
+   url: 
+    - link: https://www.paintnite.com/
+      name: PaintNite.com
+    - link: https://www.plantnite.com/
+      name: PlantNite.com
+   duties: 
+    - Script creation
+    - Scheduling events & staff
+    - Human resources
+    - Onboarding
+    - Maintaining file system
+    - Summarize payroll
+    - Document creation
+    - Newsletter
+    - Creating marketing graphics
 
 # Skills
-skills_programming:
-- {tag: C, value: 90}
-- {tag: Java, value: 100}
-- {tag: JavaScript, value: 100}
-- {tag: jQuery, value: 50}
-- {tag: HTML, value: 100}
-- {tag: CSS, value: 100}
-- {tag: SASS, value: 100}
-- {tag: Jekyll, value: 90}
-- {tag: Liquid, value: 90}
-- {tag: Lua, value: 40}
-- {tag: OpenGL, value: 70}
-- {tag: GLUT, value: 70}
-- {name: R, value: 40}
-- {tag: AutoHotkey, value: 80}
-- {tag: SQL, value: 60}
-skills_design:
-- {tag: Adobe Illustrator, value: 70}
-- {tag: Adobe Photoshop, value: 90}
-- {tag: Web Design, value: 80}
-skills_utilities:
-- {name: Eclipse, value: 100}
-- {name: Notepad++, value: 100}
-- {name: Github, value: 80}
-- {name: SourceForge, value: 70}
-- {name: Word, value: 100}
-- {name: Excel, value: 100}
-- {name: UML Design, value: 100}
+skills:
+ - title: Programming
+   items:
+     - tag: C
+       value: 90
+     - tag: Java
+       value: 100
+     - tag: JavaScript
+       value: 100
+     - tag: jQuery
+       value: 50
+     - tag: HTML
+       value: 100
+     - tag: CSS
+       value: 100
+     - tag: SASS
+       value: 100
+     - tag: Jekyll
+       value: 90
+     - tag: Liquid
+       value: 90
+     - tag: Lua
+       value: 40
+     - tag: OpenGL
+       value: 70
+     - tag: GLUT
+       value: 70
+     - name: R
+       value: 40
+     - tag: AutoHotKey
+       value: 80
+     - tag: SQL
+       value: 60
+ - title: Design
+   items:
+     - tag: Adobe Illustrator
+       value: 70
+     - tag: Adobe Photoshop
+       value: 90
+     - tag: Web Design
+       value: 80
+ - title: Utilities
+   items:
+     - name: Eclipse
+       value: 100
+     - name: Notepad++
+       value: 100
+     - name: Github
+       value: 80
+     - name: SourceForge
+       value: 70
+     - name: Word
+       value: 100
+     - name: Excel
+       value: 100
+     - name: UML Design
+       value: 100
 
 # Social Section
 social:
-- {icon: 'github', link: 'https://github.com/schlesigerjess'}
-- {icon: 'linkedin', link: 'https://www.linkedin.com/in/jessicaschlesiger/'}
-- {icon: 'facebook', link: 'https://www.facebook.com/jessica.schlesiger'}
+- icon: 'github'
+  link: 'https://github.com/schlesigerjess'
+- icon: 'linkedin'
+  link: 'https://www.linkedin.com/in/jessicaschlesiger/'
+- icon: 'facebook'
+  link: 'https://www.facebook.com/jessica.schlesiger'

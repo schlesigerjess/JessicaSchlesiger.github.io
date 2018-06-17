@@ -1,47 +1,66 @@
 <div class="exp-bar">
   <div class="exp container">
 		<h1>Education</h1>
-		<div class="exp-lockUp">
-			<div class="exp-location">
-				<div class="exp-text"><h3>Shippensburg University</h3>Fall 2014 - May 2018</div>
-				<img class="exp-logo" src="{{ site.github.url }}/assets/img/logos/ship.png" alt="Logo-Ship">
-			</div>	
-			<div class="exp-description"> 
-				<h3>Bachelor - Computer Science</h3>
-				<p>Shippensburg University's computer science program is ABET accredited with Java and C as the main programming languages taught. The curriculum is concentrated on team building, design patterns, and good programming habits such as test-driven development.</p><br>
-				<a href="http://www.ship.edu/" target="_blank" rel="noopener"><b class="icon-link"></b> Ship.edu</a>
-				<br><br><b>Relevant Coursework:</b>
-				
-				<div class="exp-listWrap">
-				{% for unit in site.data.settings.education_courses %}
-					<div class="exp-listUnit">
-					• {{ unit.name }}
+		{% for education in site.data.settings.education %}
+			<div class="exp-lockUp">
+				<div class="exp-location">
+					<div class="exp-text"><h3>{{ education.school }}</h3>{{ education.date }}</div>
+					<img class="exp-logo" src="{{ site.github.url }}/assets/img/logos/{{ education.logo }}" alt="{{ education.logo }} logo">
+				</div>	
+				<div class="exp-description"> 
+					<h3>{{ education.title }}</h3>
+					<p>{{ education.description }}
+					</p><br>
+					{% for url in education.url %}
+						<a href="{{ url.link }}" target="_blank" rel="noopener"><b class="icon-link"></b> {{ url.name }} </a>
+					{% endfor %}
+					
+					<br><br><b>Relevant Coursework:</b>
+					<div class="exp-listWrap">
+					{% for item in education.courses %}
+						<div class="exp-listUnit">
+						• {{ item }}
+						</div>
+						{% endfor %}
 					</div>
-				{% endfor %}
 				</div>
 			</div>
-		</div>
+		{% endfor %}
+		
 		<h1>Experience</h1>
-		<div class="exp-lockUp">
-			<div class="exp-location">
-				<div class="exp-text"><h3>Paint Nite & Plant Nite<br>Hull Entertainment</h3>January 2016 - April 2018</div>
-				<img class="exp-logo" src="{{ site.github.url }}/assets/img/logos/PN.png" alt="Logo-PN">
-			</div>	
-			<div class="exp-description"> 
-				<h3>Executive Assistant</h3>
-				<p>Hull Entertainment is owned by a local licensee for the Paint Nite and Plant Nite platform. The Company's territory included Central PA, Northern WV, Northern MD, and Portland, ME. As the Executive Assistant, I worked directly with the company owner and performed tasks as per needs of the company.
-				</p><br><a href="https://www.paintnite.com/" target="_blank" rel="noopener"><b class="icon-link"></b> PaintNite.com</a> | 
-				<a href="https://www.plantnite.com/" target="_blank" rel="noopener"><b class="icon-link"></b> PlantNite.com</a>
-				<br><br><b>Duties Included:</b>
-				
-				<div class="exp-listWrap">
-				{% for unit in site.data.settings.hullEntertainment_duties %}
-					<div class="exp-listUnit">
-					• {{ unit.name }}
+		{% for experience in site.data.settings.experience %}
+			<div class="exp-lockUp">
+				<div class="exp-location">
+					<div class="exp-text"><h3>{{ experience.company }}</h3>{{ experience.date }}</div>
+					<img class="exp-logo" src="{{ site.github.url }}/assets/img/logos/{{ experience.logo }}" alt="{{ experience.logo }} logo">
+				</div>	
+				<div class="exp-description"> 
+					<h3>{{ experience.title }}</h3>
+					<p>{{ experience.description }}
+					</p><br>
+					{% for url in experience.url %}
+						<a href="{{ url.link }}" target="_blank" rel="noopener"><b class="icon-link"></b> {{ url.name }} </a>
+					{% endfor %}
+					
+					<br><br><b>Duties Include:</b>
+					
+					<div class="exp-listWrap">
+					{% if experience.duties-single %}
+						{% for item in experience.duties-single %}
+							<div class="exp-listUnit-single">
+							• {{ item }}
+							</div>
+						{% endfor %}
+					{% else %}
+						{% for item in experience.duties %}
+							<div class="exp-listUnit">
+							• {{ item }}
+							</div>
+						{% endfor %}
+					{% endif %}
 					</div>
-				{% endfor %}
 				</div>
 			</div>
-		</div>
+		{% endfor %}
     </div>
 </div>

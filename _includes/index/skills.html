@@ -1,24 +1,27 @@
 <div class="skills-bar">
 	<div class="skills container">
 		<h1>Skill Sets</h1>
-			<h2><b class="icon-programming"></b> Programming:</h2>
+		{% for skills in site.data.settings.skills %}
+			<h2><b class="icon-{{ skills.title | slugify }}"></b> {{ skills.title }}:</h2>
 			<div class="skill-lockup">
-				{% for skill in site.data.settings.skills_programming %}
-					{% include index/skillUnit.html %}
+				{% for item in skills.items %}
+					<div class="skill-unit">
+						<div class="skill-label">
+						{% if item.tag != %} 
+							{{ item.tag }}
+							<div class="example">
+								<a href="/tag/{{ item.tag | slugify }}">See example</a>
+							</div>
+						{% else %}
+							{{ item.name }}
+							{% endif %}
+						</div>
+						<div class="skill-item">
+							<div class="skill-icons value-{{ item.value }}"></div>
+						</div>
+					</div>
 				{% endfor %}
 			</div>	
-			<h2><b class="icon-utilities"></b> Utilities:</h2>
-			<div class="skill-lockup">
-				{% for skill in site.data.settings.skills_utilities %}
-					{% include index/skillUnit.html %}
-				{% endfor %}
-			</div>
-			<h2><b class="icon-design"></b> Design:</h2>	
-			<div class="skill-lockup">		
-				{% for skill in site.data.settings.skills_design %}
-					{% include index/skillUnit.html %}
-				{% endfor %}
-			</div>
-		</div>
+		{% endfor %}
 	</div>
 </div>
