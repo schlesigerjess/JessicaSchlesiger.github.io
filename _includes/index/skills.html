@@ -1,8 +1,10 @@
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="{{ site.github.url }}/assets/js/scroll.js"></script>
 <div class="skills-bar">
 	<div class="skills container">
 		<h1>Skill Sets</h1>
 		{% for skills in site.data.settings.skills %}
-			<h2><b class="icon-{{ skills.title | slugify }}"></b> {{ skills.title }}:</h2>
+			<h2><b class="icon-{{ skills.title | slugify }}" id="moveSkillsBar-{{ skills.title | slugify }}"></b> {{ skills.title }}:</h2>
 			<div class="skill-lockup">
 				{% for item in skills.items %}
 					<div class="skill-unit">
@@ -17,7 +19,7 @@
 							{% endif %}
 						</div>
 						<div class="skill-item">
-							<div class="skill-icons value-{{ item.value }}"></div>
+							<div class="skill-icons value-{{ item.value }} skill-icons-{{ skills.title | slugify }}" style="margin-left:-300px"></div>
 						</div>
 					</div>
 				{% endfor %}

@@ -112,9 +112,11 @@ skills:
      - name: R
        value: 40
      - tag: AutoHotKey
-       value: 80
+       value: 100
      - tag: SQL
        value: 60
+     - name: Visual Basic
+       value: 50
  - title: Design
    items:
      - tag: Adobe Illustrator
