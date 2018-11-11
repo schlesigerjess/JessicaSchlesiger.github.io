@@ -1,18 +1,20 @@
 <div class="contact-bar">
 	<div class="contact container">
 		<h2 id="contact">Let's work together</h2>
-		<form method="POST" action="//formspree.io/{{ site.data.settings.email }}">
-			<fieldset class="contact-info-group">
-				<label><span>Your Name</span>
-				<input type="text" name="name"></label>
-				<label><span>Your Email</span>
-				<input type="email" name="_replyto"></label>
-			</fieldset>
-			<label><span>Description</span>
-			<textarea name="message"></textarea></label>
-			<fieldset class="submit-wrap">
-				<input type="submit" value="Send">
-			</fieldset>
-		</form>
+		<div class="index-contact-form">
+			<form method="POST" action="//formspree.io/{{ site.data.settings.email }}">
+				<fieldset class="contact-info-group">
+					<label><span>Your Name</span>
+					<input type="text" name="name"></label>
+					<label><span>Your Email</span>
+					<input type="email" name="_replyto"></label>
+				</fieldset>
+				<label><span>Description</span>
+				<textarea name="message"></textarea></label>
+				<fieldset class="submit-wrap">
+					<input type="submit" value="Send">
+				</fieldset>
+			</form>
+		</div>
 	</div>
 </div>
