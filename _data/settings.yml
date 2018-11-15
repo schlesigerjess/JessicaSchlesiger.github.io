@@ -1,3 +1,8 @@
+# Colors
+mainAccent: "#003e85"
+grayAccent: "#b0b0b0"
+textColor: "#666"
+
 # General Site Settings
 title: Jessica Schlesiger Portfolio
 description: Jessica Schlesiger's online portfolio.
@@ -148,5 +153,3 @@ social:
   link: 'https://github.com/schlesigerjess'
 - icon: 'linkedin'
   link: 'https://www.linkedin.com/in/jessicaschlesiger/'
-- icon: 'facebook'
-  link: 'https://www.facebook.com/jessica.schlesiger'

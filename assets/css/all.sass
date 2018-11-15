@@ -3,18 +3,17 @@
 @import '1-tools/-tools-dir'
 
 // ---- Image paths to SASS variables ---- //
-$animation: {{ site.data.layout.animation }}
-$logo-path: '{{ site.data.layout.logo }}'
+$logo-path: '{{ site.data.settings.logo }}'
 
 
 // --- Colors --- //
-$textColor: {{ site.data.layout.textColor }}
+$textColor: {{ site.data.settings.textColor }}
 
-$mainAccent: {{ site.data.layout.mainAccent }}
+$mainAccent: {{ site.data.settings.mainAccent }}
 $mainAccent-light: lighten($mainAccent, 30%)
 $mainAccent-dark: saturate(darken($mainAccent, 10%), 20%)
 
-$grayAccent: {{ site.data.layout.grayAccent }}
+$grayAccent: {{ site.data.settings.grayAccent }}
 $grayAccent-light: lighten($grayAccent, 25%)
 
 $lrgWidth: '700px'
