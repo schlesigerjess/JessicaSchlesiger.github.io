@@ -12,10 +12,9 @@ permalink: /contact/
 				<a href="{{ link.link }}" class="icon-{{ link.icon }}" alt="{{ link.icon }}" target="_blank" rel="noopener"></a>
 				{% endfor %}
 			</div>
-		<p><b>Email:</b> Jessica.Schlesiger@gmail.com<br>
-			<b>Location:</b> Shippensburg, PA</p>
+		<p><b>Email:</b> {{ site.data.settings.email }}<br>
+			<b>Location:</b> {{ site.data.settings.location }}</p>
 		</div>
-
 
 		<div class="contact-form">
 			<form method="POST" action="//formspree.io/{{ site.data.settings.email }}">
