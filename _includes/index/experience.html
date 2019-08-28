@@ -1,5 +1,61 @@
 <div class="exp-bar">
   <div class="exp container">
+		<h1>Experience</h1>
+		{% for experience in site.data.settings.experience %}
+			<div class="exp-lockUp">
+				<div class="exp-location">
+					<div class="exp-text"><h3>{{ experience.company }}</h3>{{ experience.date }}</div>
+					<img class="exp-logo" src="{{ site.github.url }}/assets/img/logos/{{ experience.logo }}" alt="{{ experience.logo }} logo">
+				</div>	
+				<div class="exp-description"> 
+					<h3>{{ experience.title }}</h3>
+					<p>{{ experience.description }}
+					</p><br>
+					{% for url in experience.url %}
+						<a href="{{ url.link }}" target="_blank" rel="noopener"><b class="icon-link"></b> {{ url.name }} </a>
+					{% endfor %}
+
+					{% if experience.accomplishments %}
+						<br><br><b>Accomplishments:</b>
+						<div class="exp-listWrap">
+							{% for item in experience.accomplishments %}
+								<div class="exp-listUnit-single">
+								• {{ item }}
+								</div>
+							{% endfor %}
+						</div>
+					{% endif %}
+									
+					{% if experience.duties-single %}
+						<br><br><b>Duties Included:</b>
+						<div class="exp-listWrap">
+							{% for item in experience.duties-single %}
+								<div class="exp-listUnit-single">
+								• {{ item }}
+								</div>
+							{% endfor %}
+					{% elsif experience.duties-double %}
+						<br><br><b>Duties Included:</b>
+						<div class="exp-listWrap">
+							{% for item in experience.duties-double %}
+								<div class="exp-listUnit">
+								• {{ item }}
+								</div>
+							{% endfor %}
+					{% else %}
+						<br><br><b>Technologies Used:</b>
+						<div class="exp-listWrap">
+							{% for item in experience.tech-blob %}
+								<div class="exp-listUnit-single">
+								 &nbsp; {{ item }}
+								</div>
+							{% endfor %}
+					{% endif %}
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+		
 		<h1>Education</h1>
 		{% for education in site.data.settings.education %}
 			<div class="exp-lockUp">
@@ -22,42 +78,6 @@
 						• {{ item }}
 						</div>
 						{% endfor %}
-					</div>
-				</div>
-			</div>
-		{% endfor %}
-		
-		<h1>Experience</h1>
-		{% for experience in site.data.settings.experience %}
-			<div class="exp-lockUp">
-				<div class="exp-location">
-					<div class="exp-text"><h3>{{ experience.company }}</h3>{{ experience.date }}</div>
-					<img class="exp-logo" src="{{ site.github.url }}/assets/img/logos/{{ experience.logo }}" alt="{{ experience.logo }} logo">
-				</div>	
-				<div class="exp-description"> 
-					<h3>{{ experience.title }}</h3>
-					<p>{{ experience.description }}
-					</p><br>
-					{% for url in experience.url %}
-						<a href="{{ url.link }}" target="_blank" rel="noopener"><b class="icon-link"></b> {{ url.name }} </a>
-					{% endfor %}
-					
-					<br><br><b>Duties Include:</b>
-					
-					<div class="exp-listWrap">
-					{% if experience.duties-single %}
-						{% for item in experience.duties-single %}
-							<div class="exp-listUnit-single">
-							• {{ item }}
-							</div>
-						{% endfor %}
-					{% else %}
-						{% for item in experience.duties %}
-							<div class="exp-listUnit">
-							• {{ item }}
-							</div>
-						{% endfor %}
-					{% endif %}
 					</div>
 				</div>
 			</div>

@@ -52,22 +52,30 @@ education:
 
 # Experience
 experience:
+ - company: Wintech Corp
+   date: April 2019 - Present
+   logo: WintechCorp.png
+   title: Software Developer
+   description: "This project focused on providing a document conversion API to validate, parse, transform, and serialize different data formats as the user required. The project is utilized by a mulitude of downstream systems which require our library to convert between formats from incoming streams of data and output to formats their downstream systems could utilize."
+   url: 
+    - link: http://wintechcorp.net/
+      name: WintechCorp.net
+   tech-blob: 
+    - Java, Kotlin, XSLT, XML, Intellij, Gradle, Github, JIRA, Agile, Jenkins, Microsoft Suite, Oxygen, HTML, Scala, Spark
  - company: HM Health Solutions
-   date: June 2018 - Present
+   date: June 2018 - April 2019
    logo: HMHS.png
    title: Associate IT Project Leader; Deployment Coordinator
-   description: "This position provides support to the project leadership of complex product and technology solutions. Protecting the stability and quality of the client's production environment, via successful releases, is our highest priority."
+   description: "This role required coordination with development teams and customers to maintain the stability of mulitple large platforms to ensure both application features and bugs were deployed swiftly and without failure. It required considerations of possible upstream and downstream impacts and possible outages needed for the deploys. Additionally, optimizing workflows by creation of macroscripts and streamlining systems were second priority."
    url: 
     - link: https://www.hmhs.com/index.shtml
       name: HMHS.com
-   duties-single: 
-    - Assist with the definition, planning, and delivery of technology projects
-    - Ensure achievement of the defined project goals
-    - Participate in budgetary oversight and staffing
-    - Maintain high standard of quality for projects
-    - Collaborate with all project stakeholders for timely project delivery
-    - Create project management tools which automate manual processes
- - company: Paint Nite & Plant Nite<br>Hull Entertainment
+   accomplishments:
+   - Autohotkey script
+   - Customized spreadsheets/reports
+   tech-blob: 
+    - Microsoft Suite, AutoHotKey, Microsoft Visual Basic
+ - company: Hull Entertainment<br>Paint Nite & Plant Nite
    date: January 2016 - April 2018
    logo: PN.png
    title: Executive Assistant
@@ -77,77 +85,99 @@ experience:
       name: PaintNite.com
     - link: https://www.plantnite.com/
       name: PlantNite.com
-   duties: 
-    - Script creation
-    - Scheduling events & staff
-    - Human resources
-    - Onboarding
-    - Maintaining file system
-    - Summarize payroll
-    - Document creation
-    - Newsletter
-    - Creating marketing graphics
+   accomplishments:
+    - Calendar Script 
+    - Payroll script
+    - Employee information dashboard
+    - Inventory Systems
+    - Automated upcoming event email
+   tech-blob: 
+    - JavaScipt, Java, Google API, Google Suite
 
 # Skills
 skills:
  - title: Programming
    items:
      - tag: C
-       value: 90
+       value: 3
      - tag: Java
-       value: 100
+       value: 5
+     - name: Kotlin
+       value: 4
+     - name: Scala
+       value: 3
      - tag: JavaScript
-       value: 100
+       value: 5
      - tag: jQuery
-       value: 50
+       value: 3
      - tag: HTML
-       value: 100
+       value: 5
      - tag: CSS
-       value: 100
+       value: 5
      - tag: SASS
-       value: 100
+       value: 4
+     - name: XML
+       value: 4
+     - name: XSLT
+       value: 4
      - tag: Jekyll
-       value: 90
+       value: 4
      - tag: Liquid
-       value: 90
+       value: 4
      - tag: Lua
-       value: 40
+       value: 2
      - tag: OpenGL
-       value: 70
+       value: 2
      - tag: GLUT
-       value: 70
+       value: 2
      - name: R
-       value: 40
+       value: 1
      - tag: AutoHotKey
-       value: 100
+       value: 5
      - tag: SQL
-       value: 60
+       value: 2
      - name: Visual Basic
-       value: 50
+       value: 3
+     - name: LISP
+       value: 1
+     - name: Assembly
+       value: 1
+     - name: Spark
+       value: 1
+     - name: Gradle
+       value: 3
  - title: Design
    items:
      - tag: Adobe Illustrator
-       value: 70
+       value: 4
      - tag: Adobe Photoshop
-       value: 90
+       value: 5
      - tag: Web Design
-       value: 80
+       value: 4
  - title: Utilities
    items:
      - name: Eclipse
-       value: 100
+       value: 4
+     - name: Intellij
+       value: 4
      - name: Notepad++
-       value: 100
+       value: 5
      - name: Github
-       value: 80
+       value: 5
      - name: SourceForge
-       value: 70
+       value: 2
      - name: Word
-       value: 100
+       value: 5
      - name: Excel
-       value: 100
+       value: 5
      - name: UML Design
-       value: 100
+       value: 5
+     - name: Jenkins
+       value: 2
+     - name: Amazon Web Services (AWS)
+       value: 3
+     - name: JIRA
+       value: 4
 
 # Social Section
 social:
