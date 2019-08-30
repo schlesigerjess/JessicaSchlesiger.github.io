@@ -56,7 +56,7 @@ experience:
    date: April 2019 - Present
    logo: WintechCorp.png
    title: Software Developer
-   description: "This project is a document conversion library which enables developers to validate, parse, transform, and serialize different XML data structures as needed. The project is utilized by a mulitude of upstream and downstream systems to handle the numerous data formats without abrasion."
+   description: "This project is a document conversion library which enables developers to validate, parse, transform, and serialize different XML data structures as needed. The project is utilized by a multitude of upstream and downstream systems to handle the numerous data formats without abrasion."
    url: 
     - link: http://wintechcorp.net/
       name: WintechCorp.net
@@ -66,14 +66,14 @@ experience:
    date: June 2018 - April 2019
    logo: HMHS.png
    title: Associate IT Project Leader; Deployment Coordinator
-   description: "This role required coordination with development teams and customers to maintain the stability of mulitple large platforms. Ensuring successful and timely deployment for both application features and bug fixes required careful project planning and considerations to the business's upstream and downstream needs. Additionally, spare hours are spent optimizing workflows by creating macroscripts and streamlining systems."
+   description: "This role required coordination with development teams and customers to maintain the stability of multiple large platforms. Ensuring successful and timely deployment for both application features and bug fixes required careful project planning and considerations to the business's upstream and downstream needs. Additionally, spare hours are spent optimizing workflow through creating macroscripts and streamlining systems."
    url: 
     - link: https://www.hmhs.com/index.shtml
       name: HMHS.com
    accomplishments:
-   - Provided over an estimated $100,000 in annual savings by creating an AutoHotKey macro script to streamline document creation and processing.
-   - Given the responsibility of two large, unstable domains in an effort to improve current processes and behaviors. These platforms went from consistently requiring emergency releases weekly to successfuly hitting their monthly benchmarks.
-   - Customized spreadsheet dashboards which utilized complicated conditional formatting formulas and Microsoft Visual Basic code to enble easier Change Request tracking for its user.
+   - Provided an estimated $100,000+ in annual savings by creating an AutoHotKey macro script to streamline document creation and processing.
+   - Customized spreadsheet dashboards which utilized complicated conditional formatting formulas and Microsoft Visual Basic code to enable easier Change Request tracking for its user.
+   - Given the responsibility of two large, unstable domains in an effort to improve current processes and behaviors. These platforms went from consistently requiring emergency releases weekly to successfully hitting their monthly benchmarks.
    tech-blob: 
     - Microsoft Suite, AutoHotKey, Microsoft Visual Basic
  - company: Hull Entertainment<br>Paint Nite & Plant Nite
@@ -87,11 +87,11 @@ experience:
     - link: https://www.plantnite.com/
       name: PlantNite.com
    accomplishments:
-    - Calendar Script 
-    - Payroll script
-    - Employee information dashboard
-    - Inventory Systems
-    - Automated upcoming event email
+    - Automated event synchronization of the company's Google Calendar with its events spreadsheet. This eliminated human error and saved countless hours updating hundreds of events daily.
+    - Created an automatic upcoming events email which would provided the employee with the location, time, size, and URL for their upcoming events.
+    - Automated payroll summary creation to enable quick review of bi-weekly payroll entries. This allowed summarizing payroll to take less than five minutes rather than being an hour long manual process.
+    - Created an employee information dashboard to enable quick lookup and review of employee information.
+    - Implemented an ad-hock inventory management system utilizing Google Spreadsheets.
    tech-blob: 
     - JavaScipt, Java, Google API, Google Suite
 
