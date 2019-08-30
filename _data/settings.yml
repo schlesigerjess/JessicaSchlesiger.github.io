@@ -7,7 +7,7 @@ textColor: "#666"
 title: Jessica Schlesiger Portfolio
 description: Jessica Schlesiger's online portfolio.
 email: Jessica.Schlesiger@gmail.com
-location: Lemoyne, PA
+location: Herndon, VA
 
 # Navigation bar
 menu:
@@ -47,8 +47,8 @@ education:
     - Big Data
     - Senior Research Methods
     - Senior Research and Development
-
-
+    tech-blob:
+    - Java, C, SQL, GLUT, OpenGL, Github, Eclipse, R, LISP, Assembly, Lua, Emacs, SourceForge, UML Design
 
 # Experience
 experience:
