@@ -47,7 +47,7 @@ education:
     - Big Data
     - Senior Research Methods
     - Senior Research and Development
-    tech-blob:
+   tech-blob:
     - Java, C, SQL, GLUT, OpenGL, Github, Eclipse, R, LISP, Assembly, Lua, Emacs, SourceForge, UML Design
 
 # Experience
@@ -56,7 +56,7 @@ experience:
    date: April 2019 - Present
    logo: WintechCorp.png
    title: Software Developer
-   description: "This project focused on providing a document conversion API to validate, parse, transform, and serialize different data formats as the user required. The project is utilized by a mulitude of downstream systems which require our library to convert between formats from incoming streams of data and output to formats their downstream systems could utilize."
+   description: "This project is a document conversion library which enables developers to validate, parse, transform, and serialize different XML data structures as needed. The project is utilized by a mulitude of upstream and downstream systems to handle the numerous data formats without abrasion."
    url: 
     - link: http://wintechcorp.net/
       name: WintechCorp.net
@@ -66,13 +66,14 @@ experience:
    date: June 2018 - April 2019
    logo: HMHS.png
    title: Associate IT Project Leader; Deployment Coordinator
-   description: "This role required coordination with development teams and customers to maintain the stability of mulitple large platforms to ensure both application features and bugs were deployed swiftly and without failure. It required considerations of possible upstream and downstream impacts and possible outages needed for the deploys. Additionally, optimizing workflows by creation of macroscripts and streamlining systems were second priority."
+   description: "This role required coordination with development teams and customers to maintain the stability of mulitple large platforms. Ensuring successful and timely deployment for both application features and bug fixes required careful project planning and considerations to the business's upstream and downstream needs. Additionally, spare hours are spent optimizing workflows by creating macroscripts and streamlining systems."
    url: 
     - link: https://www.hmhs.com/index.shtml
       name: HMHS.com
    accomplishments:
-   - Autohotkey script
-   - Customized spreadsheets/reports
+   - Provided over an estimated $100,000 in annual savings by creating an AutoHotKey macro script to streamline document creation and processing.
+   - Given the responsibility of two large, unstable domains in an effort to improve current processes and behaviors. These platforms went from consistently requiring emergency releases weekly to successfuly hitting their monthly benchmarks.
+   - Customized spreadsheet dashboards which utilized complicated conditional formatting formulas and Microsoft Visual Basic code to enble easier Change Request tracking for its user.
    tech-blob: 
     - Microsoft Suite, AutoHotKey, Microsoft Visual Basic
  - company: Hull Entertainment<br>Paint Nite & Plant Nite
