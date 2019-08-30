@@ -90,12 +90,12 @@ experience:
       name: PlantNite.com
    accomplishments:
     - Automated event synchronization of the company's Google Calendar with its events spreadsheet. This eliminated human error and saved countless hours updating hundreds of events daily.
-    - Created an automatic upcoming events email which would provided the employee with the location, time, size, and URL for their upcoming events.
+    - Created an automatic upcoming events email which provides the employee with the location, time, size, and URL for their upcoming events.
     - Automated payroll summary creation to enable quick review of bi-weekly payroll entries. This allowed summarizing payroll to take less than five minutes rather than being an hour long manual process.
     - Created an employee information dashboard to enable quick lookup and review of employee information.
-    - Implemented an ad-hock inventory management system utilizing Google Spreadsheets.
+    - Implemented an ad-hoc inventory management system utilizing Google Spreadsheets.
    tech-blob: 
-    - JavaScipt, Java, Google API, Google Suite
+    - JavaScript, Java, Google API, Google Suite
 
 # Skills
 skills:
