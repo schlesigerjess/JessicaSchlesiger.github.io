@@ -79,6 +79,16 @@
 						</div>
 						{% endfor %}
 					</div>
+									
+					{% if experience.tech-blob %}
+						<br><br><b>Technologies Used:</b>
+						<div class="exp-listWrap">
+							{% for item in experience.tech-blob %}
+								<div class="exp-listUnit-single">
+								 &nbsp; {{ item }}
+								</div>
+							{% endfor %}
+					{% endif %}	
 				</div>
 			</div>
 		{% endfor %}
