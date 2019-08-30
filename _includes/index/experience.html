@@ -34,6 +34,7 @@
 								• {{ item }}
 								</div>
 							{% endfor %}
+						</div>
 					{% elsif experience.duties-double %}
 						<br><br><b>Duties Included:</b>
 						<div class="exp-listWrap">
@@ -42,6 +43,7 @@
 								• {{ item }}
 								</div>
 							{% endfor %}
+						</div>
 					{% else %}
 						<br><br><b>Technologies Used:</b>
 						<div class="exp-listWrap">
@@ -50,8 +52,8 @@
 								 &nbsp; {{ item }}
 								</div>
 							{% endfor %}
+						</div>
 					{% endif %}
-					</div>
 				</div>
 			</div>
 		{% endfor %}
@@ -73,10 +75,10 @@
 					
 					<br><br><b>Relevant Coursework:</b>
 					<div class="exp-listWrap">
-					{% for item in education.courses %}
-						<div class="exp-listUnit">
-						• {{ item }}
-						</div>
+						{% for item in education.courses %}
+							<div class="exp-listUnit">
+							• {{ item }}
+							</div>
 						{% endfor %}
 					</div>
 									
