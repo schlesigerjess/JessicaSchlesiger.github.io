@@ -181,6 +181,8 @@ skills:
        value: 3
      - name: JIRA
        value: 4
+     - name: Oxygen
+       value: 3
 
 # Social Section
 social:
