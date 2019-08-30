@@ -60,6 +60,8 @@ experience:
    url: 
     - link: http://wintechcorp.net/
       name: WintechCorp.net
+   accomplishments:
+    - Implemented support for a new format after a seven year support gap.
    tech-blob: 
     - Java, Kotlin, XSLT, XML, Intellij, Gradle, Github, JIRA, Agile, Jenkins, Microsoft Suite, Oxygen, HTML, Scala, Spark
  - company: HM Health Solutions
@@ -71,9 +73,9 @@ experience:
     - link: https://www.hmhs.com/index.shtml
       name: HMHS.com
    accomplishments:
-   - Provided an estimated $100,000+ in annual savings by creating an AutoHotKey macro script to streamline document creation and processing.
-   - Customized spreadsheet dashboards which utilized complicated conditional formatting formulas and Microsoft Visual Basic code to enable easier Change Request tracking for its user.
-   - Given the responsibility of two large, unstable domains in an effort to improve current processes and behaviors. These platforms went from consistently requiring emergency releases weekly to successfully hitting their monthly benchmarks.
+    - Provided an estimated $100,000+ in annual savings by creating an AutoHotKey macro script to streamline document creation and processing.
+    - Customized spreadsheet dashboards which utilized complicated conditional formatting formulas and Microsoft Visual Basic code to enable easier Change Request tracking for its user.
+    - Given the responsibility of two large, unstable domains in an effort to improve current processes and behaviors. These platforms went from consistently requiring emergency releases weekly to successfully hitting their monthly benchmarks.
    tech-blob: 
     - Microsoft Suite, AutoHotKey, Microsoft Visual Basic
  - company: Hull Entertainment<br>Paint Nite & Plant Nite
@@ -99,16 +101,16 @@ experience:
 skills:
  - title: Programming
    items:
-     - tag: C
-       value: 3
      - tag: Java
+       value: 5
+     - tag: JavaScript
        value: 5
      - name: Kotlin
        value: 4
      - name: Scala
        value: 3
-     - tag: JavaScript
-       value: 5
+     - tag: C
+       value: 3
      - tag: jQuery
        value: 3
      - tag: HTML
@@ -125,28 +127,28 @@ skills:
        value: 4
      - tag: Liquid
        value: 4
+     - name: R
+       value: 1
+     - tag: SQL
+       value: 2
+     - name: Gradle
+       value: 3
+     - tag: AutoHotKey
+       value: 5
+     - name: Visual Basic
+       value: 3
      - tag: Lua
        value: 2
      - tag: OpenGL
        value: 2
      - tag: GLUT
        value: 2
-     - name: R
-       value: 1
-     - tag: AutoHotKey
-       value: 5
-     - tag: SQL
-       value: 2
-     - name: Visual Basic
-       value: 3
      - name: LISP
        value: 1
      - name: Assembly
        value: 1
      - name: Spark
        value: 1
-     - name: Gradle
-       value: 3
  - title: Design
    items:
      - tag: Adobe Illustrator
